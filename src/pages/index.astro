@@ -1,79 +1,127 @@
 ---
-import '../styles/global.css'
+import "../styles/global.css";
 
-const WA_NUMBER = '595982373124'
-const WA_URL = `https://wa.me/${WA_NUMBER}?text=Hola%2C%20me%20interesa%20saber%20m%C3%A1s%20sobre%20KiosKit`
+const WA_NUMBER = "595982373124";
+const WA_URL = `https://wa.me/${WA_NUMBER}?text=Hola%2C%20me%20interesa%20saber%20m%C3%A1s%20sobre%20KiosKit`;
 
 const features = [
   {
-    title: 'Punto de Venta (POS)',
-    desc: 'Registrá ventas al instante con búsqueda rápida de productos, descuentos por ítem y múltiples métodos de pago.',
+    title: "Punto de Venta (POS)",
+    desc: "Registrá ventas al instante con búsqueda rápida de productos, descuentos por ítem y múltiples métodos de pago.",
     svg: `<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M9 17.25v1.007a3 3 0 0 1-.879 2.122L7.5 21h9l-.621-.621A3 3 0 0 1 15 18.257V17.25m6-12V15a2.25 2.25 0 0 1-2.25 2.25H5.25A2.25 2.25 0 0 1 3 15V5.25m18 0A2.25 2.25 0 0 0 18.75 3H5.25A2.25 2.25 0 0 0 3 5.25m18 0H3" /></svg>`,
   },
   {
-    title: 'Control de Inventario',
-    desc: 'Kardex completo de movimientos, alertas de stock mínimo y ajustes de inventario con trazabilidad total.',
+    title: "Control de Inventario",
+    desc: "Kardex completo de movimientos, alertas de stock mínimo y ajustes de inventario con trazabilidad total.",
     svg: `<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="m20.25 7.5-.625 10.632a2.25 2.25 0 0 1-2.247 2.118H6.622a2.25 2.25 0 0 1-2.247-2.118L3.75 7.5M10 11.25h4M3.375 7.5h17.25c.621 0 1.125-.504 1.125-1.125v-1.5c0-.621-.504-1.125-1.125-1.125H3.375c-.621 0-1.125.504-1.125 1.125v1.5c0 .621.504 1.125 1.125 1.125Z" /></svg>`,
   },
   {
-    title: 'Reportes y Métricas',
-    desc: 'Ventas diarias, productos más rentables, margen bruto y evolución de ingresos en un solo lugar.',
+    title: "Reportes y Métricas",
+    desc: "Ventas diarias, productos más rentables, margen bruto y evolución de ingresos en un solo lugar.",
     svg: `<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M3 13.125C3 12.504 3.504 12 4.125 12h2.25c.621 0 1.125.504 1.125 1.125v6.75C7.5 20.496 6.996 21 6.375 21h-2.25A1.125 1.125 0 0 1 3 19.875v-6.75ZM9.75 8.625c0-.621.504-1.125 1.125-1.125h2.25c.621 0 1.125.504 1.125 1.125v11.25c0 .621-.504 1.125-1.125 1.125h-2.25a1.125 1.125 0 0 1-1.125-1.125V8.625ZM16.5 4.125c0-.621.504-1.125 1.125-1.125h2.25C20.496 3 21 3.504 21 4.125v15.75c0 .621-.504 1.125-1.125 1.125h-2.25a1.125 1.125 0 0 1-1.125-1.125V4.125Z" /></svg>`,
   },
   {
-    title: 'Gestión de Clientes',
-    desc: 'Registrá tus clientes, asignalos a ventas y llevá el historial de compras de cada uno.',
+    title: "Gestión de Clientes",
+    desc: "Registrá tus clientes, asignalos a ventas y llevá el historial de compras de cada uno.",
     svg: `<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M15 19.128a9.38 9.38 0 0 0 2.625.372 9.337 9.337 0 0 0 4.121-.952 4.125 4.125 0 0 0-7.533-2.493M15 19.128v-.003c0-1.113-.285-2.16-.786-3.07M15 19.128v.106A12.318 12.318 0 0 1 8.624 21c-2.331 0-4.512-.645-6.374-1.766l-.001-.109a6.375 6.375 0 0 1 11.964-3.07M12 6.375a3.375 3.375 0 1 1-6.75 0 3.375 3.375 0 0 1 6.75 0Zm8.25 2.25a2.625 2.625 0 1 1-5.25 0 2.625 2.625 0 0 1 5.25 0Z" /></svg>`,
   },
   {
-    title: 'Tienda Virtual',
-    desc: 'Tu propio catálogo online para recibir pedidos del storefront directamente en tu sistema.',
+    title: "Tienda Virtual",
+    desc: "Tu propio catálogo online para recibir pedidos del storefront directamente en tu sistema.",
     svg: `<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M13.5 21v-7.5a.75.75 0 0 1 .75-.75h3a.75.75 0 0 1 .75.75V21m-4.5 0H2.36m11.14 0H18m0 0h3.64m-1.39 0V9.349M3.75 21V9.349m0 0a3.001 3.001 0 0 0 3.75-.615A2.993 2.993 0 0 0 9.75 9.75c.896 0 1.7-.393 2.25-1.016a2.993 2.993 0 0 0 2.25 1.016 2.993 2.993 0 0 0 2.25-1.016 3.001 3.001 0 0 0 3.75.614m-16.5 0a3.004 3.004 0 0 1-.621-4.72l1.189-1.19A1.5 1.5 0 0 1 5.378 3h13.243a1.5 1.5 0 0 1 1.06.44l1.19 1.189a3 3 0 0 1-.621 4.72M6.75 18h3.75a.75.75 0 0 0 .75-.75V13.5a.75.75 0 0 0-.75-.75H6.75a.75.75 0 0 0-.75.75v3.75c0 .414.336.75.75.75Z" /></svg>`,
   },
   {
-    title: 'Múltiples Usuarios',
-    desc: 'Roles de Admin, Manager y Vendedor con permisos granulares. Cada acción queda auditada.',
+    title: "Múltiples Usuarios",
+    desc: "Roles de Admin, Manager y Vendedor con permisos granulares. Cada acción queda auditada.",
     svg: `<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M18 18.72a9.094 9.094 0 0 0 3.741-.479 3 3 0 0 0-4.682-2.72m.94 3.198.001.031c0 .225-.012.447-.037.666A11.944 11.944 0 0 1 12 21c-2.17 0-4.207-.576-5.963-1.584A6.062 6.062 0 0 1 6 18.719m12 0a5.971 5.971 0 0 0-.941-3.197m0 0A5.995 5.995 0 0 0 12 12.75a5.995 5.995 0 0 0-5.058 2.772m0 0a3 3 0 0 0-4.681 2.72 8.986 8.986 0 0 0 3.74.477m.94-3.197a5.971 5.971 0 0 0-.94 3.197M15 6.75a3 3 0 1 1-6 0 3 3 0 0 1 6 0Zm6 3a2.25 2.25 0 1 1-4.5 0 2.25 2.25 0 0 1 4.5 0Zm-13.5 0a2.25 2.25 0 1 1-4.5 0 2.25 2.25 0 0 1 4.5 0Z" /></svg>`,
   },
-]
+];
 
 const steps = [
   {
-    num: '01',
-    title: 'Creá tu cuenta',
-    desc: 'Registrate en minutos. Sin formularios largos, sin documentación. 15 días gratis desde el primer día.',
+    num: "01",
+    title: "Creá tu cuenta",
+    desc: "Registrate en minutos. Sin formularios largos, sin documentación. 15 días gratis desde el primer día.",
   },
   {
-    num: '02',
-    title: 'Cargá tus productos',
-    desc: 'Importá tu inventario o cargalo manualmente. Categorías, variantes, precios y stock en un solo lugar.',
+    num: "02",
+    title: "Cargá tus productos",
+    desc: "Importá tu inventario o cargalo manualmente. Categorías, variantes, precios y stock en un solo lugar.",
   },
   {
-    num: '03',
-    title: 'Empezá a vender',
-    desc: 'Tu equipo puede usar el POS desde cualquier dispositivo el mismo día. Sin instalaciones ni configuración compleja.',
+    num: "03",
+    title: "Empezá a vender",
+    desc: "Tu equipo puede usar el POS desde cualquier dispositivo el mismo día. Sin instalaciones ni configuración compleja.",
   },
-]
+];
 
 const roadmap = [
-  { num: '01', title: 'App nativa Android & iOS', desc: 'Velocidad nativa, notificaciones push y funcionalidades exclusivas para móvil.', active: true },
-  { num: '02', title: 'Facturación electrónica', desc: 'Integración con SIFEN para emitir facturas timbradas directamente desde el sistema.', active: false },
-  { num: '03', title: 'Multi-sucursal', desc: 'Manejá varios locales desde una sola cuenta con inventarios independientes.', active: false },
-  { num: '04', title: 'Pagos digitales', desc: 'Integración con Bancard y PagoExpress para cobrar con QR y tarjetas sin fricción.', active: false },
-  { num: '05', title: 'Fidelización de clientes', desc: 'Sistema de puntos y descuentos automáticos para recompensar a tus clientes frecuentes.', active: false },
-  { num: '06', title: 'Módulo de caja', desc: 'Apertura y cierre de caja, arqueo y control de turnos para tu equipo.', active: false },
-]
+  {
+    num: "01",
+    title: "App nativa Android & iOS",
+    desc: "Velocidad nativa, notificaciones push y funcionalidades exclusivas para móvil.",
+    active: true,
+  },
+  {
+    num: "02",
+    title: "Facturación electrónica",
+    desc: "Integración con SIFEN para emitir facturas timbradas directamente desde el sistema.",
+    active: false,
+  },
+  {
+    num: "03",
+    title: "Multi-sucursal",
+    desc: "Manejá varios locales desde una sola cuenta con inventarios independientes.",
+    active: false,
+  },
+  {
+    num: "04",
+    title: "Pagos digitales",
+    desc: "Integración con Bancard y PagoExpress para cobrar con QR y tarjetas sin fricción.",
+    active: false,
+  },
+  {
+    num: "05",
+    title: "Fidelización de clientes",
+    desc: "Sistema de puntos y descuentos automáticos para recompensar a tus clientes frecuentes.",
+    active: false,
+  },
+  {
+    num: "06",
+    title: "Módulo de caja",
+    desc: "Apertura y cierre de caja, arqueo y control de turnos para tu equipo.",
+    active: false,
+  },
+];
 
 const faqs = [
-  { q: '¿Necesito instalar algo?', a: 'No. KiosKit funciona 100% en el navegador, desde cualquier dispositivo. Solo necesitás conexión a internet.' },
-  { q: '¿Hay un período de prueba?', a: 'Sí, los primeros 15 días son completamente gratis, sin tarjeta de crédito.' },
-  { q: '¿Puedo usar KiosKit en mi celular o tablet?', a: 'Sí, la interfaz está optimizada para mobile. El POS funciona bien en tablets y celulares sin instalar nada.' },
-  { q: '¿Cuántos usuarios puedo tener?', a: 'Usuarios ilimitados. Podés crear roles de Admin, Manager y Vendedor con permisos diferenciados.' },
-  { q: '¿Qué pasa si tengo problemas?', a: 'Tenés soporte directo vía WhatsApp en horario comercial. Sin chatbots ni tickets, respuesta de una persona real.' },
-  { q: '¿Mis datos están seguros?', a: 'Tus datos se almacenan con backups automáticos. Nunca compartimos tu información con terceros.' },
-]
+  {
+    q: "¿Necesito instalar algo?",
+    a: "No. KiosKit funciona 100% en el navegador, desde cualquier dispositivo. Solo necesitás conexión a internet.",
+  },
+  {
+    q: "¿Hay un período de prueba?",
+    a: "Sí, los primeros 15 días son completamente gratis, sin tarjeta de crédito.",
+  },
+  {
+    q: "¿Puedo usar KiosKit en mi celular o tablet?",
+    a: "Sí, la interfaz está optimizada para mobile. El POS funciona bien en tablets y celulares sin instalar nada.",
+  },
+  {
+    q: "¿Cuántos usuarios puedo tener?",
+    a: "Usuarios ilimitados. Podés crear roles de Admin, Manager y Vendedor con permisos diferenciados.",
+  },
+  {
+    q: "¿Qué pasa si tengo problemas?",
+    a: "Tenés soporte directo vía WhatsApp en horario comercial. Sin chatbots ni tickets, respuesta de una persona real.",
+  },
+  {
+    q: "¿Mis datos están seguros?",
+    a: "Tus datos se almacenan con backups automáticos. Nunca compartimos tu información con terceros.",
+  },
+];
 
-const waSvg = `<svg fill="currentColor" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>`
+const waSvg = `<svg fill="currentColor" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>`;
 ---
 
 <html lang="es">
@@ -83,40 +131,110 @@ const waSvg = `<svg fill="currentColor" viewBox="0 0 24 24"><path d="M17.472 14.
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="generator" content={Astro.generator} />
     <title>KiosKit — Sistema de ventas para PyMEs</title>
-    <meta name="description" content="POS, inventario, reportes y tienda virtual para pequeñas y medianas empresas. Simple, rápido y sin letra chica." />
+    <meta
+      name="description"
+      content="POS, inventario, reportes y tienda virtual para pequeñas y medianas empresas. Simple, rápido y sin letra chica."
+    />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
   </head>
 
   <body class="bg-white text-slate-900 overflow-x-hidden">
-
     <!-- NAV -->
-    <nav class="fixed top-0 left-0 right-0 z-50 bg-white/80 backdrop-blur-md border-b border-slate-100">
-      <div class="max-w-6xl mx-auto px-6 h-16 flex items-center justify-between">
-        <span class="text-xl font-bold text-indigo-600 tracking-tight">KiosKit</span>
-        <div class="hidden sm:flex items-center gap-8 text-sm font-medium text-slate-600">
-          <a href="#como-funciona" class="hover:text-slate-900 transition-colors">Cómo funciona</a>
-          <a href="#features"      class="hover:text-slate-900 transition-colors">Funciones</a>
-          <a href="#pricing"       class="hover:text-slate-900 transition-colors">Precio</a>
-          <a href="#faq"           class="hover:text-slate-900 transition-colors">FAQ</a>
+    <nav
+      class="fixed top-0 left-0 right-0 z-50 bg-white/80 backdrop-blur-md border-b border-slate-100"
+    >
+      <div
+        class="max-w-6xl mx-auto px-6 h-16 flex items-center justify-between"
+      >
+        <span class="text-xl font-bold text-indigo-600 tracking-tight"
+          >KiosKit</span
+        >
+        <div
+          class="hidden sm:flex items-center gap-8 text-sm font-medium text-slate-600"
+        >
+          <a
+            href="#como-funciona"
+            class="hover:text-slate-900 transition-colors">Cómo funciona</a
+          >
+          <a href="#features" class="hover:text-slate-900 transition-colors"
+            >Funciones</a
+          >
+          <a href="#pricing" class="hover:text-slate-900 transition-colors"
+            >Precio</a
+          >
+          <a href="#faq" class="hover:text-slate-900 transition-colors">FAQ</a>
         </div>
         <div class="flex items-center gap-3">
-          <a href="#pricing" class="bg-indigo-600 hover:bg-indigo-700 text-white text-sm font-semibold px-4 py-2 rounded-lg transition-colors">
+          <a
+            href="#pricing"
+            class="bg-indigo-600 hover:bg-indigo-700 text-white text-sm font-semibold px-4 py-2 rounded-lg transition-colors"
+          >
             Empezar gratis
           </a>
-          <button id="menu-btn" class="sm:hidden p-2 rounded-lg hover:bg-slate-100 transition-colors" aria-label="Menú">
-            <svg id="icon-open"  class="w-5 h-5"        fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/></svg>
-            <svg id="icon-close" class="w-5 h-5 hidden" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/></svg>
+          <button
+            id="menu-btn"
+            class="sm:hidden p-2 rounded-lg hover:bg-slate-100 transition-colors"
+            aria-label="Menú"
+          >
+            <svg
+              id="icon-open"
+              class="w-5 h-5"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+              ><path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M4 6h16M4 12h16M4 18h16"></path></svg
+            >
+            <svg
+              id="icon-close"
+              class="w-5 h-5 hidden"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+              ><path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M6 18L18 6M6 6l12 12"></path></svg
+            >
           </button>
         </div>
       </div>
-      <div id="mobile-menu" class="hidden sm:hidden border-t border-slate-100 bg-white px-6 pb-4">
-        <div class="flex flex-col gap-1 pt-3 text-sm font-medium text-slate-700">
-          <a href="#como-funciona" class="py-2 hover:text-indigo-600 transition-colors" data-mobile-link>Cómo funciona</a>
-          <a href="#features"      class="py-2 hover:text-indigo-600 transition-colors" data-mobile-link>Funciones</a>
-          <a href="#pricing"       class="py-2 hover:text-indigo-600 transition-colors" data-mobile-link>Precio</a>
-          <a href="#faq"           class="py-2 hover:text-indigo-600 transition-colors" data-mobile-link>FAQ</a>
+      <div
+        id="mobile-menu"
+        class="hidden sm:hidden border-t border-slate-100 bg-white px-6 pb-4"
+      >
+        <div
+          class="flex flex-col gap-1 pt-3 text-sm font-medium text-slate-700"
+        >
+          <a
+            href="#como-funciona"
+            class="py-2 hover:text-indigo-600 transition-colors"
+            data-mobile-link>Cómo funciona</a
+          >
+          <a
+            href="#features"
+            class="py-2 hover:text-indigo-600 transition-colors"
+            data-mobile-link>Funciones</a
+          >
+          <a
+            href="#pricing"
+            class="py-2 hover:text-indigo-600 transition-colors"
+            data-mobile-link>Precio</a
+          >
+          <a
+            href="#faq"
+            class="py-2 hover:text-indigo-600 transition-colors"
+            data-mobile-link>FAQ</a
+          >
         </div>
       </div>
     </nav>
@@ -129,24 +247,37 @@ const waSvg = `<svg fill="currentColor" viewBox="0 0 24 24"><path d="M17.472 14.
       <div class="orb orb-3"></div>
 
       <div class="relative z-10 max-w-4xl mx-auto">
-        <div class="hero-fade inline-flex items-center gap-2 bg-indigo-50 border border-indigo-100 text-indigo-700 text-xs font-semibold px-3 py-1.5 rounded-full mb-6" style="animation-delay:0ms">
-          <span class="w-1.5 h-1.5 rounded-full bg-indigo-500 animate-pulse"></span>
+        <div
+          class="hero-fade inline-flex items-center gap-2 bg-indigo-50 border border-indigo-100 text-indigo-700 text-xs font-semibold px-3 py-1.5 rounded-full mb-6"
+          style="animation-delay:0ms"
+        >
+          <span class="w-1.5 h-1.5 rounded-full bg-indigo-500 animate-pulse"
+          ></span>
           15 días gratis · Sin tarjeta de crédito
         </div>
 
-        <h1 class="hero-fade text-5xl sm:text-6xl lg:text-7xl font-black tracking-tight text-slate-900 leading-[1.05] mb-6" style="animation-delay:80ms">
+        <h1
+          class="hero-fade text-5xl sm:text-6xl lg:text-7xl font-black tracking-tight text-slate-900 leading-[1.05] mb-6"
+          style="animation-delay:80ms"
+        >
           El sistema de ventas<br />
           <span class="gradient-text">para tu PyME</span>
         </h1>
 
-        <p class="hero-fade text-lg sm:text-xl text-slate-500 max-w-2xl mx-auto mb-10 leading-relaxed" style="animation-delay:160ms">
-          POS, inventario, clientes y reportes en una sola plataforma. Diseñado para pequeños y medianos negocios que quieren vender más y perder menos tiempo.
+        <p
+          class="hero-fade text-lg sm:text-xl text-slate-500 max-w-2xl mx-auto mb-10 leading-relaxed"
+          style="animation-delay:160ms"
+        >
+          POS, inventario, clientes y reportes en una sola plataforma. Diseñado
+          para pequeños y medianos negocios que quieren vender más y perder
+          menos tiempo.
         </p>
 
-        <div class="hero-fade flex flex-col sm:flex-row gap-3 justify-center" style="animation-delay:240ms">
-          <a href="#pricing" class="cta-primary">
-            Empezar gratis →
-          </a>
+        <div
+          class="hero-fade flex flex-col sm:flex-row gap-3 justify-center"
+          style="animation-delay:240ms"
+        >
+          <a href="#pricing" class="cta-primary"> Empezar gratis → </a>
           <a href={WA_URL} target="_blank" rel="noopener" class="cta-secondary">
             <span class="w-5 h-5 text-green-500" set:html={waSvg} />
             Hablar por WhatsApp
@@ -155,52 +286,81 @@ const waSvg = `<svg fill="currentColor" viewBox="0 0 24 24"><path d="M17.472 14.
       </div>
 
       <!-- Mock UI -->
-      <div class="hero-fade relative z-10 mt-16 max-w-5xl mx-auto" style="animation-delay:320ms">
-        <div class="rounded-2xl border border-slate-200 shadow-2xl shadow-slate-200/60 overflow-hidden bg-white">
-          <div class="flex items-center gap-2 px-4 py-3 bg-slate-50 border-b border-slate-200">
+      <div
+        class="hero-fade relative z-10 mt-16 max-w-5xl mx-auto"
+        style="animation-delay:320ms"
+      >
+        <div
+          class="rounded-2xl border border-slate-200 shadow-2xl shadow-slate-200/60 overflow-hidden bg-white"
+        >
+          <div
+            class="flex items-center gap-2 px-4 py-3 bg-slate-50 border-b border-slate-200"
+          >
             <div class="flex gap-1.5">
               <span class="w-3 h-3 rounded-full bg-red-400"></span>
               <span class="w-3 h-3 rounded-full bg-amber-400"></span>
               <span class="w-3 h-3 rounded-full bg-green-400"></span>
             </div>
-            <div class="flex-1 mx-4 bg-white border border-slate-200 rounded-md px-3 py-1 text-xs text-slate-400 text-center">
-              app.kioskit.com/pos
+            <div
+              class="flex-1 mx-4 bg-white border border-slate-200 rounded-md px-3 py-1 text-xs text-slate-400 text-center"
+            >
+              app.kioskit.space/pos
             </div>
           </div>
           <div class="grid grid-cols-5 h-72 sm:h-96">
             <div class="col-span-3 p-4 border-r border-slate-100">
               <div class="flex gap-2 mb-4">
-                <div class="flex-1 bg-slate-100 rounded-lg h-8 flex items-center px-3">
+                <div
+                  class="flex-1 bg-slate-100 rounded-lg h-8 flex items-center px-3"
+                >
                   <div class="w-3 h-3 rounded-full bg-slate-300 mr-2"></div>
                   <div class="h-2 bg-slate-200 rounded w-1/3"></div>
                 </div>
-                <div class="w-16 bg-indigo-100 rounded-lg h-8 flex items-center justify-center">
+                <div
+                  class="w-16 bg-indigo-100 rounded-lg h-8 flex items-center justify-center"
+                >
                   <div class="h-2 bg-indigo-300 rounded w-8"></div>
                 </div>
               </div>
               <div class="grid grid-cols-3 gap-2">
-                {Array.from({length: 9}).map((_, i) => (
-                  <div class={`rounded-xl p-3 transition-all ${i === 2 ? 'bg-indigo-50 border-2 border-indigo-300 scale-105' : 'bg-slate-50 border border-slate-100'}`}>
-                    <div class={`w-8 h-8 rounded-lg mb-2 ${i === 2 ? 'bg-indigo-200' : 'bg-slate-200'}`}></div>
-                    <div class="h-2 bg-slate-200 rounded w-3/4 mb-1"></div>
-                    <div class={`h-2 rounded w-1/2 ${i === 2 ? 'bg-indigo-200' : 'bg-slate-200'}`}></div>
-                  </div>
-                ))}
+                {
+                  Array.from({ length: 9 }).map((_, i) => (
+                    <div
+                      class={`rounded-xl p-3 transition-all ${i === 2 ? "bg-indigo-50 border-2 border-indigo-300 scale-105" : "bg-slate-50 border border-slate-100"}`}
+                    >
+                      <div
+                        class={`w-8 h-8 rounded-lg mb-2 ${i === 2 ? "bg-indigo-200" : "bg-slate-200"}`}
+                      />
+                      <div class="h-2 bg-slate-200 rounded w-3/4 mb-1" />
+                      <div
+                        class={`h-2 rounded w-1/2 ${i === 2 ? "bg-indigo-200" : "bg-slate-200"}`}
+                      />
+                    </div>
+                  ))
+                }
               </div>
             </div>
             <div class="col-span-2 p-4 flex flex-col">
-              <p class="text-xs font-semibold text-slate-400 mb-3">Venta actual · 3 ítems</p>
+              <p class="text-xs font-semibold text-slate-400 mb-3">
+                Venta actual · 3 ítems
+              </p>
               <div class="space-y-2 flex-1">
-                {['Creatina Landerfit BR', 'Whey ProFit 1kg', 'Omega 3 UniErvas'].map(() => (
-                  <div class="flex items-center gap-2 bg-slate-50 rounded-lg p-2.5">
-                    <div class="w-6 h-6 rounded bg-indigo-100 shrink-0"></div>
-                    <div class="flex-1 min-w-0">
-                      <div class="h-2 bg-slate-300 rounded w-4/5 mb-1"></div>
-                      <div class="h-1.5 bg-slate-200 rounded w-1/2"></div>
+                {
+                  [
+                    "Creatina Landerfit BR",
+                    "Whey ProFit 1kg",
+                    "Omega 3 UniErvas",
+                  ].map(() => (
+                    <div class="flex items-center gap-2 bg-slate-50 rounded-lg p-2.5">
+                      <div class="w-6 h-6 rounded bg-indigo-100 shrink-0" />
+                      <div class="flex-1 min-w-0">
+                        <div class="h-2 bg-slate-300 rounded w-4/5 mb-1" />
+                        <div class="h-1.5 bg-slate-200 rounded w-1/2" />
+                      </div>
+                      <div class="h-2 bg-indigo-300 rounded w-8 shrink-0" />
                     </div>
-                    <div class="h-2 bg-indigo-300 rounded w-8 shrink-0"></div>
-                  </div>
-                ))}
+                  ))
+                }
               </div>
               <div class="mt-4 pt-3 border-t border-slate-100 space-y-2">
                 <div class="flex justify-between text-xs">
@@ -215,7 +375,9 @@ const waSvg = `<svg fill="currentColor" viewBox="0 0 24 24"><path d="M17.472 14.
                   <span class="text-slate-700">Total</span>
                   <span class="text-slate-900">Gs. 557.000</span>
                 </div>
-                <div class="w-full bg-indigo-600 text-white text-xs font-semibold py-2.5 rounded-lg text-center mt-1">
+                <div
+                  class="w-full bg-indigo-600 text-white text-xs font-semibold py-2.5 rounded-lg text-center mt-1"
+                >
                   Finalizar Venta
                 </div>
               </div>
@@ -228,15 +390,33 @@ const waSvg = `<svg fill="currentColor" viewBox="0 0 24 24"><path d="M17.472 14.
     <!-- PARA QUIÉN ES -->
     <section class="py-14 border-y border-slate-100 bg-slate-50/60">
       <div class="max-w-6xl mx-auto px-6">
-        <p class="text-center text-sm text-slate-400 font-medium mb-8" data-animate>KiosKit está hecho para negocios como estos</p>
+        <p
+          class="text-center text-sm text-slate-400 font-medium mb-8"
+          data-animate
+        >
+          KiosKit está hecho para negocios como estos
+        </p>
         <div class="flex flex-wrap justify-center gap-3" data-animate>
-          {['Farmacias', 'Tiendas de ropa', 'Restaurantes', 'Suplementos', 'Minimarkets', 'Peluquerías', 'Ferreterías', 'Papelerías'].map((label) => (
-            <span class="px-4 py-2 bg-white border border-slate-200 rounded-full text-sm font-medium text-slate-600 hover:border-indigo-200 hover:text-indigo-600 hover:bg-indigo-50 transition-all cursor-default">
-              {label}
-            </span>
-          ))}
+          {
+            [
+              "Farmacias",
+              "Tiendas de ropa",
+              "Restaurantes",
+              "Suplementos",
+              "Minimarkets",
+              "Peluquerías",
+              "Ferreterías",
+              "Papelerías",
+            ].map((label) => (
+              <span class="px-4 py-2 bg-white border border-slate-200 rounded-full text-sm font-medium text-slate-600 hover:border-indigo-200 hover:text-indigo-600 hover:bg-indigo-50 transition-all cursor-default">
+                {label}
+              </span>
+            ))
+          }
         </div>
-        <p class="text-center text-xs text-slate-400 mt-6" data-animate>Y cualquier negocio que quiera vender más y ordenarse mejor.</p>
+        <p class="text-center text-xs text-slate-400 mt-6" data-animate>
+          Y cualquier negocio que quiera vender más y ordenarse mejor.
+        </p>
       </div>
     </section>
 
@@ -244,22 +424,40 @@ const waSvg = `<svg fill="currentColor" viewBox="0 0 24 24"><path d="M17.472 14.
     <section id="como-funciona" class="py-24 px-6">
       <div class="max-w-6xl mx-auto">
         <div class="text-center mb-16" data-animate>
-          <p class="text-sm font-semibold text-indigo-600 mb-3 uppercase tracking-wider">Simple de arrancar</p>
-          <h2 class="text-4xl sm:text-5xl font-black text-slate-900 tracking-tight mb-4">
+          <p
+            class="text-sm font-semibold text-indigo-600 mb-3 uppercase tracking-wider"
+          >
+            Simple de arrancar
+          </p>
+          <h2
+            class="text-4xl sm:text-5xl font-black text-slate-900 tracking-tight mb-4"
+          >
             Listo para vender<br />en minutos
           </h2>
-          <p class="text-slate-500 text-lg max-w-xl mx-auto">Sin técnicos, sin instalaciones, sin semanas de configuración.</p>
+          <p class="text-slate-500 text-lg max-w-xl mx-auto">
+            Sin técnicos, sin instalaciones, sin semanas de configuración.
+          </p>
         </div>
         <div class="grid grid-cols-1 sm:grid-cols-3 gap-8">
-          {steps.map((step, i) => (
-            <div class="text-center" data-animate style={`animation-delay:${i * 100}ms`}>
-              <div class="w-16 h-16 rounded-2xl bg-indigo-600 text-white font-black text-xl flex items-center justify-center mx-auto mb-6 shadow-lg shadow-indigo-200">
-                {step.num}
+          {
+            steps.map((step, i) => (
+              <div
+                class="text-center"
+                data-animate
+                style={`animation-delay:${i * 100}ms`}
+              >
+                <div class="w-16 h-16 rounded-2xl bg-indigo-600 text-white font-black text-xl flex items-center justify-center mx-auto mb-6 shadow-lg shadow-indigo-200">
+                  {step.num}
+                </div>
+                <h3 class="font-bold text-slate-900 text-xl mb-3">
+                  {step.title}
+                </h3>
+                <p class="text-slate-500 text-sm leading-relaxed max-w-xs mx-auto">
+                  {step.desc}
+                </p>
               </div>
-              <h3 class="font-bold text-slate-900 text-xl mb-3">{step.title}</h3>
-              <p class="text-slate-500 text-sm leading-relaxed max-w-xs mx-auto">{step.desc}</p>
-            </div>
-          ))}
+            ))
+          }
         </div>
       </div>
     </section>
@@ -268,22 +466,36 @@ const waSvg = `<svg fill="currentColor" viewBox="0 0 24 24"><path d="M17.472 14.
     <section id="features" class="py-24 px-6 bg-slate-50">
       <div class="max-w-6xl mx-auto">
         <div class="text-center mb-16" data-animate>
-          <p class="text-sm font-semibold text-indigo-600 mb-3 uppercase tracking-wider">Todo en uno</p>
-          <h2 class="text-4xl sm:text-5xl font-black text-slate-900 tracking-tight mb-4">
+          <p
+            class="text-sm font-semibold text-indigo-600 mb-3 uppercase tracking-wider"
+          >
+            Todo en uno
+          </p>
+          <h2
+            class="text-4xl sm:text-5xl font-black text-slate-900 tracking-tight mb-4"
+          >
             Herramientas pensadas<br />para PyMEs
           </h2>
-          <p class="text-slate-500 text-lg max-w-xl mx-auto">Sin apps separadas, sin planillas de Excel, sin dolores de cabeza.</p>
+          <p class="text-slate-500 text-lg max-w-xl mx-auto">
+            Sin apps separadas, sin planillas de Excel, sin dolores de cabeza.
+          </p>
         </div>
         <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-          {features.map((f, i) => (
-            <div class="group p-6 rounded-2xl border border-slate-100 bg-white hover:border-indigo-100 hover:shadow-xl hover:shadow-indigo-50 transition-all duration-300 hover:-translate-y-1" data-animate style={`animation-delay:${i * 80}ms`}>
-              <div class="w-11 h-11 rounded-xl bg-indigo-50 text-indigo-600 flex items-center justify-center mb-4 group-hover:bg-indigo-100 group-hover:scale-110 transition-all duration-300 p-2.5">
-                <Fragment set:html={f.svg} />
+          {
+            features.map((f, i) => (
+              <div
+                class="group p-6 rounded-2xl border border-slate-100 bg-white hover:border-indigo-100 hover:shadow-xl hover:shadow-indigo-50 transition-all duration-300 hover:-translate-y-1"
+                data-animate
+                style={`animation-delay:${i * 80}ms`}
+              >
+                <div class="w-11 h-11 rounded-xl bg-indigo-50 text-indigo-600 flex items-center justify-center mb-4 group-hover:bg-indigo-100 group-hover:scale-110 transition-all duration-300 p-2.5">
+                  <Fragment set:html={f.svg} />
+                </div>
+                <h3 class="font-bold text-slate-900 text-lg mb-2">{f.title}</h3>
+                <p class="text-slate-500 text-sm leading-relaxed">{f.desc}</p>
               </div>
-              <h3 class="font-bold text-slate-900 text-lg mb-2">{f.title}</h3>
-              <p class="text-slate-500 text-sm leading-relaxed">{f.desc}</p>
-            </div>
-          ))}
+            ))
+          }
         </div>
       </div>
     </section>
@@ -291,23 +503,51 @@ const waSvg = `<svg fill="currentColor" viewBox="0 0 24 24"><path d="M17.472 14.
     <!-- MIGRACIÓN -->
     <section class="py-24 px-6">
       <div class="max-w-5xl mx-auto">
-        <div class="rounded-3xl bg-white border border-slate-100 shadow-xl p-10 sm:p-14 flex flex-col sm:flex-row items-center gap-10" data-animate>
-          <div class="w-16 h-16 shrink-0 rounded-2xl bg-indigo-50 text-indigo-600 flex items-center justify-center p-3.5">
-            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
-              <path stroke-linecap="round" stroke-linejoin="round" d="M7.5 21 3 16.5m0 0L7.5 12M3 16.5h13.5m0-13.5L21 7.5m0 0L16.5 12M21 7.5H7.5" />
+        <div
+          class="rounded-3xl bg-white border border-slate-100 shadow-xl p-10 sm:p-14 flex flex-col sm:flex-row items-center gap-10"
+          data-animate
+        >
+          <div
+            class="w-16 h-16 shrink-0 rounded-2xl bg-indigo-50 text-indigo-600 flex items-center justify-center p-3.5"
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke-width="1.5"
+              stroke="currentColor"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="M7.5 21 3 16.5m0 0L7.5 12M3 16.5h13.5m0-13.5L21 7.5m0 0L16.5 12M21 7.5H7.5"
+              ></path>
             </svg>
           </div>
           <div class="text-center sm:text-left">
-            <div class="inline-flex items-center gap-2 bg-amber-50 border border-amber-100 text-amber-700 text-xs font-semibold px-3 py-1.5 rounded-full mb-4">
+            <div
+              class="inline-flex items-center gap-2 bg-amber-50 border border-amber-100 text-amber-700 text-xs font-semibold px-3 py-1.5 rounded-full mb-4"
+            >
               ¿Ya usás otro sistema de ventas?
             </div>
-            <h2 class="text-3xl sm:text-4xl font-black text-slate-900 tracking-tight mb-4">
+            <h2
+              class="text-3xl sm:text-4xl font-black text-slate-900 tracking-tight mb-4"
+            >
               Migramos todo por vos
             </h2>
             <p class="text-slate-500 leading-relaxed mb-6 max-w-xl">
-              Cambiar de sistema puede parecer difícil, pero no tiene que serlo. Si tenés tu inventario en Excel, en otra app o en cualquier formato, <strong class="text-slate-700">te ayudamos a importar todo a KiosKit</strong> sin perder nada: productos, variantes, stock y precios.
+              Cambiar de sistema puede parecer difícil, pero no tiene que serlo.
+              Si tenés tu inventario en Excel, en otra app o en cualquier
+              formato, <strong class="text-slate-700"
+                >te ayudamos a importar todo a KiosKit</strong
+              > sin perder nada: productos, variantes, stock y precios.
             </p>
-            <a href={WA_URL} target="_blank" rel="noopener" class="cta-primary inline-flex">
+            <a
+              href={WA_URL}
+              target="_blank"
+              rel="noopener"
+              class="cta-primary inline-flex"
+            >
               <span class="w-5 h-5" set:html={waSvg} />
               Consultanos por WhatsApp
             </a>
@@ -320,23 +560,57 @@ const waSvg = `<svg fill="currentColor" viewBox="0 0 24 24"><path d="M17.472 14.
     <section class="py-24 px-6 bg-slate-50">
       <div class="max-w-6xl mx-auto">
         <div class="text-center mb-16" data-animate>
-          <p class="text-sm font-semibold text-indigo-600 mb-3 uppercase tracking-wider">Roadmap</p>
-          <h2 class="text-4xl sm:text-5xl font-black text-slate-900 tracking-tight mb-4">Lo que se viene</h2>
-          <p class="text-slate-500 text-lg max-w-xl mx-auto">Estamos construyendo KiosKit todos los días.</p>
+          <p
+            class="text-sm font-semibold text-indigo-600 mb-3 uppercase tracking-wider"
+          >
+            Roadmap
+          </p>
+          <h2
+            class="text-4xl sm:text-5xl font-black text-slate-900 tracking-tight mb-4"
+          >
+            Lo que se viene
+          </h2>
+          <p class="text-slate-500 text-lg max-w-xl mx-auto">
+            Estamos construyendo KiosKit todos los días.
+          </p>
         </div>
         <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
-          {roadmap.map((item, i) => (
-            <div class="p-6 rounded-2xl border bg-white transition-all duration-300 hover:-translate-y-1 hover:shadow-lg group" class:list={[item.active ? 'border-indigo-200 hover:shadow-indigo-100' : 'border-slate-100 hover:shadow-slate-100']} data-animate style={`animation-delay:${i * 80}ms`}>
-              <div class="flex items-start justify-between mb-4">
-                <span class="text-2xl font-black" class:list={[item.active ? 'text-indigo-300' : 'text-slate-200']}>{item.num}</span>
-                <span class={`text-xs font-semibold px-2.5 py-1 rounded-full ${item.active ? 'bg-indigo-50 text-indigo-600' : 'bg-slate-100 text-slate-400'}`}>
-                  {item.active ? 'En desarrollo' : 'Próximamente'}
-                </span>
+          {
+            roadmap.map((item, i) => (
+              <div
+                class="p-6 rounded-2xl border bg-white transition-all duration-300 hover:-translate-y-1 hover:shadow-lg group"
+                class:list={[
+                  item.active
+                    ? "border-indigo-200 hover:shadow-indigo-100"
+                    : "border-slate-100 hover:shadow-slate-100",
+                ]}
+                data-animate
+                style={`animation-delay:${i * 80}ms`}
+              >
+                <div class="flex items-start justify-between mb-4">
+                  <span
+                    class="text-2xl font-black"
+                    class:list={[
+                      item.active ? "text-indigo-300" : "text-slate-200",
+                    ]}
+                  >
+                    {item.num}
+                  </span>
+                  <span
+                    class={`text-xs font-semibold px-2.5 py-1 rounded-full ${item.active ? "bg-indigo-50 text-indigo-600" : "bg-slate-100 text-slate-400"}`}
+                  >
+                    {item.active ? "En desarrollo" : "Próximamente"}
+                  </span>
+                </div>
+                <h3 class="font-bold text-slate-900 text-base mb-2">
+                  {item.title}
+                </h3>
+                <p class="text-slate-500 text-sm leading-relaxed">
+                  {item.desc}
+                </p>
               </div>
-              <h3 class="font-bold text-slate-900 text-base mb-2">{item.title}</h3>
-              <p class="text-slate-500 text-sm leading-relaxed">{item.desc}</p>
-            </div>
-          ))}
+            ))
+          }
         </div>
       </div>
     </section>
@@ -345,39 +619,85 @@ const waSvg = `<svg fill="currentColor" viewBox="0 0 24 24"><path d="M17.472 14.
     <section id="pricing" class="py-24 px-6">
       <div class="max-w-6xl mx-auto">
         <div class="text-center mb-16" data-animate>
-          <p class="text-sm font-semibold text-indigo-600 mb-3 uppercase tracking-wider">Precio</p>
-          <h2 class="text-4xl sm:text-5xl font-black text-slate-900 tracking-tight mb-4">Sin letra chica.<br />Sin sorpresas.</h2>
-          <p class="text-slate-500 text-lg">Un plan, todo incluido. Pensado para el bolsillo de una PyME.</p>
+          <p
+            class="text-sm font-semibold text-indigo-600 mb-3 uppercase tracking-wider"
+          >
+            Precio
+          </p>
+          <h2
+            class="text-4xl sm:text-5xl font-black text-slate-900 tracking-tight mb-4"
+          >
+            Sin letra chica.<br />Sin sorpresas.
+          </h2>
+          <p class="text-slate-500 text-lg">
+            Un plan, todo incluido. Pensado para el bolsillo de una PyME.
+          </p>
         </div>
         <div class="max-w-md mx-auto" data-animate>
-          <div class="bg-white rounded-3xl border-2 border-indigo-500 shadow-2xl shadow-indigo-100 p-8 relative">
+          <div
+            class="bg-white rounded-3xl border-2 border-indigo-500 shadow-2xl shadow-indigo-100 p-8 relative"
+          >
             <div class="absolute -top-4 left-1/2 -translate-x-1/2">
-              <span class="bg-indigo-600 text-white text-xs font-bold px-4 py-1.5 rounded-full whitespace-nowrap">
+              <span
+                class="bg-indigo-600 text-white text-xs font-bold px-4 py-1.5 rounded-full whitespace-nowrap"
+              >
                 15 días gratis para empezar
               </span>
             </div>
             <div class="text-center mb-8 pt-2">
-              <p class="text-slate-500 text-sm font-medium mb-2">Plan Completo</p>
+              <p class="text-slate-500 text-sm font-medium mb-2">
+                Plan Completo
+              </p>
               <div class="flex items-end justify-center gap-1">
                 <span class="text-sm text-slate-400 font-medium mb-2">Gs.</span>
-                <span class="text-6xl font-black text-slate-900 tracking-tight">120.000</span>
+                <span class="text-6xl font-black text-slate-900 tracking-tight"
+                  >120.000</span
+                >
               </div>
               <p class="text-slate-400 text-sm mt-1">por mes · por negocio</p>
             </div>
             <ul class="space-y-3 mb-8">
-              {['POS ilimitado', 'Inventario y kardex completo', 'Reportes y métricas', 'Gestión de clientes', 'Tienda virtual incluida', 'Usuarios ilimitados', 'Soporte por WhatsApp', 'Actualizaciones incluidas'].map((item) => (
-                <li class="flex items-center gap-3 text-sm text-slate-700">
-                  <span class="w-5 h-5 rounded-full bg-indigo-50 flex items-center justify-center shrink-0">
-                    <svg class="w-3 h-3 text-indigo-600" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="3"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg>
-                  </span>
-                  {item}
-                </li>
-              ))}
+              {
+                [
+                  "POS ilimitado",
+                  "Inventario y kardex completo",
+                  "Reportes y métricas",
+                  "Gestión de clientes",
+                  "Tienda virtual incluida",
+                  "Usuarios ilimitados",
+                  "Soporte por WhatsApp",
+                  "Actualizaciones incluidas",
+                ].map((item) => (
+                  <li class="flex items-center gap-3 text-sm text-slate-700">
+                    <span class="w-5 h-5 rounded-full bg-indigo-50 flex items-center justify-center shrink-0">
+                      <svg
+                        class="w-3 h-3 text-indigo-600"
+                        fill="none"
+                        viewBox="0 0 24 24"
+                        stroke="currentColor"
+                        stroke-width="3"
+                      >
+                        <path
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          d="M5 13l4 4L19 7"
+                        />
+                      </svg>
+                    </span>
+                    {item}
+                  </li>
+                ))
+              }
             </ul>
-            <a href="https://app.kioskit.com/register" class="block w-full text-center bg-indigo-600 hover:bg-indigo-700 text-white font-bold py-4 rounded-xl transition-all text-base shadow-lg shadow-indigo-200 hover:-translate-y-0.5">
+            <a
+              href="https://app.kioskit.space/register"
+              class="block w-full text-center bg-indigo-600 hover:bg-indigo-700 text-white font-bold py-4 rounded-xl transition-all text-base shadow-lg shadow-indigo-200 hover:-translate-y-0.5"
+            >
               Empezar 15 días gratis →
             </a>
-            <p class="text-center text-xs text-slate-400 mt-3">Sin tarjeta de crédito · Cancelá cuando quieras</p>
+            <p class="text-center text-xs text-slate-400 mt-3">
+              Sin tarjeta de crédito · Cancelá cuando quieras
+            </p>
           </div>
         </div>
       </div>
@@ -387,40 +707,87 @@ const waSvg = `<svg fill="currentColor" viewBox="0 0 24 24"><path d="M17.472 14.
     <section id="faq" class="py-24 px-6 bg-slate-50">
       <div class="max-w-3xl mx-auto">
         <div class="text-center mb-16" data-animate>
-          <p class="text-sm font-semibold text-indigo-600 mb-3 uppercase tracking-wider">FAQ</p>
-          <h2 class="text-4xl sm:text-5xl font-black text-slate-900 tracking-tight">Preguntas frecuentes</h2>
+          <p
+            class="text-sm font-semibold text-indigo-600 mb-3 uppercase tracking-wider"
+          >
+            FAQ
+          </p>
+          <h2
+            class="text-4xl sm:text-5xl font-black text-slate-900 tracking-tight"
+          >
+            Preguntas frecuentes
+          </h2>
         </div>
         <div class="space-y-3">
-          {faqs.map((faq, i) => (
-            <details class="group bg-white border border-slate-100 rounded-2xl overflow-hidden hover:border-indigo-100 transition-colors" data-animate style={`animation-delay:${i * 60}ms`}>
-              <summary class="flex items-center justify-between px-6 py-5 cursor-pointer font-semibold text-slate-900 hover:text-indigo-600 transition-colors list-none">
-                {faq.q}
-                <svg class="w-5 h-5 text-slate-400 shrink-0 group-open:rotate-180 transition-transform duration-300" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
-              </summary>
-              <p class="px-6 pb-5 text-slate-500 text-sm leading-relaxed border-t border-slate-50 pt-3">{faq.a}</p>
-            </details>
-          ))}
+          {
+            faqs.map((faq, i) => (
+              <details
+                class="group bg-white border border-slate-100 rounded-2xl overflow-hidden hover:border-indigo-100 transition-colors"
+                data-animate
+                style={`animation-delay:${i * 60}ms`}
+              >
+                <summary class="flex items-center justify-between px-6 py-5 cursor-pointer font-semibold text-slate-900 hover:text-indigo-600 transition-colors list-none">
+                  {faq.q}
+                  <svg
+                    class="w-5 h-5 text-slate-400 shrink-0 group-open:rotate-180 transition-transform duration-300"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke="currentColor"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                      d="M19 9l-7 7-7-7"
+                    />
+                  </svg>
+                </summary>
+                <p class="px-6 pb-5 text-slate-500 text-sm leading-relaxed border-t border-slate-50 pt-3">
+                  {faq.a}
+                </p>
+              </details>
+            ))
+          }
         </div>
       </div>
     </section>
 
     <!-- CTA FINAL -->
-    <section class="relative py-24 px-6 bg-indigo-600 overflow-hidden" data-animate>
-      <div class="absolute -top-20 -right-20 w-80 h-80 rounded-full bg-white/5"></div>
-      <div class="absolute -bottom-24 -left-24 w-96 h-96 rounded-full bg-white/5"></div>
+    <section
+      class="relative py-24 px-6 bg-indigo-600 overflow-hidden"
+      data-animate
+    >
+      <div class="absolute -top-20 -right-20 w-80 h-80 rounded-full bg-white/5">
+      </div>
+      <div
+        class="absolute -bottom-24 -left-24 w-96 h-96 rounded-full bg-white/5"
+      >
+      </div>
       <div class="relative max-w-3xl mx-auto text-center">
-        <h2 class="text-4xl sm:text-5xl font-black text-white tracking-tight mb-4">
+        <h2
+          class="text-4xl sm:text-5xl font-black text-white tracking-tight mb-4"
+        >
           Tu negocio merece<br />una herramienta mejor
         </h2>
         <p class="text-indigo-200 text-lg mb-10 leading-relaxed">
-          15 días gratis. Sin tarjeta. Sin compromiso.<br class="hidden sm:block" />
+          15 días gratis. Sin tarjeta. Sin compromiso.<br
+            class="hidden sm:block"
+          />
           Empezá hoy y sentí la diferencia desde el primer día.
         </p>
         <div class="flex flex-col sm:flex-row gap-4 justify-center">
-          <a href="https://app.kioskit.com/register" class="inline-block bg-white hover:bg-indigo-50 text-indigo-700 font-bold px-10 py-4 rounded-xl text-base transition-all shadow-lg hover:-translate-y-0.5">
+          <a
+            href="https://app.kioskit.space/register"
+            class="inline-block bg-white hover:bg-indigo-50 text-indigo-700 font-bold px-10 py-4 rounded-xl text-base transition-all shadow-lg hover:-translate-y-0.5"
+          >
             Crear mi cuenta gratis →
           </a>
-          <a href={WA_URL} target="_blank" rel="noopener" class="inline-flex items-center justify-center gap-2 bg-transparent hover:bg-white/10 text-white border border-white/30 font-semibold px-8 py-4 rounded-xl text-base transition-colors">
+          <a
+            href={WA_URL}
+            target="_blank"
+            rel="noopener"
+            class="inline-flex items-center justify-center gap-2 bg-transparent hover:bg-white/10 text-white border border-white/30 font-semibold px-8 py-4 rounded-xl text-base transition-colors"
+          >
             <span class="w-5 h-5" set:html={waSvg} />
             Hablar por WhatsApp
           </a>
@@ -430,24 +797,38 @@ const waSvg = `<svg fill="currentColor" viewBox="0 0 24 24"><path d="M17.472 14.
 
     <!-- FOOTER -->
     <footer class="border-t border-slate-100 py-8 px-6">
-      <div class="max-w-6xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-4 text-sm text-slate-400">
+      <div
+        class="max-w-6xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-4 text-sm text-slate-400"
+      >
         <span class="font-bold text-indigo-600 text-lg">KiosKit</span>
-        <p>© {new Date().getFullYear()} KiosKit · Hecho con dedicación en Paraguay</p>
+        <p>
+          © {new Date().getFullYear()} KiosKit · Hecho con dedicación en Paraguay
+        </p>
         <div class="flex gap-6">
-          <a href="#" class="hover:text-slate-600 transition-colors">Términos</a>
-          <a href="#" class="hover:text-slate-600 transition-colors">Privacidad</a>
+          <a href="#" class="hover:text-slate-600 transition-colors">Términos</a
+          >
+          <a href="#" class="hover:text-slate-600 transition-colors"
+            >Privacidad</a
+          >
         </div>
       </div>
     </footer>
 
     <!-- FLOATING WHATSAPP -->
-    <a href={WA_URL} target="_blank" rel="noopener" class="fixed bottom-6 right-6 z-50 w-14 h-14 bg-green-500 hover:bg-green-600 text-white rounded-full shadow-xl shadow-green-200 flex items-center justify-center transition-all hover:scale-110 group" aria-label="WhatsApp">
+    <a
+      href={WA_URL}
+      target="_blank"
+      rel="noopener"
+      class="fixed bottom-6 right-6 z-50 w-14 h-14 bg-green-500 hover:bg-green-600 text-white rounded-full shadow-xl shadow-green-200 flex items-center justify-center transition-all hover:scale-110 group"
+      aria-label="WhatsApp"
+    >
       <span class="w-7 h-7" set:html={waSvg} />
-      <span class="absolute right-16 bg-slate-900 text-white text-xs font-medium px-3 py-1.5 rounded-lg whitespace-nowrap opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none">
+      <span
+        class="absolute right-16 bg-slate-900 text-white text-xs font-medium px-3 py-1.5 rounded-lg whitespace-nowrap opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none"
+      >
         ¿Tenés dudas? Escribinos
       </span>
     </a>
-
   </body>
 </html>
 
@@ -461,45 +842,70 @@ const waSvg = `<svg fill="currentColor" viewBox="0 0 24 24"><path d="M17.472 14.
     z-index: 0;
   }
   .orb-1 {
-    width: 600px; height: 600px;
+    width: 600px;
+    height: 600px;
     background: radial-gradient(circle, #a5b4fc 0%, transparent 70%);
-    top: -200px; left: -150px;
+    top: -200px;
+    left: -150px;
     animation: drift1 12s ease-in-out infinite;
     opacity: 0.45;
   }
   .orb-2 {
-    width: 500px; height: 500px;
+    width: 500px;
+    height: 500px;
     background: radial-gradient(circle, #c7d2fe 0%, transparent 70%);
-    top: -100px; right: -100px;
+    top: -100px;
+    right: -100px;
     animation: drift2 15s ease-in-out infinite;
     opacity: 0.35;
   }
   .orb-3 {
-    width: 400px; height: 400px;
+    width: 400px;
+    height: 400px;
     background: radial-gradient(circle, #e0e7ff 0%, transparent 70%);
-    bottom: 0; left: 40%;
+    bottom: 0;
+    left: 40%;
     animation: drift3 18s ease-in-out infinite;
     opacity: 0.3;
   }
 
   @keyframes drift1 {
-    0%, 100% { transform: translate(0, 0) scale(1); }
-    33%       { transform: translate(40px, -30px) scale(1.06); }
-    66%       { transform: translate(-25px, 20px) scale(0.96); }
+    0%,
+    100% {
+      transform: translate(0, 0) scale(1);
+    }
+    33% {
+      transform: translate(40px, -30px) scale(1.06);
+    }
+    66% {
+      transform: translate(-25px, 20px) scale(0.96);
+    }
   }
   @keyframes drift2 {
-    0%, 100% { transform: translate(0, 0) scale(1); }
-    40%       { transform: translate(-35px, 25px) scale(1.04); }
-    70%       { transform: translate(20px, -15px) scale(0.97); }
+    0%,
+    100% {
+      transform: translate(0, 0) scale(1);
+    }
+    40% {
+      transform: translate(-35px, 25px) scale(1.04);
+    }
+    70% {
+      transform: translate(20px, -15px) scale(0.97);
+    }
   }
   @keyframes drift3 {
-    0%, 100% { transform: translate(0, 0) scale(1); }
-    50%       { transform: translate(20px, -30px) scale(1.08); }
+    0%,
+    100% {
+      transform: translate(0, 0) scale(1);
+    }
+    50% {
+      transform: translate(20px, -30px) scale(1.08);
+    }
   }
 
   /* ── Texto con gradiente animado ── */
   .gradient-text {
-    background: linear-gradient(135deg, #4F46E5, #7C3AED, #6366F1, #4F46E5);
+    background: linear-gradient(135deg, #4f46e5, #7c3aed, #6366f1, #4f46e5);
     background-size: 300% 300%;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
@@ -507,9 +913,15 @@ const waSvg = `<svg fill="currentColor" viewBox="0 0 24 24"><path d="M17.472 14.
     animation: gradientShift 6s ease infinite;
   }
   @keyframes gradientShift {
-    0%   { background-position: 0% 50%; }
-    50%  { background-position: 100% 50%; }
-    100% { background-position: 0% 50%; }
+    0% {
+      background-position: 0% 50%;
+    }
+    50% {
+      background-position: 100% 50%;
+    }
+    100% {
+      background-position: 0% 50%;
+    }
   }
 
   /* ── CTAs ── */
@@ -517,7 +929,7 @@ const waSvg = `<svg fill="currentColor" viewBox="0 0 24 24"><path d="M17.472 14.
     display: inline-flex;
     align-items: center;
     gap: 0.5rem;
-    background: #4F46E5;
+    background: #4f46e5;
     color: white;
     font-weight: 700;
     font-size: 1rem;
@@ -527,7 +939,7 @@ const waSvg = `<svg fill="currentColor" viewBox="0 0 24 24"><path d="M17.472 14.
     box-shadow: 0 8px 24px -4px #a5b4fc;
   }
   .cta-primary:hover {
-    background: #4338CA;
+    background: #4338ca;
     transform: translateY(-2px);
     box-shadow: 0 12px 28px -4px #a5b4fc;
   }
@@ -552,18 +964,26 @@ const waSvg = `<svg fill="currentColor" viewBox="0 0 24 24"><path d="M17.472 14.
 
   /* ── Animaciones del hero (carga inicial) ── */
   .hero-fade {
-    animation: heroFadeUp 0.7s cubic-bezier(.22,.68,0,1.2) both;
+    animation: heroFadeUp 0.7s cubic-bezier(0.22, 0.68, 0, 1.2) both;
   }
   @keyframes heroFadeUp {
-    from { opacity: 0; transform: translateY(28px); }
-    to   { opacity: 1; transform: translateY(0); }
+    from {
+      opacity: 0;
+      transform: translateY(28px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
   }
 
   /* ── Animaciones de scroll ── */
   [data-animate] {
     opacity: 0;
     transform: translateY(32px);
-    transition: opacity 0.65s cubic-bezier(.22,.68,0,1.1), transform 0.65s cubic-bezier(.22,.68,0,1.1);
+    transition:
+      opacity 0.65s cubic-bezier(0.22, 0.68, 0, 1.1),
+      transform 0.65s cubic-bezier(0.22, 0.68, 0, 1.1);
   }
   [data-animate].in-view {
     opacity: 1;
@@ -573,39 +993,45 @@ const waSvg = `<svg fill="currentColor" viewBox="0 0 24 24"><path d="M17.472 14.
 
 <script>
   // Mobile menu
-  const btn = document.getElementById('menu-btn')
-  const menu = document.getElementById('mobile-menu')
-  const iconOpen = document.getElementById('icon-open')
-  const iconClose = document.getElementById('icon-close')
-  btn?.addEventListener('click', () => {
-    const isOpen = !menu?.classList.contains('hidden')
-    menu?.classList.toggle('hidden', isOpen)
-    iconOpen?.classList.toggle('hidden', !isOpen)
-    iconClose?.classList.toggle('hidden', isOpen)
-  })
-  document.querySelectorAll('[data-mobile-link]').forEach(link => {
-    link.addEventListener('click', () => {
-      menu?.classList.add('hidden')
-      iconOpen?.classList.remove('hidden')
-      iconClose?.classList.add('hidden')
-    })
-  })
+  const btn = document.getElementById("menu-btn");
+  const menu = document.getElementById("mobile-menu");
+  const iconOpen = document.getElementById("icon-open");
+  const iconClose = document.getElementById("icon-close");
+  btn?.addEventListener("click", () => {
+    const isOpen = !menu?.classList.contains("hidden");
+    menu?.classList.toggle("hidden", isOpen);
+    iconOpen?.classList.toggle("hidden", !isOpen);
+    iconClose?.classList.toggle("hidden", isOpen);
+  });
+  document.querySelectorAll("[data-mobile-link]").forEach((link) => {
+    link.addEventListener("click", () => {
+      menu?.classList.add("hidden");
+      iconOpen?.classList.remove("hidden");
+      iconClose?.classList.add("hidden");
+    });
+  });
 
   // Scroll animations
   const observer = new IntersectionObserver(
-    (entries) => entries.forEach(e => {
-      if (e.isIntersecting) {
-        // Respect animation-delay set inline
-        const delay = (e.target as HTMLElement).style.animationDelay
-        if (delay) {
-          setTimeout(() => e.target.classList.add('in-view'), parseFloat(delay) || 0)
-        } else {
-          e.target.classList.add('in-view')
+    (entries) =>
+      entries.forEach((e) => {
+        if (e.isIntersecting) {
+          // Respect animation-delay set inline
+          const delay = (e.target as HTMLElement).style.animationDelay;
+          if (delay) {
+            setTimeout(
+              () => e.target.classList.add("in-view"),
+              parseFloat(delay) || 0,
+            );
+          } else {
+            e.target.classList.add("in-view");
+          }
+          observer.unobserve(e.target);
         }
-        observer.unobserve(e.target)
-      }
-    }),
-    { threshold: 0.08, rootMargin: '0px 0px -40px 0px' }
-  )
-  document.querySelectorAll('[data-animate]').forEach(el => observer.observe(el))
+      }),
+    { threshold: 0.08, rootMargin: "0px 0px -40px 0px" },
+  );
+  document
+    .querySelectorAll("[data-animate]")
+    .forEach((el) => observer.observe(el));
 </script>
