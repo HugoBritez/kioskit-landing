@@ -60,37 +60,134 @@ const roadmap = [
     num: "01",
     title: "App nativa Android & iOS",
     desc: "Velocidad nativa, notificaciones push y funcionalidades exclusivas para móvil.",
-    active: true,
+    status: "active",
   },
   {
     num: "02",
-    title: "Facturación electrónica",
-    desc: "Integración con SIFEN para emitir facturas timbradas directamente desde el sistema.",
-    active: false,
+    title: "App desktop nativa",
+    desc: "Versión nativa para Windows y Mac con acceso offline y mayor rendimiento.",
+    status: "active",
   },
   {
     num: "03",
-    title: "Multi-sucursal",
-    desc: "Manejá varios locales desde una sola cuenta con inventarios independientes.",
-    active: false,
+    title: "Facturación electrónica",
+    desc: "Integración con SIFEN para emitir facturas timbradas directamente desde el sistema.",
+    status: "soon",
   },
   {
     num: "04",
-    title: "Pagos digitales",
-    desc: "Integración con Bancard y PagoExpress para cobrar con QR y tarjetas sin fricción.",
-    active: false,
+    title: "Ventas a crédito y cobros",
+    desc: "Registrá ventas fiadas, controlá saldos pendientes y gestioná cobros con recordatorios automáticos.",
+    status: "soon",
   },
   {
     num: "05",
-    title: "Fidelización de clientes",
-    desc: "Sistema de puntos y descuentos automáticos para recompensar a tus clientes frecuentes.",
-    active: false,
+    title: "Módulo para prestadores de servicio",
+    desc: "Presupuestos, órdenes de trabajo y agenda de turnos para peluquerías, talleres y servicios.",
+    status: "soon",
   },
   {
     num: "06",
-    title: "Módulo de caja",
-    desc: "Apertura y cierre de caja, arqueo y control de turnos para tu equipo.",
-    active: false,
+    title: "Multi-sucursal",
+    desc: "Manejá varios locales desde una sola cuenta con inventarios independientes.",
+    status: "soon",
+  },
+  {
+    num: "07",
+    title: "Pagos digitales",
+    desc: "Integración con Bancard y PagoExpress para cobrar con QR y tarjetas sin fricción.",
+    status: "planned",
+  },
+  {
+    num: "08",
+    title: "Fidelización de clientes",
+    desc: "Sistema de puntos y descuentos automáticos para recompensar a tus clientes frecuentes.",
+    status: "planned",
+  },
+  {
+    num: "09",
+    title: "Logística y delivery",
+    desc: "Gestión de envíos, seguimiento de pedidos y coordinación de deliveries desde el sistema.",
+    status: "planned",
+  },
+  {
+    num: "10",
+    title: "Agente de WhatsApp con IA",
+    desc: "Un agente inteligente con todo el contexto de tu negocio: responde consultas, toma pedidos y avisa sobre stock.",
+    status: "planned",
+  },
+  {
+    num: "11",
+    title: "Reportes y analítica con IA",
+    desc: "Predicciones de demanda, análisis de márgenes y recomendaciones automáticas para mejorar tu negocio.",
+    status: "planned",
+  },
+];
+
+const esParaVos = [
+  "Perdés tiempo buscando precios en planillas de Excel",
+  "No sabés con exactitud cuánto stock te queda de cada producto",
+  "Tus vendedores anotan las ventas en un cuaderno o papel",
+  "Tardás horas en armar el cierre de caja del día",
+  "No podés ver las métricas de tu negocio en tiempo real",
+  "Querés que tu equipo venda sin depender de vos en todo momento",
+  "Tenés productos con variantes y el control se te complica",
+  "Usás WhatsApp para recibir pedidos y se mezcla con lo personal",
+];
+
+const comparacion = [
+  {
+    tema: "Buscar un producto",
+    sin: "Ctrl+F en planilla, a veces no aparece",
+    con: "Búsqueda instantánea por nombre o código",
+  },
+  {
+    tema: "Control de stock",
+    sin: "Manual, se desactualiza con cada venta",
+    con: "Automático en tiempo real con cada movimiento",
+  },
+  {
+    tema: "Cierre de caja",
+    sin: "Contar billetes y calcular a mano",
+    con: "Un clic, el sistema ya tiene todo calculado",
+  },
+  {
+    tema: "Reportes de ventas",
+    sin: "Armar tablas manualmente, horas de trabajo",
+    con: "Dashboard actualizado al instante",
+  },
+  {
+    tema: "Trabajo en equipo",
+    sin: "Un solo archivo compartido, versiones distintas",
+    con: "Múltiples usuarios con roles y permisos",
+  },
+  {
+    tema: "Acceso desde el celular",
+    sin: "Difícil o imposible en tiempo real",
+    con: "Funciona en cualquier dispositivo",
+  },
+];
+
+const confianza = [
+  {
+    title: "Backups automáticos",
+    desc: "Tus datos se guardan automáticamente. Nunca perdés información por un error humano o técnico.",
+    svg: `<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M20.25 6.375c0 2.278-3.694 4.125-8.25 4.125S3.75 8.653 3.75 6.375m16.5 0c0-2.278-3.694-4.125-8.25-4.125S3.75 4.097 3.75 6.375m16.5 0v11.25c0 2.278-3.694 4.125-8.25 4.125s-8.25-1.847-8.25-4.125V6.375m16.5 2.25c0 2.278-3.694 4.125-8.25 4.125s-8.25-1.847-8.25-4.125m16.5 2.25c0 2.278-3.694 4.125-8.25 4.125s-8.25-1.847-8.25-4.125" /></svg>`,
+  },
+  {
+    title: "Sin contrato de permanencia",
+    desc: "Pagás mes a mes. Si no te convence, cancelás cuando querés. Sin multas ni letras chicas.",
+    svg: `<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12.75 11.25 15 15 9.75M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z" /></svg>`,
+  },
+  {
+    title: "Soporte humano real",
+    desc: "Respondemos por WhatsApp en horario comercial. Sin chatbots, sin tickets, sin esperas eternas.",
+    svg: `<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M8.625 12a.375.375 0 1 1-.75 0 .375.375 0 0 1 .75 0Zm0 0H8.25m4.125 0a.375.375 0 1 1-.75 0 .375.375 0 0 1 .75 0Zm0 0H12m4.125 0a.375.375 0 1 1-.75 0 .375.375 0 0 1 .75 0Zm0 0h-.375M21 12c0 4.556-4.03 8.25-9 8.25a9.764 9.764 0 0 1-2.555-.337A5.972 5.972 0 0 1 5.41 20.97a5.969 5.969 0 0 1-.474-.065 4.48 4.48 0 0 0 .978-2.025c.09-.457-.133-.901-.467-1.226C3.93 16.178 3 14.189 3 12c0-4.556 4.03-8.25 9-8.25s9 3.694 9 8.25Z" /></svg>`,
+  },
+  {
+    title: "Tus datos son tuyos",
+    desc: "Tu información nunca se comparte con terceros. Vos sos el dueño de todos los datos de tu negocio.",
+    svg: `<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M16.5 10.5V6.75a4.5 4.5 0 1 0-9 0v3.75m-.75 11.25h10.5a2.25 2.25 0 0 0 2.25-2.25v-6.75a2.25 2.25 0 0 0-2.25-2.25H6.75a2.25 2.25 0 0 0-2.25 2.25v6.75a2.25 2.25 0 0 0 2.25 2.25Z" /></svg>`,
   },
 ];
 
@@ -119,6 +216,27 @@ const faqs = [
     q: "¿Mis datos están seguros?",
     a: "Tus datos se almacenan con backups automáticos. Nunca compartimos tu información con terceros.",
   },
+];
+
+const registroStep1 = [
+  "Nombre del negocio y URL único",
+  "Datos del administrador",
+  "Contraseña con guía en tiempo real",
+  "Sin tarjeta de crédito requerida",
+];
+
+const registroStep2 = [
+  "Email de verificación automático",
+  "Link válido por 24 horas",
+  "Un clic para activar la cuenta",
+  "Podés reenviar si no llegó",
+];
+
+const registroStep3 = [
+  "Roles Admin, Manager y Vendedor ya creados",
+  "Cargá productos y categorías al instante",
+  "POS listo para cobrar desde el primer día",
+  "Invitá a tu equipo en segundos",
 ];
 
 const waSvg = `<svg fill="currentColor" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>`;
@@ -420,6 +538,76 @@ const waSvg = `<svg fill="currentColor" viewBox="0 0 24 24"><path d="M17.472 14.
       </div>
     </section>
 
+    <!-- ES PARA VOS -->
+    <section class="py-24 px-6">
+      <div class="max-w-5xl mx-auto">
+        <div class="text-center mb-14" data-animate>
+          <p
+            class="text-sm font-semibold text-indigo-600 mb-3 uppercase tracking-wider"
+          >
+            ¿Es para vos?
+          </p>
+          <h2
+            class="text-4xl sm:text-5xl font-black text-slate-900 tracking-tight mb-4"
+          >
+            Si esto te suena<br />familiar...
+          </h2>
+          <p class="text-slate-500 text-lg max-w-xl mx-auto">
+            Muchos negocios conviven con estos problemas sin darse cuenta de
+            cuánto tiempo y dinero pierden cada día.
+          </p>
+        </div>
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 mb-12">
+          {
+            esParaVos.map((item, i) => (
+              <div
+                class="flex items-start gap-3 bg-white border border-slate-100 rounded-xl p-4 hover:border-red-100 hover:bg-red-50/20 transition-all"
+                data-animate
+                style={`animation-delay:${i * 60}ms`}
+              >
+                <span class="w-5 h-5 rounded-full bg-red-50 border border-red-100 flex items-center justify-center shrink-0 mt-0.5">
+                  <svg
+                    class="w-2.5 h-2.5 text-red-400"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke="currentColor"
+                    stroke-width="3"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      d="M6 18L18 6M6 6l12 12"
+                    />
+                  </svg>
+                </span>
+                <span class="text-sm text-slate-600 leading-relaxed">
+                  {item}
+                </span>
+              </div>
+            ))
+          }
+        </div>
+        <div
+          class="bg-indigo-600 rounded-3xl p-8 sm:p-10 text-center"
+          data-animate
+        >
+          <p class="text-white font-black text-2xl sm:text-3xl mb-2">
+            KiosKit es para vos
+          </p>
+          <p class="text-indigo-200 mb-7 leading-relaxed max-w-md mx-auto">
+            Si reconocés 2 o más puntos, tu negocio está listo para dar el
+            salto. Empezá gratis hoy, sin tarjeta.
+          </p>
+          <a
+            href="https://app.kioskit.space/register"
+            class="inline-block bg-white hover:bg-indigo-50 text-indigo-700 font-bold px-8 py-3.5 rounded-xl transition-colors shadow-lg"
+          >
+            Empezar 15 días gratis →
+          </a>
+        </div>
+      </div>
+    </section>
+
     <!-- CÓMO FUNCIONA -->
     <section id="como-funciona" class="py-24 px-6">
       <div class="max-w-6xl mx-auto">
@@ -462,6 +650,510 @@ const waSvg = `<svg fill="currentColor" viewBox="0 0 24 24"><path d="M17.472 14.
       </div>
     </section>
 
+    <!-- REGISTRO FLOW -->
+    <section id="registro" class="py-24 px-6 bg-slate-50">
+      <div class="max-w-6xl mx-auto">
+        <div class="text-center mb-20" data-animate>
+          <p
+            class="text-sm font-semibold text-indigo-600 mb-3 uppercase tracking-wider"
+          >
+            Cómo registrarse
+          </p>
+          <h2
+            class="text-4xl sm:text-5xl font-black text-slate-900 tracking-tight mb-4"
+          >
+            De cero a vender<br />en 3 minutos
+          </h2>
+          <p class="text-slate-500 text-lg max-w-xl mx-auto">
+            Sin técnicos, sin papeles. Completás el formulario y en minutos
+            tenés tu sistema listo.
+          </p>
+        </div>
+
+        <div class="space-y-20 lg:space-y-28">
+          <!-- Paso 1: Formulario -->
+          <div
+            class="flex flex-col sm:flex-row items-center gap-10 lg:gap-16"
+            data-animate
+          >
+            <!-- Mock: form (aparece primero en mobile) -->
+            <div class="flex-1 w-full sm:max-w-md">
+              <div
+                class="rounded-2xl border border-slate-200 shadow-2xl shadow-slate-200/50 overflow-hidden bg-white"
+              >
+                <div
+                  class="flex items-center gap-2 px-4 py-3 bg-slate-50 border-b border-slate-200"
+                >
+                  <div class="flex gap-1.5">
+                    <span class="w-3 h-3 rounded-full bg-red-400"></span>
+                    <span class="w-3 h-3 rounded-full bg-amber-400"></span>
+                    <span class="w-3 h-3 rounded-full bg-green-400"></span>
+                  </div>
+                  <div
+                    class="flex-1 mx-3 bg-white border border-slate-200 rounded-md px-3 py-1 text-xs text-slate-400 text-center"
+                  >
+                    app.kioskit.space/register
+                  </div>
+                </div>
+                <div class="p-6">
+                  <p class="font-bold text-slate-900 text-lg mb-0.5">
+                    Crear cuenta
+                  </p>
+                  <p class="text-slate-400 text-xs mb-5">
+                    15 días gratis · Sin tarjeta de crédito
+                  </p>
+                  <div class="space-y-3">
+                    <div>
+                      <p class="text-xs text-slate-500 mb-1 font-medium">
+                        Nombre del negocio
+                      </p>
+                      <div
+                        class="flex items-center bg-indigo-50 border border-indigo-300 rounded-lg px-3 py-2.5"
+                      >
+                        <span class="text-xs text-indigo-600 font-medium"
+                          >Farmacia Central</span
+                        >
+                      </div>
+                    </div>
+                    <div class="grid grid-cols-2 gap-2">
+                      <div>
+                        <p class="text-xs text-slate-500 mb-1 font-medium">
+                          Tu nombre
+                        </p>
+                        <div
+                          class="flex items-center bg-slate-50 border border-slate-200 rounded-lg px-3 py-2.5"
+                        >
+                          <span class="text-xs text-slate-500">Juan Pérez</span>
+                        </div>
+                      </div>
+                      <div>
+                        <p class="text-xs text-slate-500 mb-1 font-medium">
+                          Email
+                        </p>
+                        <div
+                          class="flex items-center bg-slate-50 border border-slate-200 rounded-lg px-3 py-2.5"
+                        >
+                          <span class="text-xs text-slate-400 truncate"
+                            >admin@far…</span
+                          >
+                        </div>
+                      </div>
+                    </div>
+                    <div>
+                      <p class="text-xs text-slate-500 mb-1 font-medium">
+                        Contraseña
+                      </p>
+                      <div
+                        class="flex items-center bg-slate-50 border border-slate-200 rounded-lg px-3 py-2.5 gap-1"
+                      >
+                        {
+                          Array.from({ length: 10 }).map(() => (
+                            <span class="w-1.5 h-1.5 bg-slate-400 rounded-full inline-block" />
+                          ))
+                        }
+                      </div>
+                      <div class="mt-2 grid grid-cols-2 gap-x-2 gap-y-1">
+                        {
+                          [
+                            "10+ caracteres",
+                            "Mayúscula",
+                            "Minúscula",
+                            "Número",
+                          ].map((r) => (
+                            <div class="flex items-center gap-1 text-xs text-green-600 font-medium">
+                              <svg
+                                class="w-3 h-3 shrink-0"
+                                fill="none"
+                                viewBox="0 0 24 24"
+                                stroke="currentColor"
+                                stroke-width="3"
+                              >
+                                <path
+                                  stroke-linecap="round"
+                                  stroke-linejoin="round"
+                                  d="M5 13l4 4L19 7"
+                                />
+                              </svg>
+                              {r}
+                            </div>
+                          ))
+                        }
+                      </div>
+                    </div>
+                    <div
+                      class="w-full bg-indigo-600 rounded-xl py-2.5 text-center"
+                    >
+                      <span class="text-white text-xs font-semibold"
+                        >Crear mi cuenta gratis →</span
+                      >
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- Texto -->
+            <div class="flex-1 sm:max-w-sm">
+              <div class="flex items-center gap-3 mb-5">
+                <span
+                  class="w-10 h-10 rounded-xl bg-indigo-600 text-white font-black text-base flex items-center justify-center shadow-lg shadow-indigo-200"
+                  >1</span
+                >
+                <span
+                  class="text-xs font-semibold text-indigo-500 uppercase tracking-wider"
+                  >Menos de 1 minuto</span
+                >
+              </div>
+              <h3
+                class="text-2xl sm:text-3xl font-black text-slate-900 tracking-tight mb-3"
+              >
+                Completá el formulario
+              </h3>
+              <p
+                class="text-slate-500 leading-relaxed mb-5 text-sm sm:text-base"
+              >
+                Solo el nombre de tu negocio, tu nombre, tu email y una
+                contraseña. Sin documentación ni procesos complicados.
+              </p>
+              <ul class="space-y-2.5">
+                {
+                  registroStep1.map((item) => (
+                    <li class="flex items-center gap-2.5 text-sm text-slate-600">
+                      <span class="w-5 h-5 rounded-full bg-indigo-50 flex items-center justify-center shrink-0">
+                        <svg
+                          class="w-3 h-3 text-indigo-600"
+                          fill="none"
+                          viewBox="0 0 24 24"
+                          stroke="currentColor"
+                          stroke-width="3"
+                        >
+                          <path
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            d="M5 13l4 4L19 7"
+                          />
+                        </svg>
+                      </span>
+                      {item}
+                    </li>
+                  ))
+                }
+              </ul>
+            </div>
+          </div>
+
+          <!-- Paso 2: Verificación email -->
+          <div
+            class="flex flex-col sm:flex-row-reverse items-center gap-10 lg:gap-16"
+            data-animate
+          >
+            <!-- Mock: email verification (aparece primero en mobile) -->
+            <div class="flex-1 w-full sm:max-w-md">
+              <div
+                class="rounded-2xl border border-slate-200 shadow-2xl shadow-slate-200/50 overflow-hidden bg-white"
+              >
+                <div
+                  class="flex items-center gap-2 px-4 py-3 bg-slate-50 border-b border-slate-200"
+                >
+                  <div class="flex gap-1.5">
+                    <span class="w-3 h-3 rounded-full bg-red-400"></span>
+                    <span class="w-3 h-3 rounded-full bg-amber-400"></span>
+                    <span class="w-3 h-3 rounded-full bg-green-400"></span>
+                  </div>
+                  <div
+                    class="flex-1 mx-3 bg-white border border-slate-200 rounded-md px-3 py-1 text-xs text-slate-400 text-center"
+                  >
+                    app.kioskit.space/register
+                  </div>
+                </div>
+                <div class="p-6 sm:p-8 text-center">
+                  <div
+                    class="w-16 h-16 rounded-2xl bg-indigo-50 flex items-center justify-center mx-auto mb-4"
+                  >
+                    <svg
+                      class="w-8 h-8 text-indigo-600"
+                      fill="none"
+                      viewBox="0 0 24 24"
+                      stroke-width="1.5"
+                      stroke="currentColor"
+                    >
+                      <path
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        d="M21.75 6.75v10.5a2.25 2.25 0 0 1-2.25 2.25h-15a2.25 2.25 0 0 1-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0 0 19.5 4.5h-15a2.25 2.25 0 0 0-2.25 2.25m19.5 0v.243a2.25 2.25 0 0 1-1.07 1.916l-7.5 4.615a2.25 2.25 0 0 1-2.36 0L3.32 8.91a2.25 2.25 0 0 1-1.07-1.916V6.75"
+                      ></path>
+                    </svg>
+                  </div>
+                  <p class="font-bold text-slate-900 text-lg mb-1">
+                    ¡Revisá tu email!
+                  </p>
+                  <p class="text-slate-400 text-xs mb-5 leading-relaxed">
+                    Te enviamos un link a <span
+                      class="font-semibold text-slate-600"
+                      >admin@farmacia.com</span
+                    >
+                  </p>
+                  <div
+                    class="bg-slate-50 rounded-xl p-4 border border-slate-100 text-left"
+                  >
+                    <div
+                      class="flex items-center gap-2.5 mb-3 pb-3 border-b border-slate-100"
+                    >
+                      <div
+                        class="w-8 h-8 rounded-full bg-indigo-600 flex items-center justify-center text-white text-xs font-black shrink-0"
+                      >
+                        K
+                      </div>
+                      <div class="flex-1 min-w-0">
+                        <p class="text-xs font-semibold text-slate-700">
+                          KiosKit
+                        </p>
+                        <p class="text-xs text-slate-400 truncate">
+                          no-reply@kioskit.space
+                        </p>
+                      </div>
+                      <span class="text-xs text-slate-400 shrink-0">ahora</span>
+                    </div>
+                    <p class="text-xs font-semibold text-slate-700 mb-2">
+                      Verificá tu cuenta de KiosKit
+                    </p>
+                    <div class="space-y-1.5 mb-3">
+                      <div class="h-1.5 bg-slate-200 rounded w-full"></div>
+                      <div class="h-1.5 bg-slate-200 rounded w-4/5"></div>
+                    </div>
+                    <div class="bg-indigo-600 rounded-lg py-2 text-center">
+                      <span class="text-white text-xs font-semibold"
+                        >Verificar mi cuenta →</span
+                      >
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- Texto -->
+            <div class="flex-1 sm:max-w-sm">
+              <div class="flex items-center gap-3 mb-5">
+                <span
+                  class="w-10 h-10 rounded-xl bg-indigo-600 text-white font-black text-base flex items-center justify-center shadow-lg shadow-indigo-200"
+                  >2</span
+                >
+                <span
+                  class="text-xs font-semibold text-indigo-500 uppercase tracking-wider"
+                  >Segundos</span
+                >
+              </div>
+              <h3
+                class="text-2xl sm:text-3xl font-black text-slate-900 tracking-tight mb-3"
+              >
+                Verificá tu email
+              </h3>
+              <p
+                class="text-slate-500 leading-relaxed mb-5 text-sm sm:text-base"
+              >
+                Te enviamos un correo de confirmación al instante. Un clic y tu
+                cuenta queda activada.
+              </p>
+              <ul class="space-y-2.5">
+                {
+                  registroStep2.map((item) => (
+                    <li class="flex items-center gap-2.5 text-sm text-slate-600">
+                      <span class="w-5 h-5 rounded-full bg-indigo-50 flex items-center justify-center shrink-0">
+                        <svg
+                          class="w-3 h-3 text-indigo-600"
+                          fill="none"
+                          viewBox="0 0 24 24"
+                          stroke="currentColor"
+                          stroke-width="3"
+                        >
+                          <path
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            d="M5 13l4 4L19 7"
+                          />
+                        </svg>
+                      </span>
+                      {item}
+                    </li>
+                  ))
+                }
+              </ul>
+            </div>
+          </div>
+
+          <!-- Paso 3: Sistema listo -->
+          <div
+            class="flex flex-col sm:flex-row items-center gap-10 lg:gap-16"
+            data-animate
+          >
+            <!-- Mock: Dashboard (aparece primero en mobile) -->
+            <div class="flex-1 w-full sm:max-w-md">
+              <div
+                class="rounded-2xl border border-slate-200 shadow-2xl shadow-slate-200/50 overflow-hidden bg-white"
+              >
+                <div
+                  class="flex items-center gap-2 px-4 py-3 bg-slate-50 border-b border-slate-200"
+                >
+                  <div class="flex gap-1.5">
+                    <span class="w-3 h-3 rounded-full bg-red-400"></span>
+                    <span class="w-3 h-3 rounded-full bg-amber-400"></span>
+                    <span class="w-3 h-3 rounded-full bg-green-400"></span>
+                  </div>
+                  <div
+                    class="flex-1 mx-3 bg-white border border-slate-200 rounded-md px-3 py-1 text-xs text-slate-400 text-center"
+                  >
+                    app.kioskit.space/dashboard
+                  </div>
+                </div>
+                <div class="flex h-72 sm:h-80">
+                  <!-- Sidebar -->
+                  <div
+                    class="w-14 bg-slate-900 flex flex-col items-center py-4 gap-2.5 shrink-0"
+                  >
+                    <div
+                      class="w-8 h-8 rounded-lg bg-indigo-500 flex items-center justify-center text-white text-xs font-black mb-1"
+                    >
+                      K
+                    </div>
+                    {
+                      [true, false, false, false, false].map((active) => (
+                        <div
+                          class={`w-8 h-8 rounded-lg flex items-center justify-center ${active ? "bg-indigo-600" : "bg-white/5"}`}
+                        >
+                          <div class="w-3.5 h-3.5 rounded bg-white/30" />
+                        </div>
+                      ))
+                    }
+                  </div>
+                  <!-- Content -->
+                  <div class="flex-1 p-4 overflow-hidden">
+                    <div class="flex items-center justify-between mb-4">
+                      <div>
+                        <div
+                          class="h-2.5 bg-slate-800 rounded-sm w-28 mb-1.5"
+                        ></div>
+                        <div class="h-1.5 bg-slate-200 rounded-sm w-20"></div>
+                      </div>
+                      <div
+                        class="w-8 h-8 rounded-full bg-indigo-100 flex items-center justify-center text-xs font-bold text-indigo-600"
+                      >
+                        JP
+                      </div>
+                    </div>
+                    <div class="grid grid-cols-2 gap-2 mb-3">
+                      {
+                        [
+                          {
+                            label: "Ventas hoy",
+                            value: "Gs. 450K",
+                            trend: "+12%",
+                          },
+                          { label: "Órdenes", value: "23", trend: "+5" },
+                        ].map((kpi) => (
+                          <div class="bg-slate-50 rounded-xl p-3 border border-slate-100">
+                            <p class="text-xs text-slate-400 mb-1">
+                              {kpi.label}
+                            </p>
+                            <p class="font-bold text-slate-900 text-sm">
+                              {kpi.value}
+                            </p>
+                            <p class="text-xs font-medium text-green-500 mt-0.5">
+                              {kpi.trend}
+                            </p>
+                          </div>
+                        ))
+                      }
+                    </div>
+                    <div
+                      class="bg-slate-50 rounded-xl p-3 border border-slate-100 mb-3"
+                    >
+                      <p class="text-xs text-slate-400 mb-2">
+                        Ventas últimos 7 días
+                      </p>
+                      <div class="flex items-end gap-1 h-10">
+                        {
+                          [40, 65, 45, 80, 55, 70, 90].map((h, i) => (
+                            <div
+                              class={`flex-1 rounded-sm ${i === 6 ? "bg-indigo-500" : "bg-slate-200"}`}
+                              style={`height:${h}%`}
+                            />
+                          ))
+                        }
+                      </div>
+                    </div>
+                    <div class="grid grid-cols-3 gap-2">
+                      {
+                        ["POS", "Inventario", "Clientes"].map((label, i) => (
+                          <div
+                            class={`rounded-lg py-2 text-center text-xs font-semibold ${i === 0 ? "bg-indigo-600 text-white" : "bg-slate-100 text-slate-500"}`}
+                          >
+                            {label}
+                          </div>
+                        ))
+                      }
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- Texto -->
+            <div class="flex-1 sm:max-w-sm">
+              <div class="flex items-center gap-3 mb-5">
+                <span
+                  class="w-10 h-10 rounded-xl bg-indigo-600 text-white font-black text-base flex items-center justify-center shadow-lg shadow-indigo-200"
+                  >3</span
+                >
+                <span
+                  class="text-xs font-semibold text-indigo-500 uppercase tracking-wider"
+                  >Tu sistema listo</span
+                >
+              </div>
+              <h3
+                class="text-2xl sm:text-3xl font-black text-slate-900 tracking-tight mb-3"
+              >
+                Ingresá y empezá
+              </h3>
+              <p
+                class="text-slate-500 leading-relaxed mb-5 text-sm sm:text-base"
+              >
+                Tu negocio ya tiene su propio sistema. Roles configurados,
+                inventario listo para cargar, POS listo para vender desde el
+                primer día.
+              </p>
+              <ul class="space-y-2.5 mb-8">
+                {
+                  registroStep3.map((item) => (
+                    <li class="flex items-center gap-2.5 text-sm text-slate-600">
+                      <span class="w-5 h-5 rounded-full bg-indigo-50 flex items-center justify-center shrink-0">
+                        <svg
+                          class="w-3 h-3 text-indigo-600"
+                          fill="none"
+                          viewBox="0 0 24 24"
+                          stroke="currentColor"
+                          stroke-width="3"
+                        >
+                          <path
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            d="M5 13l4 4L19 7"
+                          />
+                        </svg>
+                      </span>
+                      {item}
+                    </li>
+                  ))
+                }
+              </ul>
+              <a
+                href="https://app.kioskit.space/register"
+                class="cta-primary inline-flex"
+              >
+                Crear mi cuenta gratis →
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
     <!-- FEATURES -->
     <section id="features" class="py-24 px-6 bg-slate-50">
       <div class="max-w-6xl mx-auto">
@@ -493,6 +1185,137 @@ const waSvg = `<svg fill="currentColor" viewBox="0 0 24 24"><path d="M17.472 14.
                 </div>
                 <h3 class="font-bold text-slate-900 text-lg mb-2">{f.title}</h3>
                 <p class="text-slate-500 text-sm leading-relaxed">{f.desc}</p>
+              </div>
+            ))
+          }
+        </div>
+      </div>
+    </section>
+
+    <!-- COMPARACIÓN VS EXCEL -->
+    <section class="py-24 px-6">
+      <div class="max-w-5xl mx-auto">
+        <div class="text-center mb-16" data-animate>
+          <p
+            class="text-sm font-semibold text-indigo-600 mb-3 uppercase tracking-wider"
+          >
+            La diferencia
+          </p>
+          <h2
+            class="text-4xl sm:text-5xl font-black text-slate-900 tracking-tight mb-4"
+          >
+            KiosKit vs<br />como lo hacés hoy
+          </h2>
+          <p class="text-slate-500 text-lg max-w-xl mx-auto">
+            El Excel fue un gran invento. Pero no fue diseñado para gestionar un
+            negocio en tiempo real.
+          </p>
+        </div>
+        <div
+          class="rounded-2xl border border-slate-200 overflow-hidden bg-white shadow-xl shadow-slate-100/80"
+          data-animate
+        >
+          <!-- Header -->
+          <div class="grid grid-cols-3 border-b border-slate-200">
+            <div
+              class="p-4 sm:p-5 text-xs font-semibold text-slate-400 uppercase tracking-wider flex items-center"
+            >
+            </div>
+            <div
+              class="p-4 sm:p-5 bg-red-50/60 border-x border-slate-200 text-center flex items-center justify-center gap-2"
+            >
+              <span
+                class="w-4 h-4 rounded-full bg-red-100 flex items-center justify-center shrink-0"
+              >
+                <svg
+                  class="w-2.5 h-2.5 text-red-400"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                  stroke-width="3"
+                  ><path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    d="M6 18L18 6M6 6l12 12"></path></svg
+                >
+              </span>
+              <span class="text-xs font-bold text-red-400 uppercase tracking-wider"
+                >Sin KiosKit</span
+              >
+            </div>
+            <div
+              class="p-4 sm:p-5 bg-indigo-50/60 text-center flex items-center justify-center gap-2"
+            >
+              <span
+                class="w-4 h-4 rounded-full bg-indigo-100 flex items-center justify-center shrink-0"
+              >
+                <svg
+                  class="w-2.5 h-2.5 text-indigo-600"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                  stroke-width="3"
+                  ><path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    d="M5 13l4 4L19 7"></path></svg
+                >
+              </span>
+              <span
+                class="text-xs font-bold text-indigo-600 uppercase tracking-wider"
+                >Con KiosKit</span
+              >
+            </div>
+          </div>
+          <!-- Rows -->
+          {
+            comparacion.map((row, i) => (
+              <div
+                class={`grid grid-cols-3 border-b border-slate-100 last:border-0 ${i % 2 !== 0 ? "bg-slate-50/40" : ""}`}
+              >
+                <div class="p-4 sm:p-5 text-xs sm:text-sm font-semibold text-slate-700 flex items-center">
+                  {row.tema}
+                </div>
+                <div class="p-4 sm:p-5 border-x border-slate-100 bg-red-50/20 flex items-start gap-2">
+                  <span class="w-4 h-4 rounded-full bg-red-100 flex items-center justify-center shrink-0 mt-0.5">
+                    <svg
+                      class="w-2.5 h-2.5 text-red-400"
+                      fill="none"
+                      viewBox="0 0 24 24"
+                      stroke="currentColor"
+                      stroke-width="3"
+                    >
+                      <path
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        d="M6 18L18 6M6 6l12 12"
+                      />
+                    </svg>
+                  </span>
+                  <span class="text-xs text-slate-500 leading-relaxed">
+                    {row.sin}
+                  </span>
+                </div>
+                <div class="p-4 sm:p-5 bg-indigo-50/20 flex items-start gap-2">
+                  <span class="w-4 h-4 rounded-full bg-indigo-100 flex items-center justify-center shrink-0 mt-0.5">
+                    <svg
+                      class="w-2.5 h-2.5 text-indigo-600"
+                      fill="none"
+                      viewBox="0 0 24 24"
+                      stroke="currentColor"
+                      stroke-width="3"
+                    >
+                      <path
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        d="M5 13l4 4L19 7"
+                      />
+                    </svg>
+                  </span>
+                  <span class="text-xs sm:text-sm text-slate-700 font-medium leading-relaxed">
+                    {row.con}
+                  </span>
+                </div>
               </div>
             ))
           }
@@ -574,32 +1397,64 @@ const waSvg = `<svg fill="currentColor" viewBox="0 0 24 24"><path d="M17.472 14.
             Estamos construyendo KiosKit todos los días.
           </p>
         </div>
+        <!-- Leyenda de estados -->
+        <div
+          class="flex flex-wrap justify-center gap-4 mb-10"
+          data-animate
+        >
+          {
+            [
+              { label: "En desarrollo", color: "bg-indigo-50 text-indigo-600 border-indigo-100" },
+              { label: "Próximamente", color: "bg-slate-100 text-slate-500 border-slate-200" },
+              { label: "En planificación", color: "bg-amber-50 text-amber-600 border-amber-100" },
+            ].map((s) => (
+              <span class={`inline-flex items-center gap-1.5 text-xs font-semibold px-3 py-1.5 rounded-full border ${s.color}`}>
+                <span class="w-1.5 h-1.5 rounded-full bg-current" />
+                {s.label}
+              </span>
+            ))
+          }
+        </div>
         <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
           {
             roadmap.map((item, i) => (
               <div
-                class="p-6 rounded-2xl border bg-white transition-all duration-300 hover:-translate-y-1 hover:shadow-lg group"
-                class:list={[
-                  item.active
+                class={`p-6 rounded-2xl border bg-white transition-all duration-300 hover:-translate-y-1 hover:shadow-lg group ${
+                  item.status === "active"
                     ? "border-indigo-200 hover:shadow-indigo-100"
-                    : "border-slate-100 hover:shadow-slate-100",
-                ]}
+                    : item.status === "planned"
+                      ? "border-amber-100 hover:shadow-amber-50"
+                      : "border-slate-100 hover:shadow-slate-100"
+                }`}
                 data-animate
-                style={`animation-delay:${i * 80}ms`}
+                style={`animation-delay:${i * 60}ms`}
               >
                 <div class="flex items-start justify-between mb-4">
                   <span
-                    class="text-2xl font-black"
-                    class:list={[
-                      item.active ? "text-indigo-300" : "text-slate-200",
-                    ]}
+                    class={`text-2xl font-black ${
+                      item.status === "active"
+                        ? "text-indigo-300"
+                        : item.status === "planned"
+                          ? "text-amber-200"
+                          : "text-slate-200"
+                    }`}
                   >
                     {item.num}
                   </span>
                   <span
-                    class={`text-xs font-semibold px-2.5 py-1 rounded-full ${item.active ? "bg-indigo-50 text-indigo-600" : "bg-slate-100 text-slate-400"}`}
+                    class={`text-xs font-semibold px-2.5 py-1 rounded-full ${
+                      item.status === "active"
+                        ? "bg-indigo-50 text-indigo-600"
+                        : item.status === "planned"
+                          ? "bg-amber-50 text-amber-600"
+                          : "bg-slate-100 text-slate-400"
+                    }`}
                   >
-                    {item.active ? "En desarrollo" : "Próximamente"}
+                    {item.status === "active"
+                      ? "En desarrollo"
+                      : item.status === "planned"
+                        ? "En planificación"
+                        : "Próximamente"}
                   </span>
                 </div>
                 <h3 class="font-bold text-slate-900 text-base mb-2">
@@ -608,6 +1463,48 @@ const waSvg = `<svg fill="currentColor" viewBox="0 0 24 24"><path d="M17.472 14.
                 <p class="text-slate-500 text-sm leading-relaxed">
                   {item.desc}
                 </p>
+              </div>
+            ))
+          }
+        </div>
+      </div>
+    </section>
+
+    <!-- CONFIANZA -->
+    <section class="py-24 px-6">
+      <div class="max-w-5xl mx-auto">
+        <div class="text-center mb-16" data-animate>
+          <p
+            class="text-sm font-semibold text-indigo-600 mb-3 uppercase tracking-wider"
+          >
+            Tranquilidad
+          </p>
+          <h2
+            class="text-4xl sm:text-5xl font-black text-slate-900 tracking-tight mb-4"
+          >
+            Tu negocio,<br />en buenas manos
+          </h2>
+          <p class="text-slate-500 text-lg max-w-xl mx-auto">
+            Sin letra chica, sin sorpresas, sin contratos trampa.
+          </p>
+        </div>
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-5">
+          {
+            confianza.map((item, i) => (
+              <div
+                class="flex gap-4 p-6 rounded-2xl bg-white border border-slate-100 hover:border-indigo-100 hover:shadow-xl hover:shadow-indigo-50 transition-all duration-300 hover:-translate-y-1"
+                data-animate
+                style={`animation-delay:${i * 80}ms`}
+              >
+                <div class="w-11 h-11 rounded-xl bg-indigo-50 text-indigo-600 flex items-center justify-center shrink-0 p-2.5">
+                  <Fragment set:html={item.svg} />
+                </div>
+                <div>
+                  <h3 class="font-bold text-slate-900 mb-1">{item.title}</h3>
+                  <p class="text-slate-500 text-sm leading-relaxed">
+                    {item.desc}
+                  </p>
+                </div>
               </div>
             ))
           }
