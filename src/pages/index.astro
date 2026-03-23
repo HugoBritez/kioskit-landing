@@ -1027,9 +1027,8 @@ const waSvg = `<svg fill="currentColor" viewBox="0 0 24 24"><path d="M17.472 14.
                   <div class="flex-1 p-4 overflow-hidden">
                     <div class="flex items-center justify-between mb-4">
                       <div>
-                        <div
-                          class="h-2.5 bg-slate-800 rounded-sm w-28 mb-1.5"
-                        ></div>
+                        <div class="h-2.5 bg-slate-800 rounded-sm w-28 mb-1.5">
+                        </div>
                         <div class="h-1.5 bg-slate-200 rounded-sm w-20"></div>
                       </div>
                       <div
@@ -1239,7 +1238,8 @@ const waSvg = `<svg fill="currentColor" viewBox="0 0 24 24"><path d="M17.472 14.
                     d="M6 18L18 6M6 6l12 12"></path></svg
                 >
               </span>
-              <span class="text-xs font-bold text-red-400 uppercase tracking-wider"
+              <span
+                class="text-xs font-bold text-red-400 uppercase tracking-wider"
                 >Sin KiosKit</span
               >
             </div>
@@ -1398,17 +1398,25 @@ const waSvg = `<svg fill="currentColor" viewBox="0 0 24 24"><path d="M17.472 14.
           </p>
         </div>
         <!-- Leyenda de estados -->
-        <div
-          class="flex flex-wrap justify-center gap-4 mb-10"
-          data-animate
-        >
+        <div class="flex flex-wrap justify-center gap-4 mb-10" data-animate>
           {
             [
-              { label: "En desarrollo", color: "bg-indigo-50 text-indigo-600 border-indigo-100" },
-              { label: "Próximamente", color: "bg-slate-100 text-slate-500 border-slate-200" },
-              { label: "En planificación", color: "bg-amber-50 text-amber-600 border-amber-100" },
+              {
+                label: "En desarrollo",
+                color: "bg-indigo-50 text-indigo-600 border-indigo-100",
+              },
+              {
+                label: "Próximamente",
+                color: "bg-slate-100 text-slate-500 border-slate-200",
+              },
+              {
+                label: "En planificación",
+                color: "bg-amber-50 text-amber-600 border-amber-100",
+              },
             ].map((s) => (
-              <span class={`inline-flex items-center gap-1.5 text-xs font-semibold px-3 py-1.5 rounded-full border ${s.color}`}>
+              <span
+                class={`inline-flex items-center gap-1.5 text-xs font-semibold px-3 py-1.5 rounded-full border ${s.color}`}
+              >
                 <span class="w-1.5 h-1.5 rounded-full bg-current" />
                 {s.label}
               </span>
