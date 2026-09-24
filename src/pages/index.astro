@@ -18,7 +18,7 @@ const faqs = [
   },
   {
     q: "¿KiosKit sirve solamente para tiendas?",
-    a: "Hoy está especialmente preparado para comercios y retail. La plataforma seguirá creciendo para acompañar también a servicios, gastronomía y otras formas de emprender.",
+    a: "No. KiosKit ya trae todo lo necesario para operar un comercio y también se adapta a otras formas de trabajar. Le contás qué necesitás registrar y te ayuda a preparar un espacio para reparaciones, reservas, proyectos, mascotas o el flujo propio de tu negocio.",
   },
 ];
 ---
@@ -65,6 +65,7 @@ const faqs = [
           <a href="#producto">Producto</a>
           <a href="#inteligencia">Inteligencia</a>
           <a href="#catalogo">Catálogo</a>
+          <a href="#adaptable">A tu medida</a>
           <a href="#precio">Precio</a>
         </nav>
 
@@ -80,6 +81,7 @@ const faqs = [
         <a href="#producto">Producto</a>
         <a href="#inteligencia">Inteligencia</a>
         <a href="#catalogo">Catálogo</a>
+        <a href="#adaptable">A tu medida</a>
         <a href="#precio">Precio</a>
         <a href={LOGIN_URL}>Iniciar sesión</a>
         <a class="button" href={REGISTER_URL}>Crear cuenta</a>
@@ -242,6 +244,68 @@ const faqs = [
               <article><img class="store-product" src="/storefront/agua.png" alt="Botella de agua mineral" loading="lazy" /><small>Bebidas</small><b>Agua mineral 500 ml</b><span>Gs. 5.000 <em>＋</em></span></article>
             </div>
           </div>
+        </div>
+      </section>
+
+      <section class="adaptable section" id="adaptable">
+        <div class="shell adaptable-heading" data-reveal>
+          <div>
+            <p class="adaptable-kicker">Hecho para tu forma de trabajar</p>
+            <h2>KiosKit se adapta a tu negocio.<br /><em>No al revés.</em></h2>
+          </div>
+          <p>
+            Le contás cómo funciona tu negocio y KiosKit prepara lo que necesitás para
+            organizarlo. Sin empezar de cero, sin planillas raras y sin aprender a configurar
+            un sistema.
+          </p>
+        </div>
+
+        <div class="shell adaptable-demo" data-reveal>
+          <div class="adaptable-request">
+            <div class="adaptable-step"><span>1</span><p><b>Contale qué hacés</b><small>Como se lo explicarías a una persona.</small></p></div>
+            <div class="request-bubble">
+              <span>Vos</span>
+              <p>“Reparo celulares. Necesito registrar el equipo, el problema, quién lo atiende y los repuestos que uso.”</p>
+            </div>
+            <div class="request-note"><i>✦</i><p><b>KiosKit entiende tu forma de trabajar</b><small>Y aprovecha los clientes, productos y cobros que ya tenés.</small></p></div>
+          </div>
+
+          <div class="adaptable-flow" aria-hidden="true"><span>→</span></div>
+
+          <div class="adaptable-result">
+            <div class="adaptable-step"><span>2</span><p><b>Empezá a usarlo</b><small>KiosKit deja tu espacio listo.</small></p></div>
+            <div class="custom-workspace">
+              <header>
+                <div><i>✓</i><p><small>Nuevo espacio creado</small><b>Reparaciones</b></p></div>
+                <span>＋ Nueva reparación</span>
+              </header>
+              <div class="workspace-body">
+                <div class="repair-main">
+                  <div class="repair-title"><p><small>REPARACIÓN #024</small><b>Samsung Galaxy A54</b></p><span>En diagnóstico</span></div>
+                  <div class="repair-fields">
+                    <p><small>Cliente</small><b>Camila Benítez</b></p>
+                    <p><small>IMEI</small><b>3596 1428 7631</b></p>
+                    <p><small>Problema</small><b>No enciende</b></p>
+                    <p><small>Técnico</small><b>Diego R.</b></p>
+                  </div>
+                </div>
+                <aside>
+                  <small>Todo queda conectado</small>
+                  <p><i>◎</i><span><b>Cliente</b><small>Camila Benítez</small></span></p>
+                  <p><i>◇</i><span><b>Repuestos</b><small>2 productos usados</small></span></p>
+                  <p><i>₲</i><span><b>Cobro</b><small>Pendiente</small></span></p>
+                </aside>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="shell adaptable-examples" data-reveal>
+          <span>También se adapta a</span>
+          <p>Turnos y reservas</p>
+          <p>Mascotas y consultas</p>
+          <p>Proyectos y entregas</p>
+          <p>El flujo propio de tu negocio</p>
         </div>
       </section>
 
