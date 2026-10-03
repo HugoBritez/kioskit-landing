@@ -1,408 +1,311 @@
 ---
-import "../styles/global.css";
+import '../styles/global.css';
 
-const APP_URL = "https://app.kioskit.space";
-const REGISTER_URL = `${APP_URL}/register`;
-const LOGIN_URL = `${APP_URL}/login`;
-const WA_NUMBER = "595982373124";
-const WA_URL = `https://wa.me/${WA_NUMBER}?text=Hola%2C%20quiero%20saber%20m%C3%A1s%20sobre%20KiosKit`;
+const registerUrl = 'https://platform.kioskit.space/register';
+const whatsappUrl = 'https://wa.me/595982373124?text=Hola%2C%20quiero%20saber%20m%C3%A1s%20sobre%20Kioskit';
+const siteUrl = 'https://kioskit.space/';
+const pageTitle = 'Kioskit | Sistema de gestión para emprendedores';
+const pageDescription = 'Gestioná ventas, compras, stock y dinero con Kioskit. Adaptá el sistema a tu negocio y apoyate en Kiosquito para resolver tareas con IA.';
 
-const faqs = [
-  {
-    q: "¿Necesito instalar algo?",
-    a: "No. KiosKit funciona desde el navegador en computadora, tablet o celular. Creás tu cuenta y podés empezar a ordenar tu operación.",
-  },
-  {
-    q: "¿Puedo probarlo antes de pagar?",
-    a: "Sí. Tenés 15 días para probar la experiencia completa de KiosKit, sin tarjeta. Después, hay un único plan de Gs. 150.000 al mes por negocio.",
-  },
-  {
-    q: "¿KiosKit sirve solamente para tiendas?",
-    a: "No. KiosKit ya trae todo lo necesario para operar un comercio y también se adapta a otras formas de trabajar. Le contás qué necesitás registrar y te ayuda a preparar un espacio para reparaciones, reservas, proyectos, mascotas o el flujo propio de tu negocio.",
-  },
+const structuredData = {
+  '@context': 'https://schema.org',
+  '@graph': [
+    {
+      '@type': 'Organization',
+      '@id': `${siteUrl}#organization`,
+      name: 'Kioskit',
+      url: siteUrl,
+    },
+    {
+      '@type': 'WebSite',
+      '@id': `${siteUrl}#website`,
+      name: 'Kioskit',
+      url: siteUrl,
+      inLanguage: 'es-PY',
+      publisher: { '@id': `${siteUrl}#organization` },
+    },
+    {
+      '@type': 'WebApplication',
+      '@id': `${siteUrl}#app`,
+      name: 'Kioskit',
+      url: siteUrl,
+      description: pageDescription,
+      applicationCategory: 'BusinessApplication',
+      operatingSystem: 'Web',
+      inLanguage: 'es-PY',
+      publisher: { '@id': `${siteUrl}#organization` },
+      offers: {
+        '@type': 'Offer',
+        price: '150000',
+        priceCurrency: 'PYG',
+        description: 'Suscripción mensual',
+        url: `${siteUrl}#empezar`,
+      },
+    },
+  ],
+};
+
+const modules = [
+  { title: 'Ventas', description: 'Registrá y cobrá.', icon: 'ventas' },
+  { title: 'Compras', description: 'Mercadería, pagos y deudas.', icon: 'compras' },
+  { title: 'Inventario', description: 'Stock y movimientos.', icon: 'inventario' },
+  { title: 'Dinero', description: 'Ingresos, gastos y saldos.', icon: 'dinero' },
+  { title: 'Clientes y proveedores', description: 'Tus contactos y operaciones, en orden.', icon: 'personas' },
+  { title: 'Tienda online', description: 'Publicá tu catálogo y recibí pedidos.', icon: 'tienda' },
+];
+
+const problemSteps = [
+  { desktop: '/design/venta-pensando-desktop.webp', mobile: '/design/venta-pensando-mobile.webp', label: 'Kiosquito ayuda a preparar una nueva venta' },
+  { desktop: '/design/venta-registrando-desktop.webp', mobile: '/design/venta-registrando-mobile.webp', label: 'Kiosquito registra los datos de la venta' },
+  { desktop: '/design/venta-confirmada-desktop.webp', mobile: '/design/venta-confirmada-mobile.webp', label: 'La venta queda registrada y confirmada' },
 ];
 ---
 
 <!doctype html>
-<html lang="es">
+<html lang="es-PY">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width" />
-    <meta
-      name="description"
-      content="KiosKit reúne ventas, inventario y la operación diaria de tu negocio en una herramienta simple, rápida y hecha para crecer con vos."
-    />
-    <meta name="theme-color" content="#4f46e5" />
-    <link rel="canonical" href="https://kioskit.space/" />
-    <meta property="og:title" content="KiosKit — Tu negocio, bajo control" />
-    <meta
-      property="og:description"
-      content="Capacidades grandes, sin la complejidad de una empresa grande."
-    />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#F7F7FB" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="description" content={pageDescription} />
+    <link rel="canonical" href={siteUrl} />
     <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="Kioskit" />
+    <meta property="og:title" content={pageTitle} />
+    <meta property="og:description" content={pageDescription} />
+    <meta property="og:image" content="https://kioskit.space/og-kiosquito.png" />
+    <meta property="og:image:type" content="image/png" />
+    <meta property="og:image:width" content="1734" />
+    <meta property="og:image:height" content="907" />
+    <meta property="og:image:alt" content="Kiosquito saluda junto al nombre Kioskit y la frase Un sistema que sigue el ritmo de tu negocio" />
     <meta property="og:url" content="https://kioskit.space/" />
     <meta property="og:locale" content="es_PY" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content={pageTitle} />
+    <meta name="twitter:description" content={pageDescription} />
+    <meta name="twitter:image" content="https://kioskit.space/og-kiosquito.png" />
+    <script type="application/ld+json" set:html={JSON.stringify(structuredData)} />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600;700&display=swap"
-      rel="stylesheet"
-    />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-    <link rel="alternate icon" href="/favicon.ico" />
-    <title>KiosKit — Tu negocio, bajo control</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+    <title>{pageTitle}</title>
   </head>
   <body>
     <a class="skip-link" href="#contenido">Saltar al contenido</a>
-    <header class="site-header" data-header>
-      <div class="shell header-inner">
-        <a href="#inicio" class="brand" aria-label="KiosKit, inicio">
-          <span class="brand-mark" aria-hidden="true">K</span>
-          <span>KiosKit</span>
-        </a>
-
-        <nav class="desktop-nav" aria-label="Navegación principal">
-          <a href="#producto">Producto</a>
-          <a href="#inteligencia">Inteligencia</a>
-          <a href="#catalogo">Catálogo</a>
-          <a href="#adaptable">A tu medida</a>
-          <a href="#precio">Precio</a>
-        </nav>
-
-        <div class="header-actions">
-          <a class="login-link" href={LOGIN_URL}>Iniciar sesión</a>
-          <a class="button button-small" href={REGISTER_URL}>Crear cuenta</a>
-          <button class="menu-button" type="button" aria-label="Abrir menú" aria-expanded="false" data-menu-button>
-            <span></span><span></span>
-          </button>
-        </div>
-      </div>
-      <nav class="mobile-nav" aria-label="Navegación móvil" data-mobile-menu>
-        <a href="#producto">Producto</a>
-        <a href="#inteligencia">Inteligencia</a>
-        <a href="#catalogo">Catálogo</a>
-        <a href="#adaptable">A tu medida</a>
-        <a href="#precio">Precio</a>
-        <a href={LOGIN_URL}>Iniciar sesión</a>
-        <a class="button" href={REGISTER_URL}>Crear cuenta</a>
-      </nav>
-    </header>
-
     <main id="contenido">
-      <section class="hero" id="inicio">
-        <div class="hero-grid" aria-hidden="true"></div>
-        <div class="shell hero-copy" data-reveal>
-          <p class="eyebrow"><span></span> Hecho para negocios que no paran</p>
-          <h1>Capacidades grandes.<br /><em>Sin la complejidad</em><br />de una empresa grande.</h1>
-          <p class="hero-lead">
-            KiosKit reúne ventas, inventario y el día a día de tu negocio en una herramienta
-            simple, con un copiloto que entiende lo que necesitás hacer.
-          </p>
-          <div class="hero-actions">
-            <a class="button" href={REGISTER_URL}>Crear mi cuenta <span aria-hidden="true">↗</span></a>
-            <a class="text-link" href={WA_URL} target="_blank" rel="noreferrer">Quiero saber más <span aria-hidden="true">→</span></a>
+      <section class="hero" aria-labelledby="hero-title">
+        <div class="container hero-inner">
+          <div class="hero-copy">
+            <p class="eyebrow">Sistema de gestión para emprendedores</p>
+            <h1 id="hero-title">Emprender ya es bastante. Kioskit te da una mano.</h1>
+            <p class="hero-description">La herramienta para llevar tu emprendimiento que podés adaptar a tu forma de trabajar, mientras entendés qué está pasando y decidís qué hacer después.</p>
+            <div class="button-row">
+              <a class="button button-primary" href={registerUrl}>Empezar con Kioskit</a>
+              <a class="button button-secondary" href="#problema">Ver cómo funciona</a>
+            </div>
           </div>
-          <p class="trial-note">15 días con todo incluido · Sin tarjeta · Gs. 150.000 / mes</p>
-        </div>
-
-        <div class="shell product-stage" id="producto" data-reveal>
-          <div class="browser-frame">
-            <div class="browser-bar">
-              <div class="browser-dots"><i></i><i></i><i></i></div>
-              <span>app.kioskit.space</span>
-              <b>Seguro</b>
-            </div>
-            <div class="dashboard-mock" role="img" aria-label="Nuevo panel de KiosKit con copiloto, métricas y movimientos recientes">
-              <aside class="mock-sidebar">
-                <div class="mock-logo"><span>◆</span> KiosKit</div>
-                <div class="mock-business"><i>AF</i><p><b>Almacén Ferreira</b><small>Negocio principal</small></p><span>⌄</span></div>
-                <nav>
-                  <b><span>⌂</span> Inicio</b>
-                  <span><i>▣</i> POS</span>
-                  <span><i>▤</i> Ventas</span>
-                  <span><i>◇</i> Productos</span>
-                  <span><i>⇄</i> Inventario</span>
-                  <span><i>◎</i> Clientes</span>
-                </nav>
-                <div class="mock-help"><b>✦ ¿Necesitás una mano?</b><span>Preguntale a tu copiloto.</span></div>
-              </aside>
-              <div class="mock-workspace">
-                <div class="mock-topbar"><b>Inicio</b><div><span>Buscar en KiosKit</span><i>◐</i><i>●</i></div></div>
-                <div class="mock-dashboard-content">
-                  <div class="mock-welcome"><div><h3>Buen día, Ana 👋</h3><p>Esto es lo importante de tu negocio ahora.</p></div><button>Nueva venta</button></div>
-                  <div class="mock-ai-summary">
-                    <span>✦</span><div><small>TU COPILOTO</small><b>Todo marcha bien. Hay 2 cosas que podés resolver rápido.</b><p>Quedan pocas unidades de agua mineral y tenés un cobro pendiente.</p></div><em>Revisar →</em>
-                  </div>
-                  <div class="mock-metrics">
-                    <article><span>Ventas de hoy</span><b>Gs. 1.240.000</b><i>↗</i></article>
-                    <article><span>Por cobrar</span><b>Gs. 185.000</b><i>◷</i></article>
-                    <article><span>Stock bajo</span><b>3 productos</b><i>↓</i></article>
-                  </div>
-                  <div class="mock-lower">
-                    <article><header><b>Últimos movimientos</b><span>Ver todos</span></header><p><i>↗</i><b>Venta #1042<small>Hace 8 min</small></b><strong>Gs. 84.000</strong></p><p><i>↗</i><b>Venta #1041<small>Hace 2 h</small></b><strong>Gs. 156.500</strong></p></article>
-                    <article class="mock-shortcuts"><b>Atajos</b><span>＋ Agregar producto　→</span><span>◎ Anotar cobro　→</span></article>
-                  </div>
-                </div>
-              </div>
-            </div>
+          <div class="hero-art" aria-hidden="true">
+            <span class="hero-halo"></span>
+            <span class="hero-spark"></span>
+            <picture>
+              <source media="(max-width: 767px)" srcset="/design/hero-mobile.webp" />
+              <img src="/design/hero-desktop.webp" alt="" width="846" height="856" fetchpriority="high" />
+            </picture>
           </div>
         </div>
       </section>
 
-      <section class="manifesto">
-        <div class="shell manifesto-grid">
-          <div class="manifesto-copy" data-reveal>
-            <p class="kicker">Para el que vende, compra, cobra, repone y todavía contesta WhatsApp.</p>
-            <h2>Tu negocio no debería sentirse como otra tarea administrativa.</h2>
-            <p>
-              Los equipos chicos necesitan moverse rápido. Pero entre cuadernos, memoria,
-              planillas y sistemas pensados para empresas enormes, mantener el control se
-              vuelve un trabajo aparte.
-            </p>
-          </div>
-          <blockquote data-reveal>
-            “KiosKit no te pide trabajar como una gran empresa. Te da las capacidades de una.”
-          </blockquote>
-        </div>
-      </section>
-
-      <section class="intelligence section" id="inteligencia">
-        <div class="shell">
-          <div class="intelligence-heading" data-reveal>
-            <h2>Hablale a tu negocio.<br />KiosKit entiende qué hacer.</h2>
-            <p>Escribí como hablás, en el copiloto de KiosKit o desde ChatGPT, Claude o Gemini. KiosKit cruza ventas, stock, clientes y caja, prepara la acción y vos la confirmás.</p>
-          </div>
-
-          <div class="ai-story" data-reveal>
-            <div class="ai-story-source">
-              <div class="story-label"><span>Hablá</span><small>Desde la app o desde tu IA</small></div>
-              <div class="source-list">
-                <div class="source source-kioskit"><i>✦</i><span><small>Dentro de la app</small><b>Copiloto KiosKit</b></span></div>
-                <div class="source"><i>◎</i><span><small>Desde tu IA</small><b>ChatGPT</b></span></div>
-                <div class="source"><i>C</i><span><small>Desde tu IA</small><b>Claude</b></span></div>
-                <div class="source"><i>G</i><span><small>Desde tu IA</small><b>Gemini</b></span></div>
-              </div>
-            </div>
-
-            <div class="story-arrow" aria-hidden="true"><span>→</span></div>
-
-            <div class="ai-story-core">
-              <div class="story-label"><span>KiosKit entiende</span><small>Consulta los datos de tu negocio</small></div>
-              <div class="business-core">
-                <div class="core-head"><i>K</i><span><b>Almacén Ferreira</b><small>Información actualizada</small></span><em>● En línea</em></div>
-                <div class="core-data"><span>Ventas</span><span>Inventario</span><span>Clientes</span><span>Caja</span></div>
-                <div class="core-message"><small>Le dijiste a KiosKit</small><p>“Vendí dos cocas en efectivo.”</p></div>
-                <div class="core-processing"><span></span><b>Revisando producto, stock y precio…</b></div>
-              </div>
-            </div>
-
-            <div class="story-arrow" aria-hidden="true"><span>→</span></div>
-
-            <div class="ai-story-result">
-              <div class="story-label"><span>Vos confirmás</span><small>Revisás la acción antes de hacerla</small></div>
-              <div class="prepared-action">
-                <header><span>Venta preparada</span><b>Lista para revisar</b></header>
-                <div class="prepared-product"><i>2×</i><span><b>Coca-Cola 500 ml</b><small>Stock después de la venta: 18</small></span><strong>Gs. 20.000</strong></div>
-                <p><span>Total</span><b>Gs. 20.000</b></p>
-                <div class="prepared-cta">Confirmar venta</div>
-              </div>
-            </div>
-          </div>
-
-          <div class="ai-more-examples" data-reveal>
-            <span>También podés pedir:</span>
-            <p>“¿Qué tengo que reponer?” <b>→ Lista de stock bajo</b></p>
-            <p>“¿Cómo cerró el día?” <b>→ Resumen de ventas y caja</b></p>
-            <p>“Mostrame lo que me deben.” <b>→ Cobros pendientes</b></p>
-          </div>
-        </div>
-      </section>
-
-      <section class="storefront section" id="catalogo">
-        <div class="shell storefront-grid">
-          <div class="storefront-copy" data-reveal>
-            <p class="storefront-kicker">Tu negocio también puede estar online.</p>
-            <h2>¿Querés mostrar lo que tenés para vender? Publicalo.</h2>
-            <p>
-              Elegís los productos, activás tu catálogo y compartís el enlace. Sin montar otra
-              tienda, duplicar precios ni cargar el stock de nuevo.
-            </p>
-            <ul>
-              <li><span>✓</span> Tu propio enlace para compartir</li>
-              <li><span>✓</span> Catálogo siempre conectado al stock</li>
-              <li><span>✓</span> Listo para recibir pedidos</li>
-            </ul>
-          </div>
-          <div class="storefront-preview" data-reveal role="img" aria-label="Ejemplo del catálogo online de un negocio en KiosKit">
-            <div class="storefront-browser"><i></i><i></i><i></i><span>almacenferreira.kioskit.space</span></div>
-            <header><div><b>Almacén Ferreira</b><small>Todo para tu día, cerca de vos.</small></div><span>Mi pedido　0</span></header>
-            <div class="storefront-search">⌕　¿Qué estás buscando?</div>
-            <nav><b>Todo</b><span>Almacén</span><span>Bebidas</span><span>Limpieza</span></nav>
-            <div class="storefront-products">
-              <article><img class="store-product" src="/storefront/yerba.png" alt="Paquete de yerba mate" loading="lazy" /><small>Almacén</small><b>Yerba mate 500 g</b><span>Gs. 18.500 <em>＋</em></span></article>
-              <article><img class="store-product" src="/storefront/cafe.png" alt="Paquete de café molido" loading="lazy" /><small>Despensa</small><b>Café molido 250 g</b><span>Gs. 24.000 <em>＋</em></span></article>
-              <article><img class="store-product" src="/storefront/agua.png" alt="Botella de agua mineral" loading="lazy" /><small>Bebidas</small><b>Agua mineral 500 ml</b><span>Gs. 5.000 <em>＋</em></span></article>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <section class="adaptable section" id="adaptable">
-        <div class="shell adaptable-heading" data-reveal>
-          <div>
-            <p class="adaptable-kicker">Hecho para tu forma de trabajar</p>
-            <h2>KiosKit se adapta a tu negocio.<br /><em>No al revés.</em></h2>
-          </div>
-          <p>
-            Le contás cómo funciona tu negocio y KiosKit prepara lo que necesitás para
-            organizarlo. Sin empezar de cero, sin planillas raras y sin aprender a configurar
-            un sistema.
-          </p>
-        </div>
-
-        <div class="shell adaptable-demo" data-reveal>
-          <div class="adaptable-request">
-            <div class="adaptable-step"><span>1</span><p><b>Contale qué hacés</b><small>Como se lo explicarías a una persona.</small></p></div>
-            <div class="request-bubble">
-              <span>Vos</span>
-              <p>“Reparo celulares. Necesito registrar el equipo, el problema, quién lo atiende y los repuestos que uso.”</p>
-            </div>
-            <div class="request-note"><i>✦</i><p><b>KiosKit entiende tu forma de trabajar</b><small>Y aprovecha los clientes, productos y cobros que ya tenés.</small></p></div>
-          </div>
-
-          <div class="adaptable-flow" aria-hidden="true"><span>→</span></div>
-
-          <div class="adaptable-result">
-            <div class="adaptable-step"><span>2</span><p><b>Empezá a usarlo</b><small>KiosKit deja tu espacio listo.</small></p></div>
-            <div class="custom-workspace">
-              <header>
-                <div><i>✓</i><p><small>Nuevo espacio creado</small><b>Reparaciones</b></p></div>
-                <span>＋ Nueva reparación</span>
-              </header>
-              <div class="workspace-body">
-                <div class="repair-main">
-                  <div class="repair-title"><p><small>REPARACIÓN #024</small><b>Samsung Galaxy A54</b></p><span>En diagnóstico</span></div>
-                  <div class="repair-fields">
-                    <p><small>Cliente</small><b>Camila Benítez</b></p>
-                    <p><small>IMEI</small><b>3596 1428 7631</b></p>
-                    <p><small>Problema</small><b>No enciende</b></p>
-                    <p><small>Técnico</small><b>Diego R.</b></p>
-                  </div>
-                </div>
-                <aside>
-                  <small>Todo queda conectado</small>
-                  <p><i>◎</i><span><b>Cliente</b><small>Camila Benítez</small></span></p>
-                  <p><i>◇</i><span><b>Repuestos</b><small>2 productos usados</small></span></p>
-                  <p><i>₲</i><span><b>Cobro</b><small>Pendiente</small></span></p>
-                </aside>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div class="shell adaptable-examples" data-reveal>
-          <span>También se adapta a</span>
-          <p>Turnos y reservas</p>
-          <p>Mascotas y consultas</p>
-          <p>Proyectos y entregas</p>
-          <p>El flujo propio de tu negocio</p>
-        </div>
-      </section>
-
-      <section class="thesis section" id="vision">
-        <div class="shell thesis-grid">
-          <div data-reveal>
-            <h2>Los negocios chicos necesitan capacidades grandes, pero no la complejidad de una empresa grande.</h2>
-            <p>
-              KiosKit existe para darles una forma más natural de operar: entiende lo que
-              necesitan hacer, reúne su trabajo y elimina burocracia, para que puedan mantener
-              el control sin perder velocidad.
-            </p>
-          </div>
-        </div>
-      </section>
-
-      <section class="closing section" id="precio">
-        <div class="shell closing-panel" data-reveal>
-          <div class="closing-copy">
-            <h2>Que ordenar tu negocio<br />no te frene el negocio.</h2>
-            <p>Todo KiosKit, en un único plan. Sin módulos escondidos ni configuraciones difíciles.</p>
-          </div>
-          <div class="closing-offer">
-            <div class="price-block">
-              <span>Un único plan</span>
-              <strong><small>Gs.</small><span>150.000</span></strong>
-              <p>al mes por negocio</p>
-            </div>
-            <div class="closing-actions">
-              <a class="button button-amber" href={REGISTER_URL}>Probar KiosKit <span>↗</span></a>
-              <small>15 días con todo incluido · Sin tarjeta</small>
-              <a href={WA_URL} target="_blank" rel="noreferrer">¿Preferís hablar primero? Escribinos →</a>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <section class="faq section" id="preguntas">
-        <div class="shell faq-grid">
-          <div data-reveal>
-            <h2>Lo esencial,<br />sin letra chica.</h2>
-          </div>
-          <div class="faq-list" data-reveal>
-            {faqs.map((faq) => (
-              <details>
-                <summary>{faq.q}<span aria-hidden="true">+</span></summary>
-                <p>{faq.a}</p>
-              </details>
+      <section class="problem" id="problema" aria-labelledby="problem-title">
+        <div class="container problem-layout">
+          <div class="problem-visual" role="img" aria-label="Tres momentos de una venta en Kioskit: preparar, registrar y confirmar">
+            {problemSteps.map((step, index) => (
+              <picture class={`problem-step problem-step-${index + 1}`} aria-hidden="true">
+                <source media="(max-width: 767px)" srcset={step.mobile} />
+                <img src={step.desktop} alt={step.label} width="700" height="512" loading="lazy" />
+              </picture>
             ))}
           </div>
+          <div class="problem-copy">
+            <h2 id="problem-title">Tu negocio cambia. Llevarle el ritmo cuesta.</h2>
+            <p>Ventas, gastos y pendientes quedan en tu cabeza o repartidos en distintos lugares. Y si ya usás un sistema, lo que es propio de tu negocio muchas veces queda afuera. Al final, entender qué pasó se vuelve otro trabajo.</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="modules section" id="funciones" aria-labelledby="modules-title">
+        <div class="container">
+          <h2 id="modules-title">Para vender, comprar y saber cómo va tu negocio</h2>
+          <div class="modules-grid">
+            <div class="modules-small-grid">
+              {modules.map((item) => (
+                <article class="module-card">
+                  <svg class="module-icon" aria-hidden="true"><use href={`#icon-${item.icon}`} /></svg>
+                  <h3>{item.title}</h3>
+                  <p>{item.description}</p>
+                </article>
+              ))}
+            </div>
+            <article class="invoice-card">
+              <span class="invoice-icon" aria-hidden="true">▣</span>
+              <h3>Facturación electrónica</h3>
+              <p class="invoice-message">La factura no debería ser otra tarea.</p>
+              <p class="invoice-description">Vendé y facturá sin salir de Kioskit.</p>
+              <span class="invoice-status"><span aria-hidden="true">✓</span> Factura emitida</span>
+              <img src="/design/kiosquito-facturacion.webp" alt="" width="130" height="130" loading="lazy" />
+            </article>
+          </div>
+          <div class="section-transition" aria-hidden="true"><span></span><span></span></div>
+        </div>
+      </section>
+
+      <section class="catalog-feature section" id="catalogo" aria-labelledby="catalog-title">
+        <div class="container catalog-layout">
+          <div class="catalog-copy">
+            <p class="catalog-label">También tenés tienda online</p>
+            <h2 id="catalog-title">Tu catálogo, listo para compartir.</h2>
+            <p>Publicá tus productos con precios y stock al día. Compartí el enlace por WhatsApp o redes; tus clientes arman el pedido y te llega a Kioskit.</p>
+          </div>
+          <div class="catalog-visual" aria-hidden="true">
+            <div class="catalog-window">
+              <div class="catalog-window-header">
+                <span class="catalog-store-icon"><svg><use href="#icon-tienda" /></svg></span>
+                <span><strong>Tu tienda</strong><small>Productos para elegir</small></span>
+                <span class="catalog-window-dots">•••</span>
+              </div>
+              <div class="catalog-window-search">Buscar productos <span>⌕</span></div>
+              <div class="catalog-products">
+                <div class="catalog-product">
+                  <span class="catalog-product-art catalog-product-coffee"><span></span></span>
+                  <strong>Café molido</strong>
+                  <small>Disponible</small>
+                </div>
+                <div class="catalog-product">
+                  <span class="catalog-product-art catalog-product-yerba"><span></span></span>
+                  <strong>Yerba mate</strong>
+                  <small>Disponible</small>
+                </div>
+              </div>
+            </div>
+            <span class="catalog-link"><span>↗</span> Compartí tu tienda</span>
+            <span class="catalog-order"><span>✓</span> Nuevo pedido</span>
+          </div>
+        </div>
+      </section>
+
+      <section class="adapt section" id="adaptabilidad" aria-labelledby="adapt-title">
+        <div class="container adapt-inner">
+          <h2 id="adapt-title">Tu negocio tiene su forma de trabajar. Armala en Kioskit.</h2>
+          <p>¿Tomás encargos o hacés reparaciones? Definí qué datos guardar, qué etapas seguir y cómo querés ver cada trabajo. Kiosquito te ayuda a armarlo.</p>
+          <picture class="adapt-demo">
+            <source media="(max-width: 767px)" srcset="/design/adaptabilidad-mobile.webp" />
+            <img src="/design/adaptabilidad-desktop.webp" alt="Una indicación a Kiosquito se convierte en un espacio de Reparaciones con campos, etapas y trabajos" width="1312" height="520" loading="lazy" />
+          </picture>
+        </div>
+      </section>
+
+      <section class="copilot section" id="kiosquito" aria-labelledby="copilot-title">
+        <div class="container copilot-layout">
+          <div class="copilot-copy">
+            <h2 id="copilot-title">Kiosquito te ayuda con el trabajo de todos los días</h2>
+            <p>Pasale los datos de un producto, pedile que cargue una venta o que complete un formulario. Si tenés una duda, preguntale cómo hacer algo en Kioskit o qué está pasando en tu negocio.</p>
+            <ul class="use-cases" aria-label="Otras formas de usar Kiosquito">
+              <li>Cargar ventas</li>
+              <li>Completar formularios</li>
+              <li>Resolver dudas</li>
+            </ul>
+          </div>
+          <picture class="copilot-demo">
+            <source media="(max-width: 767px)" srcset="/design/kiosquito-productos-mobile.webp" />
+            <img src="/design/kiosquito-productos-desktop.webp" alt="Kiosquito prepara dos fichas de producto para que la persona revise y confirme" width="708" height="614" loading="lazy" />
+          </picture>
+        </div>
+      </section>
+
+      <section class="automations section" id="automatizaciones" aria-labelledby="automations-title">
+        <div class="container automations-inner">
+          <h2 id="automations-title">Si pasa esto, Kioskit hace aquello.</h2>
+          <p>Elegí qué lo activa y qué querés que pase: recibir un aviso, actualizar información o enviar un correo.</p>
+          <picture class="automations-demo">
+            <source media="(max-width: 767px)" srcset="/design/automatizaciones-mobile.webp" />
+            <img src="/design/automatizaciones-desktop.webp" alt="Automatización: cuando se registra una venta de Café molido, Kioskit envía un correo al proveedor" width="1264" height="380" loading="lazy" />
+          </picture>
+        </div>
+      </section>
+
+      <section class="external-ai section" id="conexiones" aria-labelledby="external-ai-title">
+        <div class="container external-ai-layout">
+          <div class="external-ai-copy">
+            <h2 id="external-ai-title">Kioskit también trabaja con la IA que ya usás.</h2>
+            <p>Conectalo con ChatGPT o Claude para consultar tu negocio y pedirle que haga tareas desde ahí.</p>
+          </div>
+          <picture class="external-ai-demo">
+            <source media="(max-width: 767px)" srcset="/design/ia-externa-mobile.webp" />
+            <img src="/design/ia-externa-desktop.webp" alt="ChatGPT y Claude conectados con Kioskit para consultar las ventas del negocio" width="598" height="382" loading="lazy" />
+          </picture>
+        </div>
+      </section>
+
+      <section class="answers section" id="preguntas" aria-labelledby="answers-title">
+        <div class="container answers-layout">
+          <div class="answers-intro">
+            <p class="answers-label">Kioskit en pocas palabras</p>
+            <h2 id="answers-title">Lo esencial, sin vueltas.</h2>
+            <p>Un sistema de gestión para emprendedores que reúne el trabajo diario y se adapta a la forma de trabajar de cada negocio.</p>
+          </div>
+          <div class="answers-list">
+            <article>
+              <h3>¿Qué es Kioskit y qué puedo hacer con él?</h3>
+              <p>Kioskit es un sistema de gestión para emprendedores. Permite registrar ventas y compras, controlar el stock, llevar ingresos y gastos, gestionar contactos y vender en una tienda online.</p>
+            </article>
+            <article>
+              <h3>¿Sirve si mi negocio tiene procesos propios?</h3>
+              <p>Sí. Podés crear espacios para trabajos como encargos o reparaciones, definir sus datos y etapas, y automatizar tareas.</p>
+            </article>
+            <article>
+              <h3>¿Necesito usar ChatGPT o Claude?</h3>
+              <p>No. Kiosquito te ayuda dentro de Kioskit. Conectar ChatGPT o Claude es una opción si preferís trabajar desde esas herramientas.</p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="closing section" id="empezar" aria-labelledby="closing-title">
+        <div class="container closing-inner">
+          <h2 id="closing-title">Dale a tu negocio un sistema que pueda seguirle el ritmo.</h2>
+          <p class="closing-description">Empezá con lo que necesitás hoy. Kioskit te acompaña cuando tu forma de trabajar cambia.</p>
+          <div class="plan">
+            <span class="plan-label">Un solo plan</span>
+            <p class="price">G. 150.000 <span>/ mes</span></p>
+            <p class="plan-includes">Ventas, compras, stock, facturación electrónica, procesos propios, automatizaciones y Kiosquito incluidos.</p>
+          </div>
+          <div class="button-row closing-actions">
+            <a class="button button-primary" href={registerUrl}>Empezar con Kioskit</a>
+            <a class="button button-secondary" href={whatsappUrl} target="_blank" rel="noopener noreferrer">Hablar por WhatsApp</a>
+          </div>
+          <picture class="closing-mascot" aria-hidden="true">
+            <source media="(max-width: 767px)" srcset="/design/kiosquito-cierre-mobile.webp" />
+            <img src="/design/kiosquito-cierre-desktop.webp" alt="" width="176" height="176" loading="lazy" />
+          </picture>
+          <footer class="footer">
+            <div><a class="footer-brand" href="#contenido">Kioskit</a><small>© 2026 Kioskit</small></div>
+            <nav aria-label="Enlaces del sitio">
+              <a href="https://platform.kioskit.space/login">Iniciar sesión</a>
+              <a href={whatsappUrl} target="_blank" rel="noopener noreferrer">Contacto</a>
+              <a href="#funciones">Funciones</a>
+            </nav>
+          </footer>
         </div>
       </section>
     </main>
 
-    <footer>
-      <div class="shell footer-inner">
-        <a href="#inicio" class="brand brand-footer"><span class="brand-mark">K</span><span>KiosKit</span></a>
-        <p>Una forma más natural de operar tu negocio.</p>
-        <div><a href={LOGIN_URL}>Ingresar</a><a href={WA_URL} target="_blank" rel="noreferrer">Contacto</a></div>
-        <small>© {new Date().getFullYear()} KiosKit · Hecho en Paraguay</small>
-      </div>
-    </footer>
-
-    <script>
-      const header = document.querySelector("[data-header]");
-      const menuButton = document.querySelector("[data-menu-button]");
-      const mobileMenu = document.querySelector("[data-mobile-menu]");
-
-      const syncHeader = () => header?.classList.toggle("is-scrolled", window.scrollY > 24);
-      syncHeader();
-      window.addEventListener("scroll", syncHeader, { passive: true });
-
-      menuButton?.addEventListener("click", () => {
-        const open = mobileMenu?.classList.toggle("is-open") ?? false;
-        menuButton.setAttribute("aria-expanded", String(open));
-      });
-
-      mobileMenu?.querySelectorAll("a").forEach((link) => link.addEventListener("click", () => {
-        mobileMenu.classList.remove("is-open");
-        menuButton?.setAttribute("aria-expanded", "false");
-      }));
-
-      const reducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
-      const revealItems = document.querySelectorAll("[data-reveal]");
-      if (reducedMotion || !("IntersectionObserver" in window)) {
-        revealItems.forEach((item) => item.classList.add("is-visible"));
-      } else {
-        const observer = new IntersectionObserver((entries) => {
-          entries.forEach((entry) => {
-            if (entry.isIntersecting) {
-              entry.target.classList.add("is-visible");
-              observer.unobserve(entry.target);
-            }
-          });
-        }, { threshold: 0.12 });
-        revealItems.forEach((item) => observer.observe(item));
-      }
-    </script>
+    <svg class="icon-sprite" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+      <symbol id="icon-ventas" viewBox="0 0 24 24"><rect x="4" y="3" width="16" height="18" rx="2"/><path d="M8 8h8M8 12h8M8 16h4"/></symbol>
+      <symbol id="icon-compras" viewBox="0 0 24 24"><path d="M4 8h16l-1.5 12h-13L4 8ZM8 8V6a4 4 0 0 1 8 0v2M9 12v4M15 12v4"/></symbol>
+      <symbol id="icon-inventario" viewBox="0 0 24 24"><path d="m3 7 9-4 9 4-9 4-9-4ZM3 7v10l9 4 9-4V7M12 11v10"/></symbol>
+      <symbol id="icon-dinero" viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 9h18M16 14h2"/></symbol>
+      <symbol id="icon-personas" viewBox="0 0 24 24"><circle cx="9" cy="8" r="3"/><path d="M3 20v-2a6 6 0 0 1 12 0v2M17 5a3 3 0 0 1 0 6M17 14a5 5 0 0 1 4 5v1"/></symbol>
+      <symbol id="icon-tienda" viewBox="0 0 24 24"><path d="M3 9h18l-2-5H5L3 9ZM5 9v11h14V9M9 20v-7h6v7"/></symbol>
+    </svg>
   </body>
 </html>
