@@ -1,0 +1,138 @@
+---
+import '../styles/global.css';
+import '../styles/audiences.css';
+import SiteHeader from '../components/SiteHeader.astro';
+
+const registerUrl = 'https://platform.kioskit.space/register';
+const whatsappUrl = 'https://wa.me/595982373124?text=Hola%2C%20quiero%20saber%20m%C3%A1s%20sobre%20Kioskit';
+const pageTitle = 'Para quién es Kioskit | Un sistema para tu forma de trabajar';
+const pageDescription = 'Descubrí cómo usar Kioskit en talleres, veterinarias, gastronomía, tiendas y otros emprendimientos. Empezá con lo básico y adaptá el resto.';
+
+const audiences = [
+  {
+    title: 'Talleres mecánicos',
+    description: 'Seguí cada vehículo, reparación y repuesto, desde que llega hasta el cobro. Registrá tareas pendientes, compras de piezas y pagos en un mismo recorrido.',
+    image: '/personas/talleres.webp',
+    background: 'lilac',
+  },
+  {
+    title: 'Veterinarias',
+    description: 'Organizá mascotas, responsables, servicios y productos en un mismo lugar. Sumá los datos de cada mascota y anotá qué se hizo y qué se cobró.',
+    image: '/personas/veterinarias.webp',
+    background: 'white',
+  },
+  {
+    title: 'Gastronomía',
+    description: 'Llevá ventas, pedidos, compras e insumos sin perder de vista tus números. Registrá lo que entra y sale, actualizá el stock y seguí tus cobros.',
+    image: '/personas/gastronomia.webp',
+    background: 'white',
+  },
+  {
+    title: 'Tiendas y ventas por redes',
+    description: 'Compartí tu catálogo, mantené precios y stock al día y recibí pedidos. Usá la tienda online para mostrar productos y ordenar las ventas que llegan.',
+    image: '/personas/tiendas.webp',
+    background: 'lilac',
+  },
+  {
+    title: 'Peluquerías y barberías',
+    description: 'Registrá servicios, productos, clientes y cobros a tu manera. Guardá lo que pidió cada cliente y seguí los pagos que quedan pendientes.',
+    image: '/personas/peluquerias.webp',
+    background: 'lilac',
+  },
+  {
+    title: 'Pastelería por encargo',
+    description: 'Guardá los detalles de cada pedido y seguí sus etapas hasta la entrega. Anotá sabores, cantidades, fechas acordadas y pagos en el mismo registro.',
+    image: '/personas/pasteleria.webp',
+    background: 'white',
+  },
+  {
+    title: 'Ferreterías',
+    description: 'Ordená productos, compras, proveedores y reposición de stock. Anotá cantidades y proveedores para saber qué hace falta volver a comprar.',
+    image: '/personas/ferreterias.webp',
+    background: 'white',
+  },
+  {
+    title: 'Servicios a domicilio',
+    description: 'Seguí cada trabajo, su cliente, lo que falta hacer y lo que falta cobrar. Organizá materiales, tareas pendientes y pagos de cada trabajo.',
+    image: '/personas/domicilio.webp',
+    background: 'lilac',
+  },
+];
+---
+
+<!doctype html>
+<html lang="es-PY">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#F7F7FB" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="canonical" href="https://kioskit.space/para-quien/" />
+    <meta name="description" content={pageDescription} />
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="Kioskit" />
+    <meta property="og:title" content={pageTitle} />
+    <meta property="og:description" content={pageDescription} />
+    <meta property="og:url" content="https://kioskit.space/para-quien/" />
+    <meta property="og:locale" content="es_PY" />
+    <meta property="og:image" content="https://kioskit.space/og-kiosquito.png" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+    <title>{pageTitle}</title>
+  </head>
+  <body>
+    <a class="skip-link" href="#contenido">Saltar al contenido</a>
+    <SiteHeader active="audiences" />
+    <main class="audiences-page" id="contenido">
+      <section class="audiences-hero" aria-labelledby="audiences-title">
+        <div class="container">
+          <p class="audiences-eyebrow">Para quién es Kioskit</p>
+          <h1 id="audiences-title">Un sistema para trabajar como trabaja tu negocio.</h1>
+          <p class="audiences-intro">Empezá con ventas, compras, stock y dinero. Después sumá los registros y pasos propios de tu emprendimiento.</p>
+        </div>
+      </section>
+
+      <section class="audiences-examples" aria-labelledby="audiences-examples-title">
+        <div class="container">
+          <h2 id="audiences-examples-title">Algunas formas de usar Kioskit</h2>
+          <div class="audiences-grid">
+            {audiences.map((audience) => (
+              <article class={`audience-card audience-card--${audience.background}`}>
+                <div class="audience-card-copy">
+                  <h3>{audience.title}</h3>
+                  <p>{audience.description}</p>
+                </div>
+                <div class="audience-card-art" aria-hidden="true">
+                  <img src={audience.image} alt="" width="220" height="220" loading="lazy" decoding="async" />
+                </div>
+              </article>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <section class="audiences-closing" aria-labelledby="audiences-closing-title">
+        <div class="container">
+          <h2 id="audiences-closing-title">¿Tu negocio no aparece acá?</h2>
+          <p>Estos son ejemplos. Contale a Kiosquito cómo trabajás y armá en Kioskit lo que necesitás.</p>
+          <div class="button-row audiences-actions">
+            <a class="button button-primary" href={registerUrl}>Empezar con Kioskit</a>
+            <a class="button button-secondary" href={whatsappUrl} target="_blank" rel="noopener noreferrer">Hablar con nosotros</a>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer class="audiences-footer">
+      <div class="container audiences-footer-inner">
+        <div><a class="footer-brand" href="/">Kioskit</a><small>© 2026 Kioskit</small></div>
+        <nav aria-label="Enlaces del sitio">
+          <a href="https://platform.kioskit.space/login">Iniciar sesión</a>
+          <a href={whatsappUrl} target="_blank" rel="noopener noreferrer">Contacto</a>
+          <a href="/#funciones">Funciones</a>
+        </nav>
+      </div>
+    </footer>
+  </body>
+</html>

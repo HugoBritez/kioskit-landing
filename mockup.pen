@@ -28968,6 +28968,1820 @@
           "gap": 12
         }
       ]
+    },
+    {
+      "type": "frame",
+      "id": "Mz7B4",
+      "x": 3200,
+      "y": -570,
+      "name": "Kiosquito · Gastronomía",
+      "context": "Mascota Kioskit reusable con fondo transparente",
+      "reusable": true,
+      "width": 320,
+      "height": 320,
+      "fill": {
+        "type": "image",
+        "enabled": true,
+        "url": "mockup-assets/kiosquito-gastronomia-v2.png",
+        "mode": "contain"
+      },
+      "layout": "none"
+    },
+    {
+      "type": "frame",
+      "id": "Pc8wq",
+      "x": 3600,
+      "y": -570,
+      "name": "Kiosquito · Peluquerías",
+      "context": "Mascota Kioskit reusable con fondo transparente",
+      "reusable": true,
+      "width": 320,
+      "height": 320,
+      "fill": {
+        "type": "image",
+        "enabled": true,
+        "url": "mockup-assets/kiosquito-peluquerias-v2.png",
+        "mode": "contain"
+      },
+      "layout": "none"
+    },
+    {
+      "type": "frame",
+      "id": "M4HfEF",
+      "x": 4000,
+      "y": -570,
+      "name": "Kiosquito · Pastelería",
+      "context": "Mascota Kioskit reusable con fondo transparente",
+      "reusable": true,
+      "width": 320,
+      "height": 320,
+      "fill": {
+        "type": "image",
+        "enabled": true,
+        "url": "mockup-assets/kiosquito-pasteleria-v2.png",
+        "mode": "contain"
+      },
+      "layout": "none"
+    },
+    {
+      "type": "frame",
+      "id": "YZFi7",
+      "x": 4400,
+      "y": -570,
+      "name": "Kiosquito · Ferreterías",
+      "context": "Mascota Kioskit reusable con fondo transparente",
+      "reusable": true,
+      "width": 320,
+      "height": 320,
+      "fill": {
+        "type": "image",
+        "enabled": true,
+        "url": "mockup-assets/kiosquito-ferreterias-v2.png",
+        "mode": "contain"
+      },
+      "layout": "none"
+    },
+    {
+      "type": "frame",
+      "id": "YcNN2",
+      "x": 4800,
+      "y": -570,
+      "name": "Kiosquito · Servicios a domicilio",
+      "context": "Mascota Kioskit reusable con fondo transparente",
+      "reusable": true,
+      "width": 320,
+      "height": 320,
+      "fill": {
+        "type": "image",
+        "enabled": true,
+        "url": "mockup-assets/kiosquito-domicilio-v2.png",
+        "mode": "contain"
+      },
+      "layout": "none"
+    },
+    {
+      "type": "frame",
+      "id": "FAgqt",
+      "x": 4030,
+      "y": 7226,
+      "name": "Para quién · Desktop",
+      "clip": true,
+      "width": 1440,
+      "height": 2450,
+      "fill": "$k-bg",
+      "layout": "none",
+      "children": [
+        {
+          "type": "text",
+          "id": "N61O5",
+          "x": 88,
+          "y": 34,
+          "name": "Marca Kioskit · Header",
+          "fill": "$k-indigo",
+          "content": "Kioskit",
+          "fontFamily": "Inter",
+          "fontSize": 26,
+          "fontWeight": "700",
+          "letterSpacing": -1.2
+        },
+        {
+          "type": "rectangle",
+          "id": "R8M56",
+          "x": 88,
+          "y": 87,
+          "name": "Línea header",
+          "fill": "#DDDCEB",
+          "width": 1264,
+          "height": 1
+        },
+        {
+          "type": "text",
+          "id": "h7GUJ",
+          "x": 88,
+          "y": 155,
+          "name": "Etiqueta · Para quién es Kioskit",
+          "fill": "$k-indigo-deep",
+          "content": "Para quién es Kioskit",
+          "fontFamily": "Inter",
+          "fontSize": 15,
+          "fontWeight": "600",
+          "letterSpacing": 0.4
+        },
+        {
+          "type": "text",
+          "id": "KSbMK",
+          "x": 88,
+          "y": 190,
+          "name": "Título hero",
+          "fill": "$k-text",
+          "textGrowth": "fixed-width",
+          "width": 1120,
+          "content": "Un sistema para trabajar como trabaja tu negocio.",
+          "lineHeight": 1.08,
+          "fontFamily": "Inter",
+          "fontSize": 59,
+          "fontWeight": "700",
+          "letterSpacing": -2.3
+        },
+        {
+          "type": "text",
+          "id": "wbOUN",
+          "x": 88,
+          "y": 340,
+          "name": "Texto hero",
+          "fill": "$k-muted",
+          "textGrowth": "fixed-width",
+          "width": 895,
+          "content": "Empezá con ventas, compras, stock y dinero. Después sumá los registros y pasos propios de tu emprendimiento.",
+          "lineHeight": 1.48,
+          "fontFamily": "Inter",
+          "fontSize": 19,
+          "fontWeight": "normal"
+        },
+        {
+          "type": "rectangle",
+          "cornerRadius": 9,
+          "id": "yxvmN",
+          "x": 1260,
+          "y": 230,
+          "name": "Acento ámbar hero",
+          "fill": "$k-amber",
+          "width": 18,
+          "height": 18
+        },
+        {
+          "type": "text",
+          "id": "wxp9U",
+          "x": 88,
+          "y": 500,
+          "name": "Título cards",
+          "fill": "$k-text",
+          "textGrowth": "fixed-width",
+          "width": 1050,
+          "content": "Algunas formas de usar Kioskit",
+          "lineHeight": 1.1,
+          "fontFamily": "Inter",
+          "fontSize": 45,
+          "fontWeight": "700",
+          "letterSpacing": -1.6
+        },
+        {
+          "type": "frame",
+          "id": "nFGF8",
+          "x": 88,
+          "y": 595,
+          "name": "Ocho rubros · Desktop",
+          "width": 1264,
+          "height": 1260,
+          "layout": "vertical",
+          "gap": 18,
+          "children": [
+            {
+              "type": "frame",
+              "id": "EjASa",
+              "name": "Fila 1",
+              "width": "fill_container",
+              "height": 300,
+              "gap": 18,
+              "children": [
+                {
+                  "type": "frame",
+                  "id": "g7m5M",
+                  "name": "Rubros · Talleres mecánicos",
+                  "clip": true,
+                  "width": "fill_container",
+                  "height": 300,
+                  "fill": "#EFEEFF",
+                  "cornerRadius": 18,
+                  "stroke": "#E6E4F4",
+                  "strokeWidth": 1,
+                  "layout": "none",
+                  "children": [
+                    {
+                      "type": "ellipse",
+                      "id": "K3fvXk",
+                      "x": 365,
+                      "y": 37,
+                      "name": "Halo · Talleres mecánicos",
+                      "fill": "#E4E2FD",
+                      "width": 220,
+                      "height": 220
+                    },
+                    {
+                      "type": "text",
+                      "id": "vIQwp",
+                      "x": 28,
+                      "y": 30,
+                      "name": "Título · Talleres mecánicos",
+                      "fill": "$k-text",
+                      "textGrowth": "fixed-width",
+                      "width": 360,
+                      "content": "Talleres mecánicos",
+                      "lineHeight": 1.12,
+                      "fontFamily": "Inter",
+                      "fontSize": 28,
+                      "fontWeight": "700",
+                      "letterSpacing": -0.9
+                    },
+                    {
+                      "type": "text",
+                      "id": "K57lCH",
+                      "x": 28,
+                      "y": 93,
+                      "name": "Texto · Talleres mecánicos",
+                      "fill": "$k-muted",
+                      "textGrowth": "fixed-width",
+                      "width": 345,
+                      "content": "Seguí cada vehículo, reparación y repuesto, desde que llega hasta el cobro. Registrá tareas pendientes, compras de piezas y pagos en un mismo recorrido.",
+                      "lineHeight": 1.45,
+                      "fontFamily": "Inter",
+                      "fontSize": 17,
+                      "fontWeight": "normal"
+                    },
+                    {
+                      "id": "Q9Y2Bd",
+                      "type": "ref",
+                      "ref": "orTzG",
+                      "name": "Kiosquito · Talleres mecánicos",
+                      "x": 385,
+                      "y": 42,
+                      "width": 210,
+                      "height": 210
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "bj9Ea",
+                  "name": "Rubros · Veterinarias",
+                  "clip": true,
+                  "width": "fill_container",
+                  "height": 300,
+                  "fill": "#FFFFFF",
+                  "cornerRadius": 18,
+                  "stroke": "#E6E4F4",
+                  "strokeWidth": 1,
+                  "layout": "none",
+                  "children": [
+                    {
+                      "type": "ellipse",
+                      "id": "hfyAS",
+                      "x": 375,
+                      "y": 37,
+                      "name": "Halo · Veterinarias",
+                      "fill": "#E9E8FF",
+                      "width": 220,
+                      "height": 220
+                    },
+                    {
+                      "type": "text",
+                      "id": "FCytD",
+                      "x": 28,
+                      "y": 30,
+                      "name": "Título · Veterinarias",
+                      "fill": "$k-text",
+                      "textGrowth": "fixed-width",
+                      "width": 360,
+                      "content": "Veterinarias",
+                      "lineHeight": 1.12,
+                      "fontFamily": "Inter",
+                      "fontSize": 28,
+                      "fontWeight": "700",
+                      "letterSpacing": -0.9
+                    },
+                    {
+                      "type": "text",
+                      "id": "dOyIR",
+                      "x": 28,
+                      "y": 93,
+                      "name": "Texto · Veterinarias",
+                      "fill": "$k-muted",
+                      "textGrowth": "fixed-width",
+                      "width": 345,
+                      "content": "Organizá mascotas, responsables, servicios y productos en un mismo lugar. Sumá los datos de cada mascota y anotá qué se hizo y qué se cobró.",
+                      "lineHeight": 1.45,
+                      "fontFamily": "Inter",
+                      "fontSize": 17,
+                      "fontWeight": "normal"
+                    },
+                    {
+                      "id": "bkiiJ",
+                      "type": "ref",
+                      "ref": "Cp53J",
+                      "name": "Kiosquito · Veterinarias",
+                      "x": 390,
+                      "y": 42,
+                      "width": 210,
+                      "height": 210
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "uuM5X",
+              "name": "Fila 2",
+              "width": "fill_container",
+              "height": 300,
+              "gap": 18,
+              "children": [
+                {
+                  "type": "frame",
+                  "id": "eGA7L",
+                  "name": "Rubros · Gastronomía",
+                  "clip": true,
+                  "width": "fill_container",
+                  "height": 300,
+                  "fill": "#FFFFFF",
+                  "cornerRadius": 18,
+                  "stroke": "#E6E4F4",
+                  "strokeWidth": 1,
+                  "layout": "none",
+                  "children": [
+                    {
+                      "type": "ellipse",
+                      "id": "CveaP",
+                      "x": 365,
+                      "y": 56,
+                      "name": "Halo · Gastronomía",
+                      "fill": "#E4E2FD",
+                      "width": 220,
+                      "height": 220
+                    },
+                    {
+                      "type": "text",
+                      "id": "bvObQ",
+                      "x": 28,
+                      "y": 30,
+                      "name": "Título · Gastronomía",
+                      "fill": "$k-text",
+                      "textGrowth": "fixed-width",
+                      "width": 360,
+                      "content": "Gastronomía",
+                      "lineHeight": 1.12,
+                      "fontFamily": "Inter",
+                      "fontSize": 28,
+                      "fontWeight": "700",
+                      "letterSpacing": -0.9
+                    },
+                    {
+                      "type": "text",
+                      "id": "XEOlM",
+                      "x": 28,
+                      "y": 93,
+                      "name": "Texto · Gastronomía",
+                      "fill": "$k-muted",
+                      "textGrowth": "fixed-width",
+                      "width": 345,
+                      "content": "Llevá ventas, pedidos, compras e insumos sin perder de vista tus números. Registrá lo que entra y sale, actualizá el stock y seguí tus cobros.",
+                      "lineHeight": 1.45,
+                      "fontFamily": "Inter",
+                      "fontSize": 17,
+                      "fontWeight": "normal"
+                    },
+                    {
+                      "id": "LNLZp",
+                      "type": "ref",
+                      "ref": "Mz7B4",
+                      "name": "Kiosquito · Gastronomía",
+                      "x": 385,
+                      "y": 42,
+                      "width": 210,
+                      "height": 210
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "JoAMX",
+                  "name": "Rubros · Tiendas y ventas por redes",
+                  "clip": true,
+                  "width": "fill_container",
+                  "height": 300,
+                  "fill": "#F0EFFF",
+                  "cornerRadius": 18,
+                  "stroke": "#E6E4F4",
+                  "strokeWidth": 1,
+                  "layout": "none",
+                  "children": [
+                    {
+                      "type": "ellipse",
+                      "id": "tTudR",
+                      "x": 375,
+                      "y": 56,
+                      "name": "Halo · Tiendas y ventas por redes",
+                      "fill": "#E9E8FF",
+                      "width": 220,
+                      "height": 220
+                    },
+                    {
+                      "type": "text",
+                      "id": "D5ZkJq",
+                      "x": 28,
+                      "y": 30,
+                      "name": "Título · Tiendas y ventas por redes",
+                      "fill": "$k-text",
+                      "textGrowth": "fixed-width",
+                      "width": 360,
+                      "content": "Tiendas y ventas por redes",
+                      "lineHeight": 1.12,
+                      "fontFamily": "Inter",
+                      "fontSize": 28,
+                      "fontWeight": "700",
+                      "letterSpacing": -0.9
+                    },
+                    {
+                      "type": "text",
+                      "id": "h5lx4",
+                      "x": 28,
+                      "y": 115,
+                      "name": "Texto · Tiendas y ventas por redes",
+                      "fill": "$k-muted",
+                      "textGrowth": "fixed-width",
+                      "width": 345,
+                      "content": "Compartí tu catálogo, mantené precios y stock al día y recibí pedidos. Usá la tienda online para mostrar productos y ordenar las ventas que llegan.",
+                      "lineHeight": 1.45,
+                      "fontFamily": "Inter",
+                      "fontSize": 17,
+                      "fontWeight": "normal"
+                    },
+                    {
+                      "id": "Gb3oV",
+                      "type": "ref",
+                      "ref": "kCtW1",
+                      "name": "Kiosquito · Tiendas y ventas por redes",
+                      "x": 390,
+                      "y": 55,
+                      "width": 210,
+                      "height": 210
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "M6gFM",
+              "name": "Fila 3",
+              "width": "fill_container",
+              "height": 300,
+              "gap": 18,
+              "children": [
+                {
+                  "type": "frame",
+                  "id": "YmqEf",
+                  "name": "Rubros · Peluquerías y barberías",
+                  "clip": true,
+                  "width": "fill_container",
+                  "height": 300,
+                  "fill": "#F0EFFF",
+                  "cornerRadius": 18,
+                  "stroke": "#E6E4F4",
+                  "strokeWidth": 1,
+                  "layout": "none",
+                  "children": [
+                    {
+                      "type": "ellipse",
+                      "id": "IfDmJ",
+                      "x": 365,
+                      "y": 37,
+                      "name": "Halo · Peluquerías y barberías",
+                      "fill": "#E4E2FD",
+                      "width": 220,
+                      "height": 220
+                    },
+                    {
+                      "type": "text",
+                      "id": "k0i7H",
+                      "x": 28,
+                      "y": 30,
+                      "name": "Título · Peluquerías y barberías",
+                      "fill": "$k-text",
+                      "textGrowth": "fixed-width",
+                      "width": 360,
+                      "content": "Peluquerías y barberías",
+                      "lineHeight": 1.12,
+                      "fontFamily": "Inter",
+                      "fontSize": 28,
+                      "fontWeight": "700",
+                      "letterSpacing": -0.9
+                    },
+                    {
+                      "type": "text",
+                      "id": "pBYkV",
+                      "x": 28,
+                      "y": 93,
+                      "name": "Texto · Peluquerías y barberías",
+                      "fill": "$k-muted",
+                      "textGrowth": "fixed-width",
+                      "width": 345,
+                      "content": "Registrá servicios, productos, clientes y cobros a tu manera. Guardá lo que pidió cada cliente y seguí los pagos que quedan pendientes.",
+                      "lineHeight": 1.45,
+                      "fontFamily": "Inter",
+                      "fontSize": 17,
+                      "fontWeight": "normal"
+                    },
+                    {
+                      "id": "LQdqi",
+                      "type": "ref",
+                      "ref": "Pc8wq",
+                      "name": "Kiosquito · Peluquerías y barberías",
+                      "x": 385,
+                      "y": 42,
+                      "width": 210,
+                      "height": 210
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "vFqiu",
+                  "name": "Rubros · Pastelería por encargo",
+                  "clip": true,
+                  "width": "fill_container",
+                  "height": 300,
+                  "fill": "#FFFFFF",
+                  "cornerRadius": 18,
+                  "stroke": "#E6E4F4",
+                  "strokeWidth": 1,
+                  "layout": "none",
+                  "children": [
+                    {
+                      "type": "ellipse",
+                      "id": "cwJQW",
+                      "x": 375,
+                      "y": 37,
+                      "name": "Halo · Pastelería por encargo",
+                      "fill": "#E9E8FF",
+                      "width": 220,
+                      "height": 220
+                    },
+                    {
+                      "type": "text",
+                      "id": "FBorX",
+                      "x": 28,
+                      "y": 30,
+                      "name": "Título · Pastelería por encargo",
+                      "fill": "$k-text",
+                      "textGrowth": "fixed-width",
+                      "width": 360,
+                      "content": "Pastelería por encargo",
+                      "lineHeight": 1.12,
+                      "fontFamily": "Inter",
+                      "fontSize": 28,
+                      "fontWeight": "700",
+                      "letterSpacing": -0.9
+                    },
+                    {
+                      "type": "text",
+                      "id": "F1kWV5",
+                      "x": 28,
+                      "y": 93,
+                      "name": "Texto · Pastelería por encargo",
+                      "fill": "$k-muted",
+                      "textGrowth": "fixed-width",
+                      "width": 345,
+                      "content": "Guardá los detalles de cada pedido y seguí sus etapas hasta la entrega. Anotá sabores, cantidades, fechas acordadas y pagos en el mismo registro.",
+                      "lineHeight": 1.45,
+                      "fontFamily": "Inter",
+                      "fontSize": 17,
+                      "fontWeight": "normal"
+                    },
+                    {
+                      "id": "MRizT",
+                      "type": "ref",
+                      "ref": "M4HfEF",
+                      "name": "Kiosquito · Pastelería por encargo",
+                      "x": 385,
+                      "y": 42,
+                      "width": 210,
+                      "height": 210
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "jg0YO",
+              "name": "Fila 4",
+              "width": "fill_container",
+              "height": 300,
+              "gap": 18,
+              "children": [
+                {
+                  "type": "frame",
+                  "id": "FA0gU",
+                  "name": "Rubros · Ferreterías",
+                  "clip": true,
+                  "width": "fill_container",
+                  "height": 300,
+                  "fill": "#FFFFFF",
+                  "cornerRadius": 18,
+                  "stroke": "#E6E4F4",
+                  "strokeWidth": 1,
+                  "layout": "none",
+                  "children": [
+                    {
+                      "type": "ellipse",
+                      "id": "oysvZ",
+                      "x": 365,
+                      "y": 56,
+                      "name": "Halo · Ferreterías",
+                      "fill": "#E4E2FD",
+                      "width": 220,
+                      "height": 220
+                    },
+                    {
+                      "type": "text",
+                      "id": "C77RU",
+                      "x": 28,
+                      "y": 30,
+                      "name": "Título · Ferreterías",
+                      "fill": "$k-text",
+                      "textGrowth": "fixed-width",
+                      "width": 360,
+                      "content": "Ferreterías",
+                      "lineHeight": 1.12,
+                      "fontFamily": "Inter",
+                      "fontSize": 28,
+                      "fontWeight": "700",
+                      "letterSpacing": -0.9
+                    },
+                    {
+                      "type": "text",
+                      "id": "DAFSo",
+                      "x": 28,
+                      "y": 93,
+                      "name": "Texto · Ferreterías",
+                      "fill": "$k-muted",
+                      "textGrowth": "fixed-width",
+                      "width": 345,
+                      "content": "Ordená productos, compras, proveedores y reposición de stock. Anotá cantidades y proveedores para saber qué hace falta volver a comprar.",
+                      "lineHeight": 1.45,
+                      "fontFamily": "Inter",
+                      "fontSize": 17,
+                      "fontWeight": "normal"
+                    },
+                    {
+                      "id": "PZpCo",
+                      "type": "ref",
+                      "ref": "YZFi7",
+                      "name": "Kiosquito · Ferreterías",
+                      "x": 385,
+                      "y": 42,
+                      "width": 210,
+                      "height": 210
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "Lr6iY",
+                  "name": "Rubros · Servicios a domicilio",
+                  "clip": true,
+                  "width": "fill_container",
+                  "height": 300,
+                  "fill": "#EFEEFF",
+                  "cornerRadius": 18,
+                  "stroke": "#E6E4F4",
+                  "strokeWidth": 1,
+                  "layout": "none",
+                  "children": [
+                    {
+                      "type": "ellipse",
+                      "id": "V04zj",
+                      "x": 375,
+                      "y": 56,
+                      "name": "Halo · Servicios a domicilio",
+                      "fill": "#E9E8FF",
+                      "width": 220,
+                      "height": 220
+                    },
+                    {
+                      "type": "text",
+                      "id": "ofyGc",
+                      "x": 28,
+                      "y": 30,
+                      "name": "Título · Servicios a domicilio",
+                      "fill": "$k-text",
+                      "textGrowth": "fixed-width",
+                      "width": 360,
+                      "content": "Servicios a domicilio",
+                      "lineHeight": 1.12,
+                      "fontFamily": "Inter",
+                      "fontSize": 28,
+                      "fontWeight": "700",
+                      "letterSpacing": -0.9
+                    },
+                    {
+                      "type": "text",
+                      "id": "OcaQQ",
+                      "x": 28,
+                      "y": 93,
+                      "name": "Texto · Servicios a domicilio",
+                      "fill": "$k-muted",
+                      "textGrowth": "fixed-width",
+                      "width": 345,
+                      "content": "Seguí cada trabajo, su cliente, lo que falta hacer y lo que falta cobrar. Organizá materiales, tareas pendientes y pagos de cada trabajo.",
+                      "lineHeight": 1.45,
+                      "fontFamily": "Inter",
+                      "fontSize": 17,
+                      "fontWeight": "normal"
+                    },
+                    {
+                      "id": "VTlfm",
+                      "type": "ref",
+                      "ref": "YcNN2",
+                      "name": "Kiosquito · Servicios a domicilio",
+                      "x": 385,
+                      "y": 42,
+                      "width": 210,
+                      "height": 210
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "id": "x62VRA",
+          "x": 88,
+          "y": 1930,
+          "name": "Título cierre",
+          "fill": "$k-text",
+          "textGrowth": "fixed-width",
+          "width": 1040,
+          "content": "¿Tu negocio no aparece acá?",
+          "lineHeight": 1.1,
+          "fontFamily": "Inter",
+          "fontSize": 45,
+          "fontWeight": "700",
+          "letterSpacing": -1.6
+        },
+        {
+          "type": "text",
+          "id": "SCYBc",
+          "x": 88,
+          "y": 1996,
+          "name": "Texto cierre",
+          "fill": "$k-muted",
+          "textGrowth": "fixed-width",
+          "width": 920,
+          "content": "Estos son ejemplos. Contale a Kiosquito cómo trabajás y armá en Kioskit lo que necesitás.",
+          "lineHeight": 1.5,
+          "fontFamily": "Inter",
+          "fontSize": 19,
+          "fontWeight": "normal"
+        },
+        {
+          "type": "frame",
+          "id": "k8dRDn",
+          "x": 88,
+          "y": 2100,
+          "name": "Botón principal · Para quién",
+          "width": 252,
+          "height": 56,
+          "fill": "$k-indigo",
+          "cornerRadius": 14,
+          "effect": {
+            "type": "shadow",
+            "shadowType": "outer",
+            "color": "#4F46E530",
+            "offset": {
+              "x": 0,
+              "y": 8
+            },
+            "blur": 18
+          },
+          "padding": [
+            0,
+            25
+          ],
+          "justifyContent": "center",
+          "alignItems": "center",
+          "children": [
+            {
+              "type": "text",
+              "id": "aOQua",
+              "name": "Texto · Empezar con Kioskit",
+              "fill": "#FFFFFF",
+              "content": "Empezar con Kioskit",
+              "fontFamily": "Inter",
+              "fontSize": 16,
+              "fontWeight": "600"
+            }
+          ]
+        },
+        {
+          "type": "frame",
+          "id": "BXuVQ",
+          "x": 354,
+          "y": 2100,
+          "name": "Botón secundario · Para quién",
+          "width": 252,
+          "height": 56,
+          "fill": "#FFFFFF",
+          "cornerRadius": 14,
+          "stroke": "#C9C8DA",
+          "strokeWidth": 1,
+          "padding": [
+            0,
+            25
+          ],
+          "justifyContent": "center",
+          "alignItems": "center",
+          "children": [
+            {
+              "type": "text",
+              "id": "VKEpR",
+              "name": "Texto · Hablar por WhatsApp",
+              "fill": "$k-text",
+              "content": "Hablar con nosotros",
+              "fontFamily": "Inter",
+              "fontSize": 16,
+              "fontWeight": "600"
+            }
+          ]
+        },
+        {
+          "type": "rectangle",
+          "id": "W1Zvhn",
+          "x": 88,
+          "y": 2270,
+          "name": "Separador del footer",
+          "fill": "#DDDCEB",
+          "width": 1264,
+          "height": 1
+        },
+        {
+          "type": "text",
+          "id": "pHzV0",
+          "x": 88,
+          "y": 2304,
+          "name": "Marca Kioskit · Footer",
+          "fill": "#4F46E5",
+          "textGrowth": "fixed-width",
+          "width": 210,
+          "content": "Kioskit",
+          "fontFamily": "Inter",
+          "fontSize": 25,
+          "fontWeight": "bold"
+        },
+        {
+          "type": "text",
+          "id": "T7y4H",
+          "x": 88,
+          "y": 2347,
+          "name": "Copyright · Footer",
+          "fill": "#77778D",
+          "textGrowth": "fixed-width",
+          "width": 230,
+          "content": "© 2026 Kioskit",
+          "fontFamily": "Inter",
+          "fontSize": 12,
+          "fontWeight": "normal"
+        },
+        {
+          "type": "frame",
+          "id": "EMio7",
+          "x": 896,
+          "y": 2310,
+          "name": "Enlaces del sitio · Footer",
+          "gap": 30,
+          "children": [
+            {
+              "type": "text",
+              "id": "oETtP",
+              "name": "Enlace · Iniciar sesión",
+              "fill": "$k-muted",
+              "content": "Iniciar sesión",
+              "fontFamily": "Inter",
+              "fontSize": 15,
+              "fontWeight": "500"
+            },
+            {
+              "type": "text",
+              "id": "LzEAl",
+              "name": "Enlace · Contacto",
+              "fill": "$k-muted",
+              "content": "Contacto",
+              "fontFamily": "Inter",
+              "fontSize": 15,
+              "fontWeight": "500"
+            },
+            {
+              "type": "text",
+              "id": "IIhkh",
+              "name": "Enlace · Funciones",
+              "fill": "$k-muted",
+              "content": "Funciones",
+              "fontFamily": "Inter",
+              "fontSize": 15,
+              "fontWeight": "500"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "frame",
+      "id": "uHdtA",
+      "x": 5570,
+      "y": 7226,
+      "name": "Para quién · Mobile",
+      "clip": true,
+      "width": 390,
+      "height": 2774,
+      "fill": "$k-bg",
+      "layout": "none",
+      "children": [
+        {
+          "type": "text",
+          "id": "o17hBf",
+          "x": 24,
+          "y": 28,
+          "name": "Marca Kioskit · Header mobile",
+          "fill": "$k-indigo",
+          "content": "Kioskit",
+          "fontFamily": "Inter",
+          "fontSize": 23,
+          "fontWeight": "700",
+          "letterSpacing": -1
+        },
+        {
+          "type": "rectangle",
+          "id": "l2ARx",
+          "x": 24,
+          "y": 72,
+          "name": "Línea header mobile",
+          "fill": "#DDDCEB",
+          "width": 342,
+          "height": 1
+        },
+        {
+          "type": "text",
+          "id": "f3aoN",
+          "x": 24,
+          "y": 115,
+          "name": "Etiqueta hero mobile",
+          "fill": "$k-indigo-deep",
+          "content": "Para quién es Kioskit",
+          "fontFamily": "Inter",
+          "fontSize": 14,
+          "fontWeight": "600",
+          "letterSpacing": 0.3
+        },
+        {
+          "type": "text",
+          "id": "U5OCZ",
+          "x": 24,
+          "y": 149,
+          "name": "Título hero mobile",
+          "fill": "$k-text",
+          "textGrowth": "fixed-width",
+          "width": 342,
+          "content": "Un sistema para trabajar como trabaja tu negocio.",
+          "lineHeight": 1.12,
+          "fontFamily": "Inter",
+          "fontSize": 38,
+          "fontWeight": "700",
+          "letterSpacing": -1.45
+        },
+        {
+          "type": "text",
+          "id": "liSWj",
+          "x": 24,
+          "y": 309,
+          "name": "Texto hero mobile",
+          "fill": "$k-muted",
+          "textGrowth": "fixed-width",
+          "width": 342,
+          "content": "Empezá con ventas, compras, stock y dinero. Después sumá los registros y pasos propios de tu emprendimiento.",
+          "lineHeight": 1.48,
+          "fontFamily": "Inter",
+          "fontSize": 16,
+          "fontWeight": "normal"
+        },
+        {
+          "type": "text",
+          "id": "yZL3V",
+          "x": 24,
+          "y": 443,
+          "name": "Título cards mobile",
+          "fill": "$k-text",
+          "textGrowth": "fixed-width",
+          "width": 342,
+          "content": "Algunas formas de usar Kioskit",
+          "lineHeight": 1.12,
+          "fontFamily": "Inter",
+          "fontSize": 31,
+          "fontWeight": "700",
+          "letterSpacing": -1.1
+        },
+        {
+          "type": "frame",
+          "id": "cPrKN",
+          "x": 24,
+          "y": 535,
+          "name": "Ocho rubros · Mobile",
+          "width": 342,
+          "height": 1612,
+          "layout": "vertical",
+          "gap": 12,
+          "children": [
+            {
+              "type": "frame",
+              "id": "ZBkWu",
+              "name": "Fila mobile · 1",
+              "width": "fill_container",
+              "height": 394,
+              "gap": 12,
+              "children": [
+                {
+                  "type": "frame",
+                  "id": "ssxOX",
+                  "name": "Rubros mobile · Talleres mecánicos",
+                  "clip": true,
+                  "width": "fill_container",
+                  "height": 394,
+                  "fill": "#EFEEFF",
+                  "cornerRadius": 18,
+                  "stroke": "#E6E4F4",
+                  "strokeWidth": 1,
+                  "layout": "none",
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "g5WIu",
+                      "x": 14,
+                      "y": 16,
+                      "name": "Título mobile · Talleres mecánicos",
+                      "fill": "$k-text",
+                      "textGrowth": "fixed-width",
+                      "width": 137,
+                      "content": "Talleres mecánicos",
+                      "lineHeight": 1.13,
+                      "fontFamily": "Inter",
+                      "fontSize": 18,
+                      "fontWeight": "700",
+                      "letterSpacing": -0.5
+                    },
+                    {
+                      "type": "text",
+                      "id": "h1tki",
+                      "x": 14,
+                      "y": 86,
+                      "name": "Texto mobile · Talleres mecánicos",
+                      "fill": "$k-muted",
+                      "textGrowth": "fixed-width",
+                      "width": 137,
+                      "content": "Seguí cada vehículo, reparación y repuesto, desde que llega hasta el cobro. Registrá tareas pendientes, compras de piezas y pagos en un mismo recorrido.",
+                      "lineHeight": 1.36,
+                      "fontFamily": "Inter",
+                      "fontSize": 14,
+                      "fontWeight": "normal"
+                    },
+                    {
+                      "type": "ellipse",
+                      "id": "o2wanb",
+                      "x": 46,
+                      "y": 277,
+                      "name": "Halo mobile · Talleres mecánicos",
+                      "fill": "#E7E5FF",
+                      "width": 108,
+                      "height": 108
+                    },
+                    {
+                      "id": "l2fy0C",
+                      "type": "ref",
+                      "ref": "orTzG",
+                      "name": "Kiosquito mobile · Talleres mecánicos",
+                      "x": 51,
+                      "y": 280,
+                      "width": 104,
+                      "height": 104
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "S4GKSr",
+                  "name": "Rubros mobile · Veterinarias",
+                  "clip": true,
+                  "width": "fill_container",
+                  "height": 394,
+                  "fill": "#FFFFFF",
+                  "cornerRadius": 18,
+                  "stroke": "#E6E4F4",
+                  "strokeWidth": 1,
+                  "layout": "none",
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "lwlRY",
+                      "x": 14,
+                      "y": 16,
+                      "name": "Título mobile · Veterinarias",
+                      "fill": "$k-text",
+                      "textGrowth": "fixed-width",
+                      "width": 137,
+                      "content": "Veterinarias",
+                      "lineHeight": 1.13,
+                      "fontFamily": "Inter",
+                      "fontSize": 18,
+                      "fontWeight": "700",
+                      "letterSpacing": -0.5
+                    },
+                    {
+                      "type": "text",
+                      "id": "lGEoc",
+                      "x": 14,
+                      "y": 86,
+                      "name": "Texto mobile · Veterinarias",
+                      "fill": "$k-muted",
+                      "textGrowth": "fixed-width",
+                      "width": 137,
+                      "content": "Organizá mascotas, responsables, servicios y productos en un mismo lugar. Sumá los datos de cada mascota y anotá qué se hizo y qué se cobró.",
+                      "lineHeight": 1.36,
+                      "fontFamily": "Inter",
+                      "fontSize": 14,
+                      "fontWeight": "normal"
+                    },
+                    {
+                      "type": "ellipse",
+                      "id": "Xn458",
+                      "x": 46,
+                      "y": 277,
+                      "name": "Halo mobile · Veterinarias",
+                      "fill": "#E7E5FF",
+                      "width": 108,
+                      "height": 108
+                    },
+                    {
+                      "id": "u36slI",
+                      "type": "ref",
+                      "ref": "Cp53J",
+                      "name": "Kiosquito mobile · Veterinarias",
+                      "x": 51,
+                      "y": 280,
+                      "width": 104,
+                      "height": 104
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "OBPac",
+              "name": "Fila mobile · 2",
+              "width": "fill_container",
+              "height": 394,
+              "gap": 12,
+              "children": [
+                {
+                  "type": "frame",
+                  "id": "R4Bnmo",
+                  "name": "Rubros mobile · Gastronomía",
+                  "clip": true,
+                  "width": "fill_container",
+                  "height": 394,
+                  "fill": "#FFFFFF",
+                  "cornerRadius": 18,
+                  "stroke": "#E6E4F4",
+                  "strokeWidth": 1,
+                  "layout": "none",
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "hTGaL",
+                      "x": 14,
+                      "y": 16,
+                      "name": "Título mobile · Gastronomía",
+                      "fill": "$k-text",
+                      "textGrowth": "fixed-width",
+                      "width": 137,
+                      "content": "Gastronomía",
+                      "lineHeight": 1.13,
+                      "fontFamily": "Inter",
+                      "fontSize": 18,
+                      "fontWeight": "700",
+                      "letterSpacing": -0.5
+                    },
+                    {
+                      "type": "text",
+                      "id": "cg1hg",
+                      "x": 14,
+                      "y": 86,
+                      "name": "Texto mobile · Gastronomía",
+                      "fill": "$k-muted",
+                      "textGrowth": "fixed-width",
+                      "width": 137,
+                      "content": "Llevá ventas, pedidos, compras e insumos sin perder de vista tus números. Registrá lo que entra y sale, actualizá el stock y seguí tus cobros.",
+                      "lineHeight": 1.36,
+                      "fontFamily": "Inter",
+                      "fontSize": 14,
+                      "fontWeight": "normal"
+                    },
+                    {
+                      "type": "ellipse",
+                      "id": "fk7WE",
+                      "x": 46,
+                      "y": 277,
+                      "name": "Halo mobile · Gastronomía",
+                      "fill": "#E7E5FF",
+                      "width": 108,
+                      "height": 108
+                    },
+                    {
+                      "id": "jlNKZ",
+                      "type": "ref",
+                      "ref": "Mz7B4",
+                      "name": "Kiosquito mobile · Gastronomía",
+                      "x": 51,
+                      "y": 280,
+                      "width": 104,
+                      "height": 104
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "WSHmU",
+                  "name": "Rubros mobile · Tiendas y ventas por redes",
+                  "clip": true,
+                  "width": "fill_container",
+                  "height": 394,
+                  "fill": "#F0EFFF",
+                  "cornerRadius": 18,
+                  "stroke": "#E6E4F4",
+                  "strokeWidth": 1,
+                  "layout": "none",
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "bvTfI",
+                      "x": 14,
+                      "y": 16,
+                      "name": "Título mobile · Tiendas y ventas por redes",
+                      "fill": "$k-text",
+                      "textGrowth": "fixed-width",
+                      "width": 137,
+                      "content": "Tiendas y ventas por redes",
+                      "lineHeight": 1.13,
+                      "fontFamily": "Inter",
+                      "fontSize": 18,
+                      "fontWeight": "700",
+                      "letterSpacing": -0.5
+                    },
+                    {
+                      "type": "text",
+                      "id": "ZeqyV",
+                      "x": 14,
+                      "y": 86,
+                      "name": "Texto mobile · Tiendas y ventas por redes",
+                      "fill": "$k-muted",
+                      "textGrowth": "fixed-width",
+                      "width": 137,
+                      "content": "Compartí tu catálogo, mantené precios y stock al día y recibí pedidos. Usá la tienda online para mostrar productos y ordenar las ventas que llegan.",
+                      "lineHeight": 1.36,
+                      "fontFamily": "Inter",
+                      "fontSize": 14,
+                      "fontWeight": "normal"
+                    },
+                    {
+                      "type": "ellipse",
+                      "id": "Trsdv",
+                      "x": 46,
+                      "y": 277,
+                      "name": "Halo mobile · Tiendas y ventas por redes",
+                      "fill": "#E7E5FF",
+                      "width": 108,
+                      "height": 108
+                    },
+                    {
+                      "id": "j4KQZ",
+                      "type": "ref",
+                      "ref": "kCtW1",
+                      "name": "Kiosquito mobile · Tiendas y ventas por redes",
+                      "x": 51,
+                      "y": 280,
+                      "width": 104,
+                      "height": 104
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "Y71ljA",
+              "name": "Fila mobile · 3",
+              "width": "fill_container",
+              "height": 394,
+              "gap": 12,
+              "children": [
+                {
+                  "type": "frame",
+                  "id": "NpxGN",
+                  "name": "Rubros mobile · Peluquerías y barberías",
+                  "clip": true,
+                  "width": "fill_container",
+                  "height": 394,
+                  "fill": "#F0EFFF",
+                  "cornerRadius": 18,
+                  "stroke": "#E6E4F4",
+                  "strokeWidth": 1,
+                  "layout": "none",
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "AgpDX",
+                      "x": 14,
+                      "y": 16,
+                      "name": "Título mobile · Peluquerías y barberías",
+                      "fill": "$k-text",
+                      "textGrowth": "fixed-width",
+                      "width": 137,
+                      "content": "Peluquerías y barberías",
+                      "lineHeight": 1.13,
+                      "fontFamily": "Inter",
+                      "fontSize": 18,
+                      "fontWeight": "700",
+                      "letterSpacing": -0.5
+                    },
+                    {
+                      "type": "text",
+                      "id": "Ovnqb",
+                      "x": 14,
+                      "y": 86,
+                      "name": "Texto mobile · Peluquerías y barberías",
+                      "fill": "$k-muted",
+                      "textGrowth": "fixed-width",
+                      "width": 137,
+                      "content": "Registrá servicios, productos, clientes y cobros a tu manera. Guardá lo que pidió cada cliente y seguí los pagos que quedan pendientes.",
+                      "lineHeight": 1.36,
+                      "fontFamily": "Inter",
+                      "fontSize": 14,
+                      "fontWeight": "normal"
+                    },
+                    {
+                      "type": "ellipse",
+                      "id": "vQIfs",
+                      "x": 46,
+                      "y": 277,
+                      "name": "Halo mobile · Peluquerías y barberías",
+                      "fill": "#E7E5FF",
+                      "width": 108,
+                      "height": 108
+                    },
+                    {
+                      "id": "wF1wB",
+                      "type": "ref",
+                      "ref": "Pc8wq",
+                      "name": "Kiosquito mobile · Peluquerías y barberías",
+                      "x": 51,
+                      "y": 280,
+                      "width": 104,
+                      "height": 104
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "A9PdA",
+                  "name": "Rubros mobile · Pastelería por encargo",
+                  "clip": true,
+                  "width": "fill_container",
+                  "height": 394,
+                  "fill": "#FFFFFF",
+                  "cornerRadius": 18,
+                  "stroke": "#E6E4F4",
+                  "strokeWidth": 1,
+                  "layout": "none",
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "kwRCC",
+                      "x": 14,
+                      "y": 16,
+                      "name": "Título mobile · Pastelería por encargo",
+                      "fill": "$k-text",
+                      "textGrowth": "fixed-width",
+                      "width": 137,
+                      "content": "Pastelería por encargo",
+                      "lineHeight": 1.13,
+                      "fontFamily": "Inter",
+                      "fontSize": 18,
+                      "fontWeight": "700",
+                      "letterSpacing": -0.5
+                    },
+                    {
+                      "type": "text",
+                      "id": "Q3SVa",
+                      "x": 14,
+                      "y": 86,
+                      "name": "Texto mobile · Pastelería por encargo",
+                      "fill": "$k-muted",
+                      "textGrowth": "fixed-width",
+                      "width": 137,
+                      "content": "Guardá los detalles de cada pedido y seguí sus etapas hasta la entrega. Anotá sabores, cantidades, fechas acordadas y pagos en el mismo registro.",
+                      "lineHeight": 1.36,
+                      "fontFamily": "Inter",
+                      "fontSize": 14,
+                      "fontWeight": "normal"
+                    },
+                    {
+                      "type": "ellipse",
+                      "id": "xJRgu",
+                      "x": 46,
+                      "y": 277,
+                      "name": "Halo mobile · Pastelería por encargo",
+                      "fill": "#E7E5FF",
+                      "width": 108,
+                      "height": 108
+                    },
+                    {
+                      "id": "CX4YA",
+                      "type": "ref",
+                      "ref": "M4HfEF",
+                      "name": "Kiosquito mobile · Pastelería por encargo",
+                      "x": 51,
+                      "y": 280,
+                      "width": 104,
+                      "height": 104
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "MJXdw",
+              "name": "Fila mobile · 4",
+              "width": "fill_container",
+              "height": 394,
+              "gap": 12,
+              "children": [
+                {
+                  "type": "frame",
+                  "id": "PvSAC",
+                  "name": "Rubros mobile · Ferreterías",
+                  "clip": true,
+                  "width": "fill_container",
+                  "height": 394,
+                  "fill": "#FFFFFF",
+                  "cornerRadius": 18,
+                  "stroke": "#E6E4F4",
+                  "strokeWidth": 1,
+                  "layout": "none",
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "d3Xwe",
+                      "x": 14,
+                      "y": 16,
+                      "name": "Título mobile · Ferreterías",
+                      "fill": "$k-text",
+                      "textGrowth": "fixed-width",
+                      "width": 137,
+                      "content": "Ferreterías",
+                      "lineHeight": 1.13,
+                      "fontFamily": "Inter",
+                      "fontSize": 18,
+                      "fontWeight": "700",
+                      "letterSpacing": -0.5
+                    },
+                    {
+                      "type": "text",
+                      "id": "Bfncc",
+                      "x": 14,
+                      "y": 86,
+                      "name": "Texto mobile · Ferreterías",
+                      "fill": "$k-muted",
+                      "textGrowth": "fixed-width",
+                      "width": 137,
+                      "content": "Ordená productos, compras, proveedores y reposición de stock. Anotá cantidades y proveedores para saber qué hace falta volver a comprar.",
+                      "lineHeight": 1.36,
+                      "fontFamily": "Inter",
+                      "fontSize": 14,
+                      "fontWeight": "normal"
+                    },
+                    {
+                      "type": "ellipse",
+                      "id": "hX2VW",
+                      "x": 46,
+                      "y": 277,
+                      "name": "Halo mobile · Ferreterías",
+                      "fill": "#E7E5FF",
+                      "width": 108,
+                      "height": 108
+                    },
+                    {
+                      "id": "kUunb",
+                      "type": "ref",
+                      "ref": "YZFi7",
+                      "name": "Kiosquito mobile · Ferreterías",
+                      "x": 51,
+                      "y": 280,
+                      "width": 104,
+                      "height": 104
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "fcw5r",
+                  "name": "Rubros mobile · Servicios a domicilio",
+                  "clip": true,
+                  "width": "fill_container",
+                  "height": 394,
+                  "fill": "#EFEEFF",
+                  "cornerRadius": 18,
+                  "stroke": "#E6E4F4",
+                  "strokeWidth": 1,
+                  "layout": "none",
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "Iyu6n",
+                      "x": 14,
+                      "y": 16,
+                      "name": "Título mobile · Servicios a domicilio",
+                      "fill": "$k-text",
+                      "textGrowth": "fixed-width",
+                      "width": 137,
+                      "content": "Servicios a domicilio",
+                      "lineHeight": 1.13,
+                      "fontFamily": "Inter",
+                      "fontSize": 18,
+                      "fontWeight": "700",
+                      "letterSpacing": -0.5
+                    },
+                    {
+                      "type": "text",
+                      "id": "zGSkA",
+                      "x": 14,
+                      "y": 86,
+                      "name": "Texto mobile · Servicios a domicilio",
+                      "fill": "$k-muted",
+                      "textGrowth": "fixed-width",
+                      "width": 137,
+                      "content": "Seguí cada trabajo, su cliente, lo que falta hacer y lo que falta cobrar. Organizá materiales, tareas pendientes y pagos de cada trabajo.",
+                      "lineHeight": 1.36,
+                      "fontFamily": "Inter",
+                      "fontSize": 14,
+                      "fontWeight": "normal"
+                    },
+                    {
+                      "type": "ellipse",
+                      "id": "wLOjk",
+                      "x": 46,
+                      "y": 277,
+                      "name": "Halo mobile · Servicios a domicilio",
+                      "fill": "#E7E5FF",
+                      "width": 108,
+                      "height": 108
+                    },
+                    {
+                      "id": "aUGx1",
+                      "type": "ref",
+                      "ref": "YcNN2",
+                      "name": "Kiosquito mobile · Servicios a domicilio",
+                      "x": 51,
+                      "y": 280,
+                      "width": 104,
+                      "height": 104
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "id": "iIJzv",
+          "x": 24,
+          "y": 2194,
+          "name": "Título cierre mobile",
+          "fill": "$k-text",
+          "textGrowth": "fixed-width",
+          "width": 342,
+          "content": "¿Tu negocio no aparece acá?",
+          "lineHeight": 1.12,
+          "fontFamily": "Inter",
+          "fontSize": 31,
+          "fontWeight": "700",
+          "letterSpacing": -1.1
+        },
+        {
+          "type": "text",
+          "id": "kl868",
+          "x": 24,
+          "y": 2279,
+          "name": "Texto cierre mobile",
+          "fill": "$k-muted",
+          "textGrowth": "fixed-width",
+          "width": 342,
+          "content": "Estos son ejemplos. Contale a Kiosquito cómo trabajás y armá en Kioskit lo que necesitás.",
+          "lineHeight": 1.48,
+          "fontFamily": "Inter",
+          "fontSize": 16,
+          "fontWeight": "normal"
+        },
+        {
+          "type": "frame",
+          "id": "YsX9W",
+          "x": 24,
+          "y": 2379,
+          "name": "Botón principal · Para quién mobile",
+          "width": 342,
+          "height": 56,
+          "fill": "$k-indigo",
+          "cornerRadius": 14,
+          "effect": {
+            "type": "shadow",
+            "shadowType": "outer",
+            "color": "#4F46E530",
+            "offset": {
+              "x": 0,
+              "y": 8
+            },
+            "blur": 18
+          },
+          "padding": [
+            0,
+            25
+          ],
+          "justifyContent": "center",
+          "alignItems": "center",
+          "children": [
+            {
+              "type": "text",
+              "id": "FCnG8",
+              "name": "Texto mobile · Empezar con Kioskit",
+              "fill": "#FFFFFF",
+              "content": "Empezar con Kioskit",
+              "fontFamily": "Inter",
+              "fontSize": 16,
+              "fontWeight": "600"
+            }
+          ]
+        },
+        {
+          "type": "frame",
+          "id": "KtfEt",
+          "x": 24,
+          "y": 2446,
+          "name": "Botón secundario · Para quién mobile",
+          "width": 342,
+          "height": 56,
+          "fill": "#FFFFFF",
+          "cornerRadius": 14,
+          "stroke": "#C9C8DA",
+          "strokeWidth": 1,
+          "padding": [
+            0,
+            25
+          ],
+          "justifyContent": "center",
+          "alignItems": "center",
+          "children": [
+            {
+              "type": "text",
+              "id": "QQbX6",
+              "name": "Texto mobile · Hablar por WhatsApp",
+              "fill": "$k-text",
+              "content": "Hablar con nosotros",
+              "fontFamily": "Inter",
+              "fontSize": 16,
+              "fontWeight": "600"
+            }
+          ]
+        },
+        {
+          "type": "rectangle",
+          "id": "I4XKu",
+          "x": 24,
+          "y": 2564,
+          "name": "Separador footer mobile",
+          "fill": "#DDDCEB",
+          "width": 342,
+          "height": 1
+        },
+        {
+          "type": "text",
+          "id": "Jrj7q",
+          "x": 24,
+          "y": 2596,
+          "name": "Marca Kioskit · Footer mobile",
+          "fill": "#4F46E5",
+          "textGrowth": "fixed-width",
+          "width": 155,
+          "content": "Kioskit",
+          "fontFamily": "Inter",
+          "fontSize": 22,
+          "fontWeight": "bold"
+        },
+        {
+          "type": "text",
+          "id": "YnCCR",
+          "x": 24,
+          "y": 2626,
+          "name": "Copyright · Footer mobile",
+          "fill": "#77778D",
+          "content": "© 2026 Kioskit",
+          "fontFamily": "Inter",
+          "fontSize": 12,
+          "fontWeight": "normal"
+        },
+        {
+          "type": "frame",
+          "id": "dYNIE",
+          "x": 24,
+          "y": 2674,
+          "name": "Enlaces del sitio · Footer mobile",
+          "width": 342,
+          "gap": 20,
+          "children": [
+            {
+              "type": "text",
+              "id": "ywbwf",
+              "name": "Enlace mobile · Iniciar sesión",
+              "fill": "$k-muted",
+              "content": "Iniciar sesión",
+              "fontFamily": "Inter",
+              "fontSize": 13,
+              "fontWeight": "500"
+            },
+            {
+              "type": "text",
+              "id": "whY9B",
+              "name": "Enlace mobile · Contacto",
+              "fill": "$k-muted",
+              "content": "Contacto",
+              "fontFamily": "Inter",
+              "fontSize": 13,
+              "fontWeight": "500"
+            },
+            {
+              "type": "text",
+              "id": "zldyA",
+              "name": "Enlace mobile · Funciones",
+              "fill": "$k-muted",
+              "content": "Funciones",
+              "fontFamily": "Inter",
+              "fontSize": 13,
+              "fontWeight": "500"
+            }
+          ]
+        }
+      ]
     }
   ],
   "variables": {

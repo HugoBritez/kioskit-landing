@@ -1,0 +1,118 @@
+---
+import '../styles/global.css';
+import '../styles/story.css';
+import SiteHeader from '../components/SiteHeader.astro';
+
+const pageTitle = 'Por qué existe Kioskit | La historia detrás del sistema';
+const pageDescription = 'Kioskit empezó con una tarea que quitaba tiempo y creció junto a otros emprendimientos. Conocé la idea detrás de un sistema que se adapta a tu forma de trabajar.';
+const whatsappUrl = 'https://wa.me/595982373124?text=Hola%2C%20quiero%20saber%20m%C3%A1s%20sobre%20Kioskit';
+---
+
+<!doctype html>
+<html lang="es-PY">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#F7F7FB" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="canonical" href="https://kioskit.space/por-que/" />
+    <meta name="description" content={pageDescription} />
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="Kioskit" />
+    <meta property="og:title" content={pageTitle} />
+    <meta property="og:description" content={pageDescription} />
+    <meta property="og:url" content="https://kioskit.space/por-que/" />
+    <meta property="og:locale" content="es_PY" />
+    <meta property="og:image" content="https://kioskit.space/og-kiosquito.png" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+    <title>{pageTitle}</title>
+  </head>
+  <body>
+    <a class="skip-link" href="#contenido">Saltar al contenido</a>
+    <SiteHeader active="why" />
+    <main class="story-page" id="contenido">
+      <section class="story-hero" aria-labelledby="story-title">
+        <div class="container story-hero-inner">
+          <div class="story-hero-copy">
+            <p class="story-eyebrow">Por qué existe Kioskit</p>
+            <h1 id="story-title">Empezó con mi forma de trabajar. Creció con la de otros.</h1>
+            <p>Hice Kioskit para ayudarme a llevar mi propio emprendimiento. No sabía entonces cuántas formas distintas de trabajar iba a encontrar en el camino.</p>
+          </div>
+          <div class="story-hero-art" aria-hidden="true"><span class="story-hero-spark"></span><img src="/historia/inicio.webp" alt="" width="340" height="340" decoding="async" /></div>
+        </div>
+      </section>
+
+      <section class="story-scene story-scene--receipt" aria-labelledby="story-receipt-title">
+        <div class="container story-scene-grid">
+          <div class="story-copy">
+            <h2 id="story-receipt-title">Una compra más para cargar</h2>
+            <p>Había comprado cosas para el negocio y tocaba pasar los datos al sistema, uno por uno. Me dio pereza. Pensé: si puedo sacarle una foto al comprobante, ¿por qué no pedirle a una IA que me ayude?</p>
+            <p>Empecé por ahí. Después probé lo mismo con productos y otras tareas que repetía todos los días. Cada vez que algo me quitaba tiempo, me preguntaba si Kioskit podía darme una mano.</p>
+          </div>
+          <div class="story-visual story-receipt-visual" aria-hidden="true">
+            <span class="story-receipt-paper"><i></i><i></i><i></i><i></i><i></i></span>
+            <img src="/historia/comprobante.webp" alt="" width="390" height="390" loading="lazy" decoding="async" />
+            <svg class="story-camera" viewBox="0 0 24 24" fill="none"><path d="M4 7h3l2-2h6l2 2h3v12H4V7Z"/><circle cx="12" cy="13" r="3.5"/></svg>
+          </div>
+        </div>
+      </section>
+
+      <section class="story-scene story-scene--others" aria-labelledby="story-others-title">
+        <div class="container story-scene-grid story-scene-grid--reverse">
+          <div class="story-copy">
+            <h2 id="story-others-title">Después llegaron otros negocios</h2>
+            <p>Primero lo usó un amigo. Después otro. Lo que a mí me servía no siempre alcanzaba para ellos: cada uno tenía datos que guardar, pasos que seguir y una manera propia de hacer las cosas.</p>
+            <p>Podía seguir agregando soluciones para cada pedido. Pero los emprendimientos cambian demasiado rápido. Necesitaba que Kioskit pudiera cambiar con ellos.</p>
+          </div>
+          <div class="story-visual story-others-visual" aria-hidden="true">
+            <span class="story-sheet story-sheet--one"><i></i><i></i><i></i></span>
+            <span class="story-sheet story-sheet--two"><i></i><i></i><i></i></span>
+            <span class="story-sheet story-sheet--three"><i></i><i></i><i></i></span>
+            <img src="/historia/otros.webp" alt="" width="380" height="380" loading="lazy" decoding="async" />
+          </div>
+        </div>
+      </section>
+
+      <section class="story-scene story-scene--foundation" aria-labelledby="story-foundation-title">
+        <div class="container story-scene-grid">
+          <div class="story-copy">
+            <h2 id="story-foundation-title">Una base firme, con espacio para lo tuyo</h2>
+            <p>Ventas, compras, stock y dinero necesitan estar claros. Sobre esa base, hoy podés crear los registros y procesos propios de tu negocio. Kiosquito te ayuda a armarlos, a quitarte tareas repetidas y a entender qué está pasando.</p>
+            <p>Podés usar Kioskit como un sistema de todos los días. Y cuando necesitás algo más, tenés a quién pedírselo.</p>
+          </div>
+          <div class="story-visual story-foundation-visual" aria-hidden="true">
+            <span class="story-building-block story-building-block--one"><i></i><i></i></span>
+            <span class="story-building-block story-building-block--two"><i></i><i></i></span>
+            <span class="story-building-block story-building-block--three"><i></i><i></i></span>
+            <img src="/historia/bloques.webp" alt="" width="400" height="400" loading="lazy" decoding="async" />
+            <span class="story-foundation-base"><span>Ventas</span><span>Compras</span><span>Stock</span><span>Dinero</span></span>
+          </div>
+        </div>
+      </section>
+
+      <section class="story-ending" aria-labelledby="story-ending-title">
+        <div class="container story-ending-inner">
+          <div class="story-ending-copy">
+            <h2 id="story-ending-title">Para emprender con un poco menos de peso encima</h2>
+            <p>Sé que Kioskit no va a tomar todas las decisiones por vos. Quiero que te ahorre parte del trabajo operativo, te ayude a ver qué pasó y te deje más tiempo y claridad para decidir qué sigue.</p>
+            <a class="button button-primary" href="/#funciones">Conocer Kioskit</a>
+          </div>
+          <div class="story-ending-art" aria-hidden="true"><img src="/historia/cierre.webp" alt="" width="340" height="340" loading="lazy" decoding="async" /></div>
+        </div>
+      </section>
+    </main>
+    <footer class="story-footer">
+      <div class="container story-footer-inner">
+        <div><a class="footer-brand" href="/">Kioskit</a><small>© 2026 Kioskit</small></div>
+        <nav aria-label="Enlaces del sitio">
+          <a href="https://platform.kioskit.space/login">Iniciar sesión</a>
+          <a href={whatsappUrl} target="_blank" rel="noopener noreferrer">Contacto</a>
+          <a href="/#funciones">Funciones</a>
+        </nav>
+      </div>
+    </footer>
+  </body>
+</html>

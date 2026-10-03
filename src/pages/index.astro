@@ -1,5 +1,6 @@
 ---
 import '../styles/global.css';
+import SiteHeader from '../components/SiteHeader.astro';
 
 const registerUrl = 'https://platform.kioskit.space/register';
 const whatsappUrl = 'https://wa.me/595982373124?text=Hola%2C%20quiero%20saber%20m%C3%A1s%20sobre%20Kioskit';
@@ -93,6 +94,7 @@ const problemSteps = [
   </head>
   <body>
     <a class="skip-link" href="#contenido">Saltar al contenido</a>
+    <SiteHeader active="home" />
     <main id="contenido">
       <section class="hero" aria-labelledby="hero-title">
         <div class="container hero-inner">

@@ -1,0 +1,40 @@
+---
+interface Props {
+  active?: 'home' | 'audiences' | 'why';
+}
+
+const { active = 'home' } = Astro.props;
+const links = [
+  { href: '/', label: 'Inicio', key: 'home' },
+  { href: '/para-quien/', label: 'Para quién', key: 'audiences' },
+  { href: '/por-que/', label: 'Por qué Kioskit', key: 'why' },
+] as const;
+---
+
+<header class="site-header">
+  <div class="container site-header-inner">
+    <a class="site-header-brand" href="/" aria-label="Kioskit, ir al inicio">Kioskit</a>
+
+    <nav class="site-header-nav" aria-label="Navegación principal">
+      {links.map((link) => (
+        <a href={link.href} aria-current={active === link.key ? 'page' : undefined}>{link.label}</a>
+      ))}
+    </nav>
+
+    <div class="site-header-actions">
+      <a class="site-header-login" href="https://platform.kioskit.space/login">Iniciar sesión</a>
+      <a class="site-header-cta" href="https://platform.kioskit.space/register">Empezar</a>
+    </div>
+
+    <details class="site-mobile-menu">
+      <summary><span>Menú</span><svg aria-hidden="true" viewBox="0 0 24 24"><path d="M4 7h16M4 12h16M4 17h16" /></svg></summary>
+      <nav aria-label="Navegación móvil">
+        {links.map((link) => (
+          <a href={link.href} aria-current={active === link.key ? 'page' : undefined}>{link.label}</a>
+        ))}
+        <a href="https://platform.kioskit.space/login">Iniciar sesión</a>
+        <a class="site-mobile-cta" href="https://platform.kioskit.space/register">Empezar con Kioskit</a>
+      </nav>
+    </details>
+  </div>
+</header>
